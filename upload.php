@@ -37,7 +37,6 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
    if($fileurl!="TEST"){
 	   $eventid= $_POST["eventid"];
    echo $fileurl;
-	   echo "We got here";
 $myfile = fopen($fileurl, "r") or die("Unable to open file!");
 ini_set('max_execution_time', 300);
                     require 'mysqlkeys.php';
