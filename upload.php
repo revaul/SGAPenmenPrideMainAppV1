@@ -68,7 +68,7 @@ while(!feof($myfile)) {
   }
 }
 fclose($myfile);
-if (!unlink($fileurl))
+/* if (!unlink($fileurl))
   {
   echo "Error deleting". $fileurl;
   }
@@ -76,6 +76,7 @@ else
   {
   echo "Deleted".$fileurl;
   }
+	   */
    }
 ?>
 
