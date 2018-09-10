@@ -108,7 +108,7 @@ foreach ($results as $HostName){
           </div>
             </div>
 </div>
-      <?php include "template/bottom.php" ?>;
+      <?php 
 	  echo "<br>";
             if ($conn->query($insertdaystmt) === TRUE) {
             } else {
