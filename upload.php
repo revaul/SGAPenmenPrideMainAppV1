@@ -37,6 +37,7 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
    if($fileurl!="TEST"){
 	   $eventid= $_POST["eventid"];
    echo $fileurl;
+	   echo "We got here";
 $myfile = fopen($fileurl, "r") or die("Unable to open file!");
 ini_set('max_execution_time', 300);
                     require 'mysqlkeys.php';
@@ -44,19 +45,21 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
+//Blank Insert Begin
 $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '0000001');";
 	  echo $insertdaystmt;
 	  echo "<br>";
             if ($conn->query($insertdaystmt) === TRUE) {
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-            }
+//Blank Insert End
 // Output one line until end-of-file
+	//Get Line Length Begin
 while(!feof($myfile)) {
   $line = fgets($myfile);
   $linelength = strlen($line);
- 
+ 	//Get Line Length End
+	//If Line Length is Correct
   if($linelength==18){
 	  $lineremove = str_replace(array("\r", "\n"), '', $line);
 	  $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '".$lineremove."');";
@@ -67,7 +70,9 @@ while(!feof($myfile)) {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
   }
+	//End Line Length
 }
+		    //End While File Lines
 fclose($myfile);
 if (!unlink($fileurl))
   {
@@ -82,7 +87,8 @@ else
 
       <h2>Penmen Pride File Uploader</h2>
       <form action="" method="POST" enctype="multipart/form-data">
-	  <p><label>Event: </label>
+	<!--Begin Event Lookup-->
+	      <p><label>Event: </label>
 <select name="eventid">
 <option value="">Select Event</option>
 <?php 
@@ -103,9 +109,13 @@ foreach ($results as $HostName){
 }
 
 ?>
-</select></p>
+</select>
+		      <!--End Event Stuff-->
+	      </p>
+	      <!--Begin File Stuff-->
           <p><label>File: </label>
               <input type="file" name="image" /></p>
+	      <!--End File Stuff-->
          <input type="submit"/>
       </form>
         </div>
