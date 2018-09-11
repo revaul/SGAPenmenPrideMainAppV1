@@ -67,6 +67,16 @@ while(!feof($myfile)) {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
   }
+	if($linelength==18){
+	  $lineremove = str_replace(array("\r", "\n"), '', $line);
+	  $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '".$lineremove."');";
+	  echo $insertdaystmt;
+	  echo "<br>";
+            if ($conn->query($insertdaystmt) === TRUE) {
+            } else {
+                echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
+            }
+  }
 }
 fclose($myfile);
 if (!unlink($fileurl))
