@@ -60,6 +60,7 @@ while(!feof($myfile)) {
  echo $line;
 	echo "<br>";
 	echo $linelength;
+	echo "<br>";
   if($linelength==18){
 	  $lineremove = str_replace(array("\r", "\n"), '', $line);
 	  $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '".$lineremove."');";
