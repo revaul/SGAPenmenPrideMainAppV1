@@ -57,11 +57,7 @@ $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALU
 while(!feof($myfile)) {
   $line = fgets($myfile);
   $linelength = strlen($line);
- echo $line;
-	echo "<br>";
-	echo $linelength;
-	echo "<br>";
-  if($linelength==18){
+  if($linelength==17){
 	  $lineremove = str_replace(array("\r", "\n"), '', $line);
 	  $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '".$lineremove."');";
 	  echo $insertdaystmt;
