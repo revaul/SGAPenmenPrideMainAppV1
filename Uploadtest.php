@@ -6,6 +6,7 @@
           </div>
     <div class="col-sm-8">
 <?php
+	    //Upload Begin
 $fileurl="TEST";
    if(isset($_FILES['image'])){
       $errors= array();
@@ -33,6 +34,7 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
 	  $fileurl = "uploads/".$file_name;
 	  $myopenfile;
    }
+	    //Upload End
    
    if($fileurl!="TEST"){
 	   $eventid= $_POST["eventid"];
@@ -55,7 +57,9 @@ $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALU
 while(!feof($myfile)) {
   $line = fgets($myfile);
   $linelength = strlen($line);
- 
+ echo $line;
+	echo "<br>";
+	echo $linelength;
   if($linelength==18){
 	  $lineremove = str_replace(array("\r", "\n"), '', $line);
 	  $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '".$lineremove."');";
