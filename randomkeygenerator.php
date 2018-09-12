@@ -43,6 +43,7 @@ for($x = 0; $x < $arrlength; $x++) {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
 			*/
+}
 $conn->close();
 
 ?>
