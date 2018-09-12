@@ -14,7 +14,7 @@ $insertamount=0;
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       $newkeystring = $hashforkeys . $row["EventID"];
+       $newkeystring = $hashforkeys . $row["EmailAddress"];
        echo $newkeystring;
        echo "<br>";
        $newkey= md5($newkeystring);
