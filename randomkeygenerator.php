@@ -1,7 +1,6 @@
 <?php
 require "login/loginheader.php";
 require 'mysqlkeys.php';
-require
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
