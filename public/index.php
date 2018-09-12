@@ -12,4 +12,4 @@
     </div>
   </div>
 </div>
-<?php include "template/bottom.php" ?>
+<?php include "./template/bottom.php" ?>
