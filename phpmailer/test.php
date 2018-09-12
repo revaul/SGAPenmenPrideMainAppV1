@@ -7,21 +7,22 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
+require ‘./mysqlkeys.php’;
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
     //Server settings
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
+    $mail->Host = $mailhost;  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'ryan@ryanevaul.com';                 // SMTP username
-    $mail->Password = 'secret';                           // SMTP password
+    $mail->Username = $mailusername;                 // SMTP username
+    $mail->Password = $mailpassword;                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
+    $mail->Port = $mailport;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('ryan@ryanevaul.com', 'Ryan Evaul');
+    $mail->setFrom($mailusername, 'Ryan Evaul');
     $mail->addAddress('ryan.evaul@snhu.edu', 'Ryan');     // Add a recipient
 
     //Content
