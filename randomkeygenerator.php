@@ -35,8 +35,8 @@ $arrlength = count($newinserts);
 echo $arrlength;
 echo "<br>";
 for($x = 0; $x < $arrlength; $x++) {
-   // $insertdaystmt = "INSERT INTO `ppv0008003`.`randomkeys` (`email`, `randomkeycol`) VALUES ('".$newinsertsemail[$x]."', '".$newinserts[$x]."' ); ";
-     //   echo $insertdaystmt;
+   $insertdaystmt = "INSERT INTO `ppv0008003`.`randomkeys` (`email`, `randomkeycol`) VALUES ('".$newinsertsemail[$x]."', '".$newinserts[$x]."' ); ";
+     echo $insertdaystmt;
 	echo "<br>";
 	/* if ($conn->query($insertdaystmt) === TRUE) {
             } else {
