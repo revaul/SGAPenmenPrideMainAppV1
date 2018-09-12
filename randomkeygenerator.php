@@ -47,4 +47,9 @@ for($x = 0; $x < $arrlength; $x++) {
 $conn->close();
 ?>
 	    <h2> All Keys Created </h2>
+	    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+</div>
 <?php include "template/bottom.php" ?>
