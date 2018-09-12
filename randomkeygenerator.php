@@ -41,20 +41,6 @@ for($x = 0; $x < $arrlength; $x++) {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
 			
-?>
-<h2>Success Event Added!</h2></div>
-    <div class="col-sm-1">
-    </div>
-  </div>
-</div>
-<?php include "template/bottom.php" ?>
-
-            if ($conn->query($insertdaystmt) === TRUE) {
-            } else {
-                echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-            }
-}
-
 $conn->close();
 
 ?>
