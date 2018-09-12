@@ -26,6 +26,17 @@ if ($result->num_rows > 0) {
 } else {
  
 }
+echo "<br>";
+echo "<br>";
+echo "<br>";
+$arrlength = count($newinserts);
+echo $arrlength;
+echo "<br>";
+for($x = 0; $x < $arrlength; $x++) {
+    echo $newinserts[$x];
+    echo "<br>";
+}
+
 $conn->close();
 
 ?>
