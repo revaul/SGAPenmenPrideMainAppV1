@@ -1,5 +1,5 @@
 <?php 
-require_once "Mail.php";
+require_once "/usr/share/php/Mail.php";
 require 'mysqlkeys.php';
 require "login/loginheader.php";
 $from = $mailfrom;
