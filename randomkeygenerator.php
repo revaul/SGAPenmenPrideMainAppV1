@@ -36,11 +36,13 @@ echo $arrlength;
 echo "<br>";
 for($x = 0; $x < $arrlength; $x++) {
     $insertdaystmt = "INSERT INTO `ppv0008003`.`randomkeys` (`email`, `randomkeycol`) VALUES ('".$newinsertsemail[$x]."', '".$newinserts[$x]."' ); ";
-            if ($conn->query($insertdaystmt) === TRUE) {
+        echo $insertdaystmt;
+	echo "<br>";
+	/* if ($conn->query($insertdaystmt) === TRUE) {
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
-			
+			*/
 $conn->close();
 
 ?>
