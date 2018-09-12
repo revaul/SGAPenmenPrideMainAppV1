@@ -1,4 +1,4 @@
-<?php include "/template/publictop.php"; ?>
+<?php include "../template/publictop.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
           <div class="col-sm-2">
@@ -12,4 +12,4 @@
     </div>
   </div>
 </div>
-<?php include "/template/bottom.php" ?>
+<?php include "../template/bottom.php" ?>
