@@ -1,6 +1,13 @@
 <?php
 require "login/loginheader.php";
 require 'mysqlkeys.php';
+include "template/top.php"; ?>
+<div id="about" class="container-fluid">
+      <div class="row">
+              <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
+	    <?php
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
@@ -16,11 +23,9 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        $newkeystring = $row["StudentID"] . $hashforkeys . $row["EmailAddress"];
-       echo $newkeystring;
-       echo "<br>";
+       
        $newkey= md5($newkeystring);
-       echo $newkey;
-       echo "<br>";
+      
        $newinserts[$insertamount] = $newkey;
         $newinsertsemail[$insertamount] = $row["EmailAddress"];
        $insertamount++;
@@ -28,16 +33,11 @@ if ($result->num_rows > 0) {
 } else {
  
 }
-echo "<br>";
-echo "<br>";
-echo "<br>";
+
 $arrlength = count($newinserts);
-echo $arrlength;
-echo "<br>";
+
 for($x = 0; $x < $arrlength; $x++) {
    $insertdaystmt = "INSERT INTO `ppv0008003`.`randomkeys` (`email`, `randomkeycol`) VALUES ('".$newinsertsemail[$x]."', '".$newinserts[$x]."' ); ";
-     echo $insertdaystmt;
-	echo "<br>";
 	 if ($conn->query($insertdaystmt) === TRUE) {
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
@@ -45,5 +45,6 @@ for($x = 0; $x < $arrlength; $x++) {
 			
 }
 $conn->close();
-
 ?>
+	    <h2> All Keys Created </h2>
+<?php include "template/bottom.php" ?>
