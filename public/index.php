@@ -6,7 +6,7 @@
     <div class="col-sm-8">
       
       
-        <h2> All Keys Created $_GET['id'] </h2>
+        <h2> All Keys Created <?php echo $_GET["id"]; ?> </h2>
 	    </div>
     <div class="col-sm-1">
     </div>
