@@ -3,7 +3,7 @@ require_once "Mail.php";
 require 'mysqlkeys.php';
 require "login/loginheader.php";
 $from = $mailfrom;
-$to = "Ramona Recipient <recipient@example.com>";
+$to = "Ryan Evaul <ryan.evaul@snhu.edu>";
 $subject = "Hi!";
 $body = "Hi,\n\nHow are you?";
 $host = $mailhost;
