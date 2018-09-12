@@ -10,6 +10,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM ppv0008003.NeedRamdomKey limit 100";
 $result = $conn->query($sql);
 $newinserts= array();
+$newinsertsemail= array();
 $insertamount=0;
 if ($result->num_rows > 0) {
     // output data of each row
@@ -21,6 +22,7 @@ if ($result->num_rows > 0) {
        echo $newkey;
        echo "<br>";
        $newinserts[$insertamount] = $newkey;
+        $newinsertsemail[$insertamount] = $row["EmailAddress"];
        $insertamount++;
     }
 } else {
@@ -33,8 +35,24 @@ $arrlength = count($newinserts);
 echo $arrlength;
 echo "<br>";
 for($x = 0; $x < $arrlength; $x++) {
-    echo $newinserts[$x];
-    echo "<br>";
+    $insertdaystmt = "INSERT INTO `ppv0008003`.`randomkeys` (`email`, `randomkeycol`) VALUES ('".$newinsertsemail[$x]."', '".$newinserts[$x]."' ); ";
+            if ($conn->query($insertdaystmt) === TRUE) {
+            } else {
+                echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
+            }
+			
+?>
+<h2>Success Event Added!</h2></div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+</div>
+<?php include "template/bottom.php" ?>
+
+            if ($conn->query($insertdaystmt) === TRUE) {
+            } else {
+                echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
+            }
 }
 
 $conn->close();
