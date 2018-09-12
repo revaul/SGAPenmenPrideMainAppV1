@@ -7,6 +7,7 @@ $to = "Ryan Evaul <ryan.evaul@snhu.edu>";
 $subject = "Hi!";
 $body = "Hi,\n\nHow are you?";
 $host = $mailhost;
+$port = $mailport;
 $username = $mailusername;
 $password = $mailpassword;
 $headers = array ('From' => $from,
@@ -14,6 +15,7 @@ $headers = array ('From' => $from,
   'Subject' => $subject);
 $smtp = Mail::factory('smtp',
   array ('host' => $host,
+    'port' => $port,
     'auth' => true,
     'username' => $username,
     'password' => $password));
@@ -23,4 +25,4 @@ if (PEAR::isError($mail)) {
  } else {
   echo("<p>Message successfully sent!</p>");
  }
- ?>
+?>
