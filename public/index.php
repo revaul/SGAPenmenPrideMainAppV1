@@ -1,15 +1,64 @@
-<?php include "../template/publictop.php"; ?>
+<?php require "login/loginheader.php"; ?>
+<?php include "template/top.php"; 
+require 'publicmysqlkeys.php';
+// Create connection
+$conn = new mysqli($host, $user, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+?>
 <div id="about" class="container-fluid">
       <div class="row">
-          <div class="col-sm-2">
-          </div>
-    <div class="col-sm-8">
-      
-      
-        <h2> All Keys Created <?php echo $_GET["id"]; ?> </h2>
-	    </div>
+              <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
+        <h2>Welcome First Name, This semester you have earned Points and attended Events.</h2>
+<table class="table table-striped">
+      <col width="10%">
+  <col width="35%">
+      <col width="15%">
+  <col width="10%">
+      <col width="10%">
+  <col width="20%">
+<tr>
+<th>Event ID
+</th>
+<th>Event Name
+</th>
+<th>Event Date
+</th>
+<th>Points
+</th>
+<th>Double Points
+</th>
+<th>Host Name
+</th>
+</tr>
+
+<?php
+$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoublePoints, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID order by eventnames.EventDate DESC";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       ?><tr><td> <?php echo $row["EventID"];
+	   ?></td><td><?php echo $row["EventName"];
+	   ?></td><td><?php echo $row["EventDate"];
+	   ?></td><td><?php echo $row["PointValue"];
+	   ?></td><td><?php echo $row["DoublePoints"];
+	   ?></td><td><?php echo $row["HostName"];
+	   ?></td></tr><?php
+    }
+} else {
+ 
+}
+$conn->close();
+?>
+</table>
+        </div>
     <div class="col-sm-1">
     </div>
   </div>
 </div>
-<?php include "../template/bottom.php" ?>
+<?php include "template/bottom.php" ?>
