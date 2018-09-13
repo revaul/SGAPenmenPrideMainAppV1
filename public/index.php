@@ -1,4 +1,3 @@
-<?php require "login/loginheader.php"; ?>
 <?php include "template/top.php"; 
 require 'publicmysqlkeys.php';
 // Create connection
@@ -7,6 +6,24 @@ $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+$idnumnotsafe = $_GET["name"];
+$idnumlenchecked;
+if (strlen($idnumnotsafe)!=32){
+$idnumlenchecked="9bce422057d28895fa132da3d68f065b";
+}
+else{
+$idnumlenchecked = $idnumnotsafe;
+}
+$idnumlower = strtolower($idnumlenchecked);
+$vowels = array("select", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ";" ,"and", "or", ",");
+$idnocommands = str_replace($vowels,"",$idnumlower);
+$idclean;
+if (strlen($idnocommands)!=32){
+$idclean="9bce422057d28895fa132da3d68f065b";
+}
+else{
+$idclean = $idnocommands;
+}
 ?>
 <div id="about" class="container-fluid">
       <div class="row">
