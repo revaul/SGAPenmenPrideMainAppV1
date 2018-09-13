@@ -15,7 +15,7 @@ else{
 $idnumlenchecked = $idnumnotsafe;
 }
 $idnumlower = strtolower($idnumlenchecked);
-$vowels = array("select", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ";" ,"and", "or", ",");
+$vowels = array("select", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ";" ,"and", "or", ",", "echo", "$");
 $idnocommands = str_replace($vowels,"",$idnumlower);
 $idclean;
 if (strlen($idnocommands)!=32){
