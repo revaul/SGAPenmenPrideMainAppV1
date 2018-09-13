@@ -1,5 +1,9 @@
 <?php include "template/top.php"; 
 require 'publicmysqlkeys.php';
+echo $host;
+echo $username;
+echo $password;
+echo $dbname;
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
