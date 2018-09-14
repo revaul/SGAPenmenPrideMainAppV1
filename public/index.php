@@ -117,6 +117,7 @@ if ($result->num_rows > 0) {
  
 }
 				?>
+			</table>
 		</div>
 		 <div class="col-sm-3">
 		<h4>Number of Events Per Semester</h4>
