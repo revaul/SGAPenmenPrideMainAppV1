@@ -75,7 +75,7 @@ else{
  
 $url = $protocol . $_SERVER['HTTP_HOST'];
 	  ?>
-    url : "<?php echo $url; ?> /public/chart1data.php?id=<?php echo $idclean; ?>",
+    url : "<?php echo $url; ?>/public/chart1data.php?id=<?php echo $idclean; ?>",
     type : "GET",
     success : function(data){
       console.log(data);
