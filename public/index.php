@@ -109,11 +109,11 @@ if ($result->num_rows > 0) {
 	   ?>
                         </td>
                         <td>
-                            <?php echo $row["totpoints"];
+                            <?php echo $row["totevents"];
 	   ?>
                         </td>
                         <td>
-                            <?php echo $row["totevents"];
+                            <?php echo $row["totpoints"];
 	   ?>
                         </td>
                     </tr>
