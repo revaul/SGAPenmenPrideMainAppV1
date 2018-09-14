@@ -234,7 +234,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
         <div class="col-sm-1">
         </div>
         <div class="col-sm-10">
-		<h3>You Have Attended the Following Events.</h3>
+		<h3>You Have Attended the Following Events:</h3>
             <table class="table table-striped">
                 <col width="10%">
                 <col width="35%">
