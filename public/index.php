@@ -25,7 +25,7 @@ $idclean="9bce422057d28895fa132da3d68f065b";
 else{
 $idclean = $idnocommands;
 }
-$sql = "SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."' order by PubEventDate desc;";
+$sql = "SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."';";
 
 $result = $conn->query($sql);
 $totevents;
@@ -79,7 +79,7 @@ else{
 </tr>
 
 <?php
-$sql = "SELECT * FROM ppv0008004.pubscanner where Pubrandomkeycol='".$idclean."' ;";
+$sql = "SELECT * FROM ppv0008004.pubscanner where Pubrandomkeycol='".$idclean."' order by PubEventDate desc;;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
