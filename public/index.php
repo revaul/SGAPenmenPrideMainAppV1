@@ -65,7 +65,10 @@ else{
                 <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
           
 		<div class="chart-container">
-      <canvas id="mycanvas"></canvas>
+      <canvas id="mycanvas1"></canvas>
+    </div>
+		<div class="chart-container">
+      <canvas id="mycanvas2"></canvas>
     </div>
 <script>
 	$(document).ready(function(){
@@ -106,7 +109,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
         ]
       };
 
-      var ctx = $("#mycanvas");
+      var ctx = $("#mycanvas1");
 
       var LineGraph = new Chart(ctx, {
         type: 'doughnut',
