@@ -82,12 +82,10 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
 
       var PubSemester = [];
       var totpoints = [];
-      var totevents = [];
 
       for(var i in data) {
         PubSemester.push(data[i].PubSemester);
         totpoints.push(data[i].totpoints);
-        totevents.push(data[i].totevents);
       }
 
       var chartdata = {
@@ -102,16 +100,6 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
             pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
             pointHoverBorderColor: "rgba(59, 89, 152, 1)",
             data: totpoints
-          },
-          {
-            label: "totevents",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(29, 202, 255, 0.75)",
-            borderColor: "rgba(29, 202, 255, 1)",
-            pointHoverBackgroundColor: "rgba(29, 202, 255, 1)",
-            pointHoverBorderColor: "rgba(29, 202, 255, 1)",
-            data: totevents
           }
           
         ]
