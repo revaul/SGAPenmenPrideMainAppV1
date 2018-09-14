@@ -71,12 +71,53 @@ else{
         <div class="col-sm-1">
         </div>
         
-	    <div class="col-sm-5">
+	    <div class="col-sm-3">
 		    <h4>Number of Points Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas1"></canvas>
 		    </div></div>
-		 <div class="col-sm-5">
+		<div class="col-sm-4">
+			<table class="table table-striped">
+                <col width="10%">
+                <col width="35%">
+                <col width="15%">
+                <tr>
+                    <th>Semester
+                    </th>
+                    <th>Events
+                    </th>
+                    <th>Points
+                    </th>
+                </tr>
+
+                <?php
+$sql = "SELECT PubSemester, totpoints, totevents FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='".$idclean."' order by PubEventDate desc;";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       ?>
+                    <tr>
+                        <td>
+                            <?php echo $row["PubSemester"];
+	   ?>
+                        </td>
+                        <td>
+                            <?php echo $row["totpoints"];
+	   ?>
+                        </td>
+                        <td>
+                            <?php echo $row["totevents"];
+	   ?>
+                        </td>
+                    </tr>
+                    <?php
+    }
+} else {
+ 
+}
+		</div>
+		 <div class="col-sm-3">
 		<h4>Number of Events Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas2"></canvas>
@@ -210,7 +251,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
                 </tr>
 
                 <?php
-$sql = "SELECT * FROM ppv0008004.pubscanner where Pubrandomkeycol='".$idclean."' order by PubEventDate desc;;";
+$sql = "SELECT * FROM ppv0008004.pubscanner where Pubrandomkeycol='".$idclean."' order by PubEventDate desc;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
