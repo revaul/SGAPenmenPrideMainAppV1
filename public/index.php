@@ -1,5 +1,5 @@
 <?php 
-include './template/publictop.php'; 
+include '../template/publictop.php'; 
 require 'publicmysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -103,4 +103,4 @@ $conn->close();
     </div>
   </div>
 </div>
-<?php include './template/bottom.php' ?>
+<?php include '../template/bottom.php' ?>
