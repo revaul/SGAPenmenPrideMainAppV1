@@ -82,7 +82,7 @@ else{
 			 </div>
 		</div>
 	    </div>
-		<div class="col-sm-3 graphbox">
+		<div class="col-sm-3">
 			<table class="table table-striped">
                 <col width="10%">
                 <col width="35%">
