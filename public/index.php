@@ -65,67 +65,7 @@ else{
                 <?php if ($totpoints!=1){echo "s";}?> and attended
                 <?php echo $totevents; ?> event
                 <?php if ($totevents!=1){echo "s";}?>.</h3>
-           <!--Start Paste of Chart-->
-            <div id="canvas-holder" style="width:40%">
-                <canvas id="chart-area"></canvas>
-            </div>
-
-            <script>
-                var config = {
-                    type: 'doughnut',
-                    data: {
-                        datasets: [{
-                            data: [
-                                1,
-                                2,
-                                3,
-                                4,
-                                5,
-                            ],
-                            backgroundColor: [
-                                window.chartColors.red,
-                                window.chartColors.orange,
-                                window.chartColors.yellow,
-                                window.chartColors.green,
-                                window.chartColors.blue,
-                            ],
-                            label: 'Dataset 1'
-                        }],
-                        labels: [
-                            'Red',
-                            'Orange',
-                            'Yellow',
-                            'Green',
-                            'Blue'
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Chart.js Doughnut Chart'
-                        },
-                        animation: {
-                            animateScale: true,
-                            animateRotate: true
-                        }
-                    }
-                };
-
-                window.onload = function() {
-                    var ctx = document.getElementById('chart-area').getContext('2d');
-                    window.myDoughnut = new Chart(ctx, config);
-                };
-
-                var colorNames = Object.keys(window.chartColors);
-
-                    
-
-            </script>
-            <!--End Paste of Chart-->
+           
 
             <table class="table table-striped">
                 <col width="10%">
