@@ -161,7 +161,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
       };
       var ctx = $("#mycanvas1");
       var LineGraph = new Chart(ctx, {
-        type: 'doughnut',
+        type: 'horizontalBar',
         data: chartdata,
 	options: {
      		legend: {
