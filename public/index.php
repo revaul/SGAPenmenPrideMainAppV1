@@ -61,10 +61,8 @@ else{
             <h2>Welcome
                 <?php echo $name; ?>,</h2>
             <h3>This semester you have earned
-                <?php echo $totpoints; ?> point
-                <?php if ($totpoints!=1){echo "s";}?> and attended
-                <?php echo $totevents; ?> event
-                <?php if ($totevents!=1){echo "s";}?>.</h3>
+                <?php echo $totpoints; ?> point<?php if ($totpoints!=1){echo "s";}?> and attended
+                <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
            
 
             <table class="table table-striped">
