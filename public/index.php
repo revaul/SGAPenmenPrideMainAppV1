@@ -26,7 +26,7 @@ else{
 $idclean = $idnocommands;
 }
 echo $idclean;
-$sql = "SELECT SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."' ;";
+$sql = "SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."' ;";
 echo $sql;
 $result = $conn->query($sql);
 $totevents;
