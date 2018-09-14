@@ -115,6 +115,50 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
     }
   });
 });
+			$(document).ready(function(){
+  $.ajax({
+	  <?php 
+	  $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+ 
+$url = $protocol . $_SERVER['HTTP_HOST'];
+	  ?>
+    url : "<?php echo $url; ?>/public/chart2data.php?id=<?php echo $idclean; ?>",
+    type : "GET",
+    success : function(data){
+      console.log(data);
+      var PubSemester = [];
+      var totevents = [];
+      for(var i in data) {
+        PubSemester.push(data[i].PubSemester);
+        totevents.push(data[i].totpoints);
+      }
+      var chartdata = {
+        labels: PubSemester,
+        datasets: [
+          {
+            label: "totevents",
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: "rgba(0, 30, 96, 1)",
+            //borderColor: "rgba(59, 89, 152, 1)",
+		  borderColor: "rgba(255, 255, 255, 1)",
+            pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
+            pointHoverBorderColor: "rgba(59, 89, 152, 1)",
+            data: totevents
+          }
+          
+        ]
+      };
+      var ctx = $("#mycanvas2");
+      var LineGraph = new Chart(ctx, {
+        type: 'doughnut',
+        data: chartdata
+      });
+    },
+    error : function(data) {
+    }
+  });
+});
 		</script>
             <table class="table table-striped">
                 <col width="10%">
