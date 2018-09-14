@@ -59,7 +59,7 @@ else{
         </div>
         <div class="col-sm-7">
 		<div class="row">
-		<div class="col-sm-12 graphbox">
+		<div class="col-sm-12">
             <h2>Welcome
                 <?php echo $name; ?>,</h2>
             <h3>This semester you have earned
