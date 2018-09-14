@@ -59,7 +59,7 @@ else{
         </div>
         <div class="col-sm-7">
 		<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-12 graphbox">
             <h2>Welcome
                 <?php echo $name; ?>,</h2>
             <h3>This semester you have earned
@@ -69,12 +69,12 @@ else{
 		</div>
     
 	<div class="row">
-	    <div class="col-sm-6">
+	    <div class="col-sm-6 graphbox">
 		    <h4>Number of Points Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas1"></canvas>
 		    </div></div>
-		<div class="col-sm-6">
+		<div class="col-sm-6 graphbox">
 		<h4>Number of Events Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas2"></canvas>
@@ -82,7 +82,7 @@ else{
 			 </div>
 		</div>
 	    </div>
-		<div class="col-sm-3">
+		<div class="col-sm-3 graphbox">
 			<table class="table table-striped">
                 <col width="10%">
                 <col width="35%">
