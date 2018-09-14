@@ -119,7 +119,12 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
       var ctx = $("#mycanvas1");
       var LineGraph = new Chart(ctx, {
         type: 'doughnut',
-        data: chartdata
+        data: chartdata,
+	options: {
+     		legend: {
+            		display: false
+         		}
+	      }
       });
     },
     error : function(data) {
@@ -163,7 +168,12 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
       var ctx = $("#mycanvas2");
       var LineGraph = new Chart(ctx, {
         type: 'doughnut',
-        data: chartdata
+        data: chartdata,
+	options: {
+     		legend: {
+            		display: false
+         		}
+	      }
       });
     },
     error : function(data) {
