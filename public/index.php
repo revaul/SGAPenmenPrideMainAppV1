@@ -24,13 +24,31 @@ $idclean="9bce422057d28895fa132da3d68f065b";
 else{
 $idclean = $idnocommands;
 }
-?>
+
+$sql = "SELECT SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."' ;";
+$result = $conn->query($sql);
+$totevents;
+$totpoints;
+$name;
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       $totevents = $row["TotalEvents"];
+	    $totpoints = $row["TotalPoints"];
+	    $name = $row["PubFirstName"];
+	    
+	     }
+}
+else {
+ 
+}
+	   ?>
 <div id="about" class="container-fluid">
       <div class="row">
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-        <h2>Welcome First Name, This semester you have earned Points and attended Events.</h2>
+        <h2>Welcome <?php echo $name; ?>, This semester you have earned <?php echo $totpoints; ?> points and attended <?php echo $totevents; ?> events.</h2>
 <table class="table table-striped">
       <col width="10%">
   <col width="35%">
