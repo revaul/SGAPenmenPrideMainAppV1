@@ -1,4 +1,4 @@
-<?php include "template/top.php"; 
+<?php include "/template/publictop.php"; 
 require 'publicmysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -46,6 +46,11 @@ if ($result->num_rows > 0) {
 }
 else {
  
+}
+if ($totpoints==0){
+$totevents=0;
+}
+else{
 }
 	   ?>
 <div id="about" class="container-fluid">
@@ -101,4 +106,4 @@ $conn->close();
     </div>
   </div>
 </div>
-<?php include "template/bottom.php" ?>
+<?php include "/template/bottom.php" ?>
