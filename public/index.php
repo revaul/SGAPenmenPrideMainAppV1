@@ -58,7 +58,8 @@ else{
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-        <h2>Welcome <?php echo $name; ?>, This semester you have earned <?php echo $totpoints; ?> points and attended <?php echo $totevents; ?> events.</h2>
+	    <h2>Welcome <?php echo $name; ?>,</h2>
+	    <h3>This semester you have earned <?php echo $totpoints; ?> points and attended <?php echo $totevents; ?> events.</h3>
 <table class="table table-striped">
       <col width="10%">
   <col width="35%">
