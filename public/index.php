@@ -91,7 +91,7 @@ else{
                 </tr>
 
                 <?php
-$sql = "SELECT PubSemester, totpoints, totevents FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='".$idclean."' order by PubEventDate desc;";
+$sql = "SELECT PubSemester, totpoints, totevents FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='".$idclean."';";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
