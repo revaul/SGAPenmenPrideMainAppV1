@@ -120,7 +120,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
       var ctx = $("#mycanvas");
 
       var LineGraph = new Chart(ctx, {
-        type: 'pie',
+        type: 'doughnut',
         data: chartdata
       });
     },
