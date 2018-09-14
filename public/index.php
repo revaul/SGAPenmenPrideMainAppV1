@@ -1,4 +1,4 @@
-<?php include "/template/publictop.php"; 
+<?php include "./template/publictop.php"; 
 require 'publicmysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -25,9 +25,8 @@ $idclean="9bce422057d28895fa132da3d68f065b";
 else{
 $idclean = $idnocommands;
 }
-echo $idclean;
 $sql = "SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."' ;";
-echo $sql;
+
 $result = $conn->query($sql);
 $totevents;
 $totpoints;
@@ -36,11 +35,11 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        $totevents = $row["TotalEvents"];
-	    echo $totevents;
+	    
 	    $totpoints = $row["TotalPoints"];
-	    echo $totpoints;
+	   
 	    $name = $row["PubFirstName"];
-	    echo $name;
+	   
 	    
 	     }
 }
@@ -106,4 +105,4 @@ $conn->close();
     </div>
   </div>
 </div>
-<?php include "/template/bottom.php" ?>
+<?php include "./template/bottom.php" ?>
