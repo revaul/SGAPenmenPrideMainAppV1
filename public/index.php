@@ -71,12 +71,20 @@ else{
         <div class="col-sm-1">
         </div>
         
-	    <div class="col-sm-4">
+	    <div class="col-sm-3">
 		    <h4>Number of Points Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas1"></canvas>
 		    </div></div>
-		<div class="col-sm-2">
+		<div class="col-sm-3">
+		<h4>Number of Events Per Semester</h4>
+		    <div class="chart-container">
+      <canvas id="mycanvas2"></canvas>
+    </div>
+			 </div>
+		<div class="col-sm-1">
+		</div>
+		<div class="col-sm-3">
 			<table class="table table-striped">
                 <col width="10%">
                 <col width="35%">
@@ -119,11 +127,7 @@ if ($result->num_rows > 0) {
 				?>
 			</table>
 		</div>
-		 <div class="col-sm-4">
-		<h4>Number of Events Per Semester</h4>
-		    <div class="chart-container">
-      <canvas id="mycanvas2"></canvas>
-    </div>
+		 
 		<script>
 			$(document).ready(function(){
   $.ajax({
@@ -224,7 +228,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
   });
 });
 		</script>
-		</div>
+		
         <div class="col-sm-1">
         </div>
     </div>
