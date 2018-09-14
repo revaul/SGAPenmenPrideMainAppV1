@@ -86,7 +86,7 @@ else{
       }
 
       var chartdata = {
-        labels: userid,
+        labels: PubSemester,
         datasets: [
           {
             label: "totpoints",
