@@ -70,7 +70,12 @@ else{
 <script>
 	$(document).ready(function(){
   $.ajax({
-    url : "http://167.99.41.93/public/chart1data.php?id=<?php echo $idclean ?>",
+	  <?php 
+	  $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+ 
+$url = $protocol . $_SERVER['HTTP_HOST'];
+	  ?>
+    url : "<?php echo $url; ?> /public/chart1data.php?id=<?php echo $idclean; ?>",
     type : "GET",
     success : function(data){
       console.log(data);
