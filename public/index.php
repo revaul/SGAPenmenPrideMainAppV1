@@ -66,32 +66,29 @@ else{
       <col width="10%">
   <col width="20%">
 <tr>
-<th>Event ID
+<th>Event Date
 </th>
 <th>Event Name
 </th>
-<th>Event Date
+<th>Event Host
+</th>
+<th>Semester
 </th>
 <th>Points
-</th>
-<th>Double Points
-</th>
-<th>Host Name
 </th>
 </tr>
 
 <?php
-$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoublePoints, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID order by eventnames.EventDate DESC";
+$sql = "SELECT * FROM ppv0008004.pubscanner where Pubrandomkeycol='".$idclean."' ;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td> <?php echo $row["EventID"];
-	   ?></td><td><?php echo $row["EventName"];
-	   ?></td><td><?php echo $row["EventDate"];
-	   ?></td><td><?php echo $row["PointValue"];
-	   ?></td><td><?php echo $row["DoublePoints"];
-	   ?></td><td><?php echo $row["HostName"];
+       ?><tr><td> <?php echo $row["PubEventDate"];
+	   ?></td><td><?php echo $row["PubEventName"];
+	   ?></td><td><?php echo "Unknown";
+	   ?></td><td><?php echo $row["PubSemester"];
+	   ?></td><td><?php echo $row["PubPointValue"];
 	   ?></td></tr><?php
     }
 } else {
