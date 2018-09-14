@@ -80,7 +80,7 @@ else{
       var totevents = [];
 
       for(var i in data) {
-        PubSemester.push("PubSemester " + data[i].PubSemester);
+        PubSemester.push(data[i].PubSemester);
         totpoints.push(data[i].totpoints);
         totevents.push(data[i].totevents);
       }
