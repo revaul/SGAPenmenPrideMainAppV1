@@ -6,7 +6,7 @@ $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$idnumnotsafe = $_GET["name"];
+$idnumnotsafe = $_GET["id"];
 $idnumlenchecked;
 if (strlen($idnumnotsafe)!=32){
 $idnumlenchecked="9bce422057d28895fa132da3d68f065b";
