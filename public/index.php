@@ -57,13 +57,14 @@ else{
     <div class="row">
         <div class="col-sm-1">
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-5">
             <h2>Welcome
                 <?php echo $name; ?>,</h2>
             <h3>This semester you have earned
                 <?php echo $totpoints; ?> point<?php if ($totpoints!=1){echo "s";}?> and attended
                 <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
-          
+	    </div>
+	    <div class="col-sm-5">
 		<div class="chart-container">
       <canvas id="mycanvas1"></canvas>
     </div>
@@ -160,6 +161,14 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
   });
 });
 		</script>
+		</div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+	<div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10">
             <table class="table table-striped">
                 <col width="10%">
                 <col width="35%">
