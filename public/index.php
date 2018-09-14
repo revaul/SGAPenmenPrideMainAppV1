@@ -130,7 +130,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
       var totevents = [];
       for(var i in data) {
         PubSemester.push(data[i].PubSemester);
-        totevents.push(data[i].totpoints);
+        totevents.push(data[i].totevents);
       }
       var chartdata = {
         labels: PubSemester,
