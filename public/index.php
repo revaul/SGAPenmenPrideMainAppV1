@@ -1,4 +1,5 @@
-<?php include "./template/publictop.php"; 
+<?php 
+include './template/publictop.php'; 
 require 'publicmysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -86,7 +87,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
        ?><tr><td> <?php echo $row["PubEventDate"];
 	   ?></td><td><?php echo $row["PubEventName"];
-	   ?></td><td><?php echo "Unknown";
+	   ?></td><td><?php echo $row["PubEventHost"];
 	   ?></td><td><?php echo $row["PubSemester"];
 	   ?></td><td><?php echo $row["PubPointValue"];
 	   ?></td></tr><?php
@@ -102,4 +103,4 @@ $conn->close();
     </div>
   </div>
 </div>
-<?php include "./template/bottom.php" ?>
+<?php include './template/bottom.php' ?>
