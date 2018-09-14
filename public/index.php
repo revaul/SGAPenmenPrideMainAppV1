@@ -97,7 +97,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
             lineTension: 0.1,
             backgroundColor: "rgba(0, 30, 96, 1)",
             //borderColor: "rgba(59, 89, 152, 1)",
-		  borderColor: "rgba(0, 0, 0, 1)",
+		  borderColor: "rgba(255, 255, 255, 1)",
             pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
             pointHoverBorderColor: "rgba(59, 89, 152, 1)",
             data: totpoints
