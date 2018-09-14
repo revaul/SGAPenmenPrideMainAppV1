@@ -70,7 +70,7 @@ else{
 <script>
 	$(document).ready(function(){
   $.ajax({
-    url : "http://localhost/chartjs/followersdata.php",
+    url : "/chart1data.php",
     type : "GET",
     success : function(data){
       console.log(data);
