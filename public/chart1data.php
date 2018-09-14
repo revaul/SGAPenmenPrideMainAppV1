@@ -33,7 +33,7 @@ else{
 $idclean = $idnocommands;
 }
 //query to get data from the table
-$query = sprintf("SELECT PubSemester, totpoints, totevents FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='%s';", $idclean);
+$query = sprintf("SELECT PubSemester, totpoints FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='%s';", $idclean);
 
 //execute query
 $result = $mysqli->query($query);
