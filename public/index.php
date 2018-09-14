@@ -18,14 +18,16 @@ $idnumlower = strtolower($idnumlenchecked);
 $vowels = array("select", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ";" ,"and", "or", ",", "echo", "$");
 $idnocommands = str_replace($vowels,"",$idnumlower);
 $idclean;
+
 if (strlen($idnocommands)!=32){
 $idclean="9bce422057d28895fa132da3d68f065b";
 }
 else{
 $idclean = $idnocommands;
 }
-
+echo $idclean;
 $sql = "SELECT SELECT * FROM ppv0008004.pubtotalpointsandeventcurrentsem where Pubrandomkeycol='".$idclean."' ;";
+echo $sql;
 $result = $conn->query($sql);
 $totevents;
 $totpoints;
@@ -34,8 +36,11 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        $totevents = $row["TotalEvents"];
+	    echo $totevents;
 	    $totpoints = $row["TotalPoints"];
+	    echo $totpoints;
 	    $name = $row["PubFirstName"];
+	    echo $name;
 	    
 	     }
 }
