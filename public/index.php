@@ -65,10 +65,12 @@ else{
                 <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
 	    </div>
 	    <div class="col-sm-5">
-		<div class="chart-container">
+		    <h4>Number of Points Per Semester</h4>
+		    <div class="chart-container">
       <canvas id="mycanvas1"></canvas>
     </div>
-		<div class="chart-container">
+		<h4>Number of Events Per Semester</h4>
+		    <div class="chart-container">
       <canvas id="mycanvas2"></canvas>
     </div>
 		<script>
