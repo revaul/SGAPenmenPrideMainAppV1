@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT * FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='42e2725c64bd6fd33842d6dabfc49d8f'");
+$query = sprintf("SELECT PubSemester, totpoints, totevents FROM ppv0008004.pointspersemesterordered where Pubrandomkeycol='42e2725c64bd6fd33842d6dabfc49d8f'");
 
 //execute query
 $result = $mysqli->query($query);
