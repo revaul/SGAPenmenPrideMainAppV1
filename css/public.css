@@ -6,3 +6,9 @@ h4 {
       margin-bottom: 0px !important;
       text-align: center;
   }  
+.graphbox{
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;     
+}
+}
