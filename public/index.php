@@ -59,7 +59,7 @@ else{
     </div>
     <div class="col-sm-10">
 	    <h2>Welcome <?php echo $name; ?>,</h2>
-	    <h3>This semester you have earned <?php echo $totpoints; ?> points and attended <?php echo $totevents; ?> events.</h3>
+	    <h3>This semester you have earned <?php echo $totpoints; ?> point<?php if ($totpoints!=1){echo "s";}?> and attended <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
 <table class="table table-striped">
       <col width="10%">
   <col width="35%">
