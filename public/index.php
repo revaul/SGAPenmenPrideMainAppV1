@@ -65,7 +65,7 @@ else{
                 <?php if ($totpoints!=1){echo "s";}?> and attended
                 <?php echo $totevents; ?> event
                 <?php if ($totevents!=1){echo "s";}?>.</h3>
-            //Start Paste of Chart
+           <!--Start Paste of Chart-->
             <div id="canvas-holder" style="width:40%">
                 <canvas id="chart-area"></canvas>
             </div>
@@ -125,7 +125,7 @@ else{
                     
 
             </script>
-            //End Paste of Chart
+            <!--End Paste of Chart-->
 
             <table class="table table-striped">
                 <col width="10%">
