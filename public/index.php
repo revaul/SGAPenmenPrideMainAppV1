@@ -75,7 +75,8 @@ else{
 		    <h4>Number of Points Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas1"></canvas>
-    </div>
+		    </div></div>
+		 <div class="col-sm-5">
 		<h4>Number of Events Per Semester</h4>
 		    <div class="chart-container">
       <canvas id="mycanvas2"></canvas>
