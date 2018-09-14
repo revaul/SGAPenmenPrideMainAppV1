@@ -70,7 +70,7 @@ else{
 <script>
 	$(document).ready(function(){
   $.ajax({
-    url : "http://167.99.41.93/public/chart1data.php",
+    url : "http://167.99.41.93/public/chart1data.php?id=<?php echo $idclean ?>",
     type : "GET",
     success : function(data){
       console.log(data);
