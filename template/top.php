@@ -53,7 +53,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPORTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li>
+          <li><a href="/events/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li>
 		  <li><a href="#">EVENT ATTENDANCE NUMBERS</a></li>
           <li><a href="/OSIExport.php">OSI DATA CONVERSION</a></li>
             <li><a href="/fulltermpoints.php">TERM POINTS</a></li>
