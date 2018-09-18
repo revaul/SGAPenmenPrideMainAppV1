@@ -45,8 +45,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
        ?><tr><td> <?php echo $row["email"];
 	   ?></td><td><?php echo $row["StudentID"];
-	   ?></td><td><?php echo $row["Student Last Name"];
-	   ?></td><td><?php echo $row["Student First Name"];
+	   ?></td><td><?php echo $row["StudentLastName"];
+	   ?></td><td><?php echo $row["StudentFirstName"];
 	   ?></td><td><?php echo $row["Senator"];
 	   ?></td><td><?php echo $row["Faculty"];
 	   ?></td><td><a href="<?php echo $row["link"];?>" target="_blank"><div class="linkbuttontopublic">Go to Portal</div></a></td></tr><?php
