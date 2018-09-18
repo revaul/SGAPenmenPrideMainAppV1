@@ -46,7 +46,7 @@
         <ul class="dropdown-menu">
           <li><a href="/events/newevent.php">NEW EVENT INFORMATION</a></li>
           <li><a href="/upload.php">EVENT UPLOAD</a></li>
-		  <li><a href="/fulleventlisting.php">EVENT LISTING</a></li>
+		  <li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li>
         </ul>
       </li>
 		<li class="dropdown">
