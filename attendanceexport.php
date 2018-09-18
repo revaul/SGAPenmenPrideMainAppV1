@@ -5,7 +5,7 @@
 	  <div class="col-sm-2">
           </div>
     <div class="col-sm-8">
-<h1>Penmen Pride Event Form</h1>
+<h2>Penmen Pride Event Form</h2>
 <div class="EventName">
 <form action="actioneventattendanceexport.php" method="post">
 <p><label>Event: </label>
