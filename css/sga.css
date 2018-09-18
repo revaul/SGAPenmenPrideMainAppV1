@@ -2,7 +2,17 @@ body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
-  }
+
+}
+.linkbuttontopublic {
+    background-color: #001E60;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
 
   h2 {
       font-size: 24px;
