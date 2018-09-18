@@ -1,10 +1,10 @@
 <?php require "login/loginheader.php"; ?>
-<!DOCTYPE html>
-<html>
-<head>
-</head
-
-<body>
+<?php include "template/top.php"; ?>
+<div id="about" class="container-fluid">
+  <div class="row">
+	  <div class="col-sm-2">
+          </div>
+    <div class="col-sm-8">
 <h1>Penmen Pride Event Form</h1>
 <div class="EventName">
 <form action="actioneventattendanceexport.php" method="post">
@@ -32,7 +32,9 @@ foreach ($results as $HostName){
 <p> <input type="submit" /> </p>
 </form>
 </div>
-</body>
-
-
-</html>
+	     
+</div>
+	  <div class="col-sm-2">
+          </div>
+</div>
+<?php include "template/bottom.php" ?>
