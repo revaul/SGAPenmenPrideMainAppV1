@@ -1,5 +1,5 @@
-<?php require "login/loginheader.php"; ?>
-<?php include "template/top.php"; ?>
+<?php require "../login/loginheader.php"; ?>
+<?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
   <div class="row">
 	  <div class="col-sm-2">
@@ -7,12 +7,12 @@
     <div class="col-sm-8">
 <h2>Penmen Pride Event Form</h2>
 <div class="EventName">
-<form action="actioneventattendanceexport.php" method="post">
+<form action="../actions/actioneventattendanceexport.php" method="post">
 <p><label>Event: </label>
 <select name="eventid">
 <option value="">Select Event</option>
 <?php 
-require 'mysqlkeys.php';
+require '../mysqlkeys.php';
 $con=mysqli_connect($host , $user , $password , $dbname );
 
 if (mysqli_connect_errno()){
@@ -37,4 +37,4 @@ foreach ($results as $HostName){
 	  <div class="col-sm-2">
           </div>
 </div>
-<?php include "template/bottom.php" ?>
+<?php include "../template/bottom.php" ?>
