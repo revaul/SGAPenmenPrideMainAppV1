@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["Student First Name"];
 	   ?></td><td><?php echo $row["Senator"];
 	   ?></td><td><?php echo $row["Faculty"];
-	   ?></td><td><a href="<?php echo $row["link"];?>" target="_blank"><div class="linkbuttontopublic">Portal</div></a></td></tr><?php
+	   ?></td><td><a href="<?php echo $row["link"];?>" target="_blank"><div class="linkbuttontopublic">Go to Portal</div></a></td></tr><?php
     }
 } else {
  
