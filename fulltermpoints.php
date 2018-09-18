@@ -5,7 +5,7 @@
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-        <h2>Penmen Pride Event Listing</h2>
+        <h2>Full Term Points</h2>
 <table class="table table-striped">
       <col width="10%">
   <col width="45%">
