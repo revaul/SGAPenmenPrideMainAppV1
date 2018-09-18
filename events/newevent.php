@@ -1,5 +1,5 @@
-<?php require "login/loginheader.php"; ?>
-<?php include "template/top.php"; ?>
+<?php require "../login/loginheader.php"; ?>
+<?php include "../template/top.php"; ?>
 
 <div id="about" class="container-fluid">
       <div class="row">
@@ -7,13 +7,13 @@
           </div>
     <div class="col-sm-8">
     <h2>Penmen Pride Event Form</h2>
-<form action="actionnewevent.php" method="post">
+<form action="../actions/actionnewevent.php" method="post">
 <p> <label> Event Name:   </label> <input type="text" name="name"/> </p>
 <p><label>Host:   </label>
 <select name="host">
 <option value="">Select Event Host</option>
 <?php 
-require 'mysqlkeys.php';
+require '../mysqlkeys.php';
 $con=mysqli_connect($host , $user , $password , $dbname );
 
 if (mysqli_connect_errno()){
@@ -215,4 +215,4 @@ foreach ($results as $years){
     </div>
   </div>
 </div>
-<?php include "template/bottom.php" ?>
+<?php include "../template/bottom.php" ?>
