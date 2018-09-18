@@ -1,8 +1,8 @@
-<?php require "login/loginheader.php"; ?>              
+<?php require "../login/loginheader.php"; ?>              
 			  <?php
 			   $eventid= $_POST["eventid"];
 			   ini_set('max_execution_time', 300);
-                    require 'mysqlkeys.php';
+                    require '../mysqlkeys.php';
 					// output headers so that the file is downloaded rather than displayed
 header('Content-type: text/csv; charset=utf-8');
 header('Content-Disposition: attachment; filename="EventAttendanceList.csv"');
