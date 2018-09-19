@@ -70,6 +70,7 @@
             <li><a href="/backendsystemapplications/year.php">UPDATE SEMESTERS/YEARS</a></li>
             <li><a href="/backendsystemapplications/dates.php">UPDATE DATES</a></li>
 			<li><a href="/backendsystemapplications/tallypoints.php">TALLY POINTS</a></li>
+		<li><a href="/backendsystemapplications/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
         </ul>
       </li>
           <li class="dropdown">
