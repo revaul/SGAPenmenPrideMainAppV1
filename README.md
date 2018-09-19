@@ -11,7 +11,6 @@ In order to use the system you must create a few files:
 ### /mysqlkeys.php
 ```php
 <?php
-
 $host="localhost";
 $user="insideops";
 $password="Create a Password";
