@@ -1,4 +1,11 @@
 # SNHU-SGA-Penmen-Pride-Database
+## SQL Scripts
+### Run the Following SQL Scripts
+
+### Change the SQL Conf File
+
+### Add the following users with the following permissions
+
 ## Files to add
 In order to use the system you must create a few files:
 ### /mysqlkeys.php
