@@ -56,8 +56,8 @@
           <li><a href="/events/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li>
 		  <li><a href="#">EVENT ATTENDANCE NUMBERS</a></li>
           <li><a href="/exports/OSIExport.php">OSI DATA CONVERSION</a></li>
-            <li><a href="/fulltermpoints.php">TERM POINTS</a></li>
-            <li><a href="/prizesheet.php">PRIZE SHEETS</a></li>
+            <li><a href="exports/fulltermpoints.php">TERM POINTS</a></li>
+            <li><a href="exports/prizesheet.php">PRIZE SHEETS</a></li>
 		  
         </ul>
       </li>
