@@ -79,7 +79,7 @@
         <ul class="dropdown-menu">
           <li><a href="/prizegiveaway.php">PRIZE GIVEAWAY</a></li>
 		  <li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li>
-		<li><a href="/publiclinks.php">PUBLIC LINKS</a></li>
+		<li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li>
         </ul>
       </li>
         <li><a href="/adminsystem/index.php">ADMIN</a></li>
