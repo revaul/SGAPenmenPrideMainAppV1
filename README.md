@@ -26,3 +26,12 @@ $mailpassword = "Create a Password";
 $hashforkeys = "Create a Random Hash";
 ?>
 ```
+### /public/publicmysqlkeys.php
+```php
+<?php
+$host="localhost";
+                    $user="publicops";
+                    $password="Create a Password";
+                    $dbname="ppv0008004";
+?>
+```
