@@ -30,8 +30,8 @@ $hashforkeys = "Create a Random Hash";
 ```php
 <?php
 $host="localhost";
-                    $user="publicops";
-                    $password="Create a Password";
-                    $dbname="ppv0008004";
+$user="publicops";
+$password="Create a Password";
+$dbname="ppv0008004";
 ?>
 ```
