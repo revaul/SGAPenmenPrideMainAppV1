@@ -55,6 +55,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="/exports/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li>
+		<li><a href="/exports/attendanceexportwithid.php">EVENT ATTENDANCE INFORMATION WITH STUDENT IDS</a></li>
 		  <li><a href="#">EVENT ATTENDANCE NUMBERS</a></li>
           <li><a href="/exports/OSIExport.php">OSI DATA CONVERSION</a></li>
             <li><a href="exports/fulltermpoints.php">TERM POINTS</a></li>
