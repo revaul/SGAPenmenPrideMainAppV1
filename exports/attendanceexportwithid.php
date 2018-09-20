@@ -7,7 +7,7 @@
     <div class="col-sm-8">
 <h2>Penmen Pride Event Form</h2>
 <div class="EventName">
-<form action="../actions/actioneventattendanceexport.php" method="post">
+<form action="../actions/actioneventattendanceexportwithid.php" method="post">
 <p><label>Event: </label>
 <select name="eventid">
 <option value="">Select Event</option>
