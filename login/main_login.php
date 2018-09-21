@@ -30,7 +30,7 @@ if (isset($_SESSION['username'])) {
     margin-left: auto;
     margin-right: auto;
     width: 40%;"> 
-	  <img src="/images/PenmenPrideLogo.png" alt="Penmen Pride Logo" style="width: 50%">
+	  <img src="/images/PenmenPrideLogo.png" alt="Penmen Pride Logo" style="width: 100%">
 	  </div>
 	  <div class="container">
 
