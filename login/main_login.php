@@ -26,9 +26,15 @@ if (isset($_SESSION['username'])) {
   </head>
 
   <body>
-    <div class="container">
+  <div style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;"> 
+	  <img src="/images/PenmenPrideLogo.png" alt="Penmen Pride Logo" style="width: 50%">
+	  </div>
+	  <div class="container">
 
-<img src="/images/PenmenPrideLogo.png" alt="Penmen Pride Logo">
+
       <form class="form-signin" name="form1" method="post" action="checklogin.php">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input name="myusername" id="myusername" type="text" class="form-control" placeholder="Username" autofocus>
