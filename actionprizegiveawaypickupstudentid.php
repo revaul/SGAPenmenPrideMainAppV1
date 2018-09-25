@@ -22,12 +22,12 @@ ini_set('max_execution_time', 300);
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} ?><img src="http://webapps.snhu.edu/SNHUimages/<?php echo $id; ?>.jpg" style="width:100%">
-        
-        
+} ?><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $id; ?>.jpg" style="width:100%">
+
+
 </div>
         <div class="col-sm-6" style="background-color:<?php  $sql = "select count(*) as oldyear from scanner where Scanner= '".$id."' and EventID=618 or EventID=619 and Scanner = '".$id."';";
-		
+
 					$resultonenew;
                     $resultone = $conn->query($sql);
 					if ($resultone->num_rows > 0) {
@@ -44,9 +44,9 @@ echo "red";
              if($beforecount=0){
              echo "white";
              }?>">
-            <h3>This person has picked up their prize: <?php 
+            <h3>This person has picked up their prize: <?php
         $sql = "select count(*) as oldyear from scanner where Scanner= '".$id."' and EventID=618 or EventID=619 and Scanner = '".$id."';";
-		
+
 					$resultonenew;
                     $resultone = $conn->query($sql);
 					if ($resultone->num_rows > 0) {
@@ -69,10 +69,10 @@ $beforecount = $resultonenew;
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
-			
+
             ?> times! </h3>
             <h3>This person has <?php $sql = "select tier as oldyear from pointpickupmerged where StudentID='".$id."';";
-		
+
 					$resultonenew;
                     $resultone = $conn->query($sql);
 					if ($resultone->num_rows > 0) {
@@ -83,12 +83,12 @@ $beforecount = $resultonenew;
 } else {
     echo "0 results";
 }
-$points = $resultonenew; 
+$points = $resultonenew;
 echo $points;
                 ?>.
             </h3>
                 <h3>This person has <?php $sql = "select points as oldyear from pointpickupmerged where StudentID='".$id."';";
-		
+
 					$resultonenew;
                     $resultone = $conn->query($sql);
 					if ($resultone->num_rows > 0) {
