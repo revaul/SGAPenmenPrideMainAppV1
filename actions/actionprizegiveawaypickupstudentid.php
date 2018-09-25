@@ -1,5 +1,5 @@
-<?php require "login/loginheader.php"; ?>
-<?php include "template/top.php"; ?>
+<?php require "../login/loginheader.php"; ?>
+<?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
     <div class="row">
         <div class="col-sm-1">
@@ -18,7 +18,7 @@
 $cardscan= $_POST["cardscan"];
 $id = substr($cardscan, 3, 7);
 ini_set('max_execution_time', 300);
-                    require 'mysqlkeys.php';
+                    require '../mysqlkeys.php';
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -106,10 +106,10 @@ $tier= $resultonenew;
         echo $tier;
                 ?> points.
             </h3>
-            <form method="get" action="/prizegiveaway.php"><button type="submit">Continue</button></form>
+            <form method="get" action="/misc/prizegiveaway.php"><button type="submit">Continue</button></form>
         </div>
         <div class="col-sm-1">
         </div>
     </div>
 </div>
-<?php include "template/bottom.php" ?>
+<?php include "../template/bottom.php" ?>

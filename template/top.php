@@ -31,13 +31,13 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#myPage"><img src="/images/PenmenPrideLogo.png" style="width:50px"></a>
 
-    
+
 	</div>
-	
+
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
 	  <li><a href="/index.php">DASHBOARD</a></li>
@@ -60,7 +60,7 @@
           <li><a href="/exports/OSIExport.php">OSI DATA CONVERSION</a></li>
             <li><a href="exports/fulltermpoints.php">TERM POINTS</a></li>
             <li><a href="exports/prizesheet.php">PRIZE SHEETS</a></li>
-		  
+
         </ul>
       </li>
         <li class="dropdown">
@@ -79,13 +79,13 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MISC
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/prizegiveaway.php">PRIZE GIVEAWAY</a></li>
+          <li><a href="/misc/prizegiveaway.php">PRIZE GIVEAWAY</a></li>
 		  <li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li>
 		<li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li>
         </ul>
       </li>
         <li><a href="/adminsystem/index.php">ADMIN</a></li>
-		
+
 		<li><a href="/login/logout.php">LOGOUT</a></li>
       </ul>
     </div>
