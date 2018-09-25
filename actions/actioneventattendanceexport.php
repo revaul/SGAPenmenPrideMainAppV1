@@ -1,6 +1,6 @@
 <?php require "../login/loginheader.php"; ?>
 			  <?php
-				// GOAL: I want to change the file name to include csv and be shorter
+				// IDEA: I want to change the file name to include csv and be shorter
 			   $eventid= $_POST["eventid"];
 			   ini_set('max_execution_time', 300);
                     require '../mysqlkeys.php';
