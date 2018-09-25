@@ -1,20 +1,20 @@
 <?php require "login/loginheader.php"; ?>
 <?php include "template/top.php"; ?>
 <div id="about" class="container-fluid">
-      <div class="row">
-              <div class="col-sm-1">
-    </div>
-    <div class="col-sm-10">
-        <h2>Give Away Status</h2>
-        </div>
-    <div class="col-sm-1">
-    </div>
-  </div>
     <div class="row">
-              <div class="col-sm-1">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10">
+            <h2>Give Away Status</h2>
+        </div>
+        <div class="col-sm-1">
+        </div>
     </div>
-    <div class="col-sm-2">
-<?php
+    <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-2">
+            <?php
 $cardscan= $_POST["cardscan"];
 $id = substr($cardscan, 3, 7);
 ini_set('max_execution_time', 300);
@@ -25,26 +25,27 @@ ini_set('max_execution_time', 300);
 } ?><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $id; ?>.jpg" style="width:100%">
 
 
-</div>
-        <div class="col-sm-6" style="background-color:<?php  $sql = "select count(*) as oldyear from scanner where Scanner= '".$id."' and EventID=618 or EventID=619 and Scanner = '".$id."';";
+        </div>
+        <div class="col-sm-6" style="background-color:<?php  $sql = " select count(*) as oldyear from scanner where Scanner='".$id."' and EventID=618 or EventID=619 and Scanner='".$id."' ; ";
 
 					$resultonenew;
                     $resultone = $conn->query($sql);
 					if ($resultone->num_rows > 0) {
     // output data of each row
     while($row = $resultone->fetch_assoc()) {
-		$resultonenew = $row["oldyear"];
+		$resultonenew = $row["oldyear "];
     }
 } else {
-    echo "0 results";
+    echo "0 results ";
 }
 $beforecount = $resultonenew; if($beforecount>0){
-echo "red";
+echo "red ";
 }
              if($beforecount=0){
-             echo "white";
+             echo "white ";
              }?>">
-            <h3>This person has picked up their prize: <?php
+            <h3>This person has picked up their prize:
+                <?php
         $sql = "select count(*) as oldyear from scanner where Scanner= '".$id."' and EventID=618 or EventID=619 and Scanner = '".$id."';";
 
 					$resultonenew;
@@ -71,7 +72,8 @@ $beforecount = $resultonenew;
             }
 
             ?> times! </h3>
-            <h3>This person has <?php $sql = "select tier as oldyear from pointpickupmerged where StudentID='".$id."';";
+            <h3>This person has
+                <?php $sql = "select tier as oldyear from pointpickupmerged where StudentID='".$id."';";
 
 					$resultonenew;
                     $resultone = $conn->query($sql);
@@ -87,7 +89,8 @@ $points = $resultonenew;
 echo $points;
                 ?>.
             </h3>
-                <h3>This person has <?php $sql = "select points as oldyear from pointpickupmerged where StudentID='".$id."';";
+            <h3>This person has
+                <?php $sql = "select points as oldyear from pointpickupmerged where StudentID='".$id."';";
 
 					$resultonenew;
                     $resultone = $conn->query($sql);
@@ -104,9 +107,9 @@ $tier= $resultonenew;
                 ?> points.
             </h3>
             <form method="get" action="/prizegiveaway.php"><button type="submit">Continue</button></form>
+        </div>
+        <div class="col-sm-1">
+        </div>
     </div>
-    <div class="col-sm-1">
-    </div>
-  </div>
 </div>
 <?php include "template/bottom.php" ?>
