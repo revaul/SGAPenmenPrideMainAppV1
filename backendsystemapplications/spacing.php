@@ -2,7 +2,7 @@
 <?php
 
 	ini_set('max_execution_time', 300);
-	require 'mysqlkeys.php';
+	require '../mysqlkeys.php';
 	$conn = new mysqli($host, $user, $password, $dbname);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
@@ -19,7 +19,7 @@
         echo "year: " . $row["oldyear"]. "<br>";
 		$resultonenew = $row["oldyear"];
     }
-} 
+}
 echo $resultone->num_rows;
 if($resultone->num_rows==0){
 	$abortmission=1;
@@ -27,9 +27,9 @@ if($resultone->num_rows==0){
 }
 echo $resultonenew;
 $minidnum = $resultonenew;
-	
+
 	if($abortmission==0){
-		
+
 		$sql = "SELECT Six as oldyear FROM ppv0008003.updatescannerbreaks where ScanID = ".$minidnum.";";
 					echo $sql;
 					$resultonenew;

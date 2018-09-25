@@ -6,14 +6,14 @@
     </div>
     <div class="col-sm-10">
         <h2>Dates Built</h2>
-<?php 
-        require 'mysqlkeys.php';
+<?php
+        require '../mysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $insertdaystmt = "call builddates();";
             if ($conn->query($insertdaystmt) === TRUE) {
             } else {
