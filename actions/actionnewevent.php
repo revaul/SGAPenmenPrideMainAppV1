@@ -6,6 +6,7 @@
     </div>
     <div class="col-sm-10">
 <?php
+// TODO: Post Field Verification
 $eventname= $_POST["name"];
 $eventhost= $_POST["host"];
 $eventpoints= $_POST["pointvalue"];
@@ -19,13 +20,13 @@ ini_set('max_execution_time', 300);
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $insertdaystmt = "INSERT INTO `ppv0008003`.`eventnames` (`EventName`, `EventDate`, `PointValue`, `DoublePoints`, `HostID`) VALUES ('".$eventname."', '".$date."', ".$eventpoints.", ".$eventdoublepoints.", '".$eventhost."');";
             if ($conn->query($insertdaystmt) === TRUE) {
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
-			
+
 ?>
 <h2>Success Event Added!</h2></div>
     <div class="col-sm-1">

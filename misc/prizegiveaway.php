@@ -8,6 +8,7 @@
     <div class="col-sm-8">
         <center><h2>Scan Student ID</h2>
             <br>
+            <!-- TODO: Need to Re-Evaluate the Pickup System. -->
 <form action="../misc/actionprizegiveawaypickupstudentid.php" method="post">
    <input type="text" name="cardscan" autofocus><br>
     <br>

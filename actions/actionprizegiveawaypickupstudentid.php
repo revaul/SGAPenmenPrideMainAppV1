@@ -15,6 +15,7 @@
         </div>
         <div class="col-sm-2">
             <?php
+            // TODO: Post Field Verification
 $cardscan= $_POST["cardscan"];
 $id = substr($cardscan, 3, 7);
 ini_set('max_execution_time', 300);
