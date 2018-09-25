@@ -1,5 +1,5 @@
-<?php require "login/loginheader.php"; ?>
-<?php include "template/top.php"; ?>
+<?php require "../login/loginheader.php"; ?>
+<?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
           <div class="col-sm-2">
@@ -15,16 +15,16 @@ $fileurl="TEST";
       $file_tmp =$_FILES['image']['tmp_name'];
       $file_type=$_FILES['image']['type'];
 $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-      
+
       $expensions= array("txt");
-      
+
       if(in_array($file_ext,$expensions)=== false){
          $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       }
       if($file_size > 2097152){
          $errors[]='File size must be excately 2 MB';
       }
-      
+
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"uploads/".$file_name);
          echo "Success";
@@ -35,17 +35,17 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
 	  $myopenfile;
    }
 	    //Upload End
-   
+
    if($fileurl!="TEST"){
 	   $eventid= $_POST["eventid"];
    echo $fileurl;
 $myfile = fopen($fileurl, "r") or die("Unable to open file!");
 ini_set('max_execution_time', 300);
-                    require 'mysqlkeys.php';
+                    require '../mysqlkeys.php';
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '0000001');";
 	  echo $insertdaystmt;
 	  echo "<br>";
@@ -95,8 +95,8 @@ else
 	  <p><label>Event: </label>
 <select name="eventid">
 <option value="">Select Event</option>
-<?php 
-require 'mysqlkeys.php';
+<?php
+require '../mysqlkeys.php';
 $con=mysqli_connect($host , $user , $password , $dbname );
 if (mysqli_connect_errno()){
 	echo "Failed to connect:".mysqli_connect_errno();
@@ -119,4 +119,4 @@ foreach ($results as $HostName){
           </div>
             </div>
 </div>
-      <?php include "template/bottom.php" ?>
+      <?php include "../template/bottom.php" ?>
