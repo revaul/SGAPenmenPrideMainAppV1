@@ -67,12 +67,12 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">TRIGGER
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/backendsystemapplications/duplicates.php">DUPLICATE ELIMINATION</a></li>
-            <li><a href="/backendsystemapplications/studentidtolisting.php">SCANNERLINK STUDENT LISTING</a></li>
-            <li><a href="/backendsystemapplications/year.php">UPDATE SEMESTERS/YEARS</a></li>
-            <li><a href="/backendsystemapplications/dates.php">UPDATE DATES</a></li>
-			<li><a href="/backendsystemapplications/tallypoints.php">TALLY POINTS</a></li>
-		<li><a href="/backendsystemapplications/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
+            <li><a href="/trigger/duplicates.php">DUPLICATE ELIMINATION</a></li>
+            <li><a href="/trigger/studentidtolisting.php">SCANNERLINK STUDENT LISTING</a></li>
+            <li><a href="/trigger/year.php">UPDATE SEMESTERS/YEARS</a></li>
+            <li><a href="/trigger/dates.php">UPDATE DATES</a></li>
+			      <li><a href="/trigger/tallypoints.php">TALLY POINTS</a></li>
+		        <li><a href="/trigger/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
         </ul>
       </li>
           <li class="dropdown">
