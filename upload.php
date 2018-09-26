@@ -1,5 +1,5 @@
-<?php require "../login/loginheader.php"; ?>
-<?php include "../template/top.php"; ?>
+<?php require "/login/loginheader.php"; ?>
+<?php include "/template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
           <div class="col-sm-2">
@@ -41,7 +41,7 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
    echo $fileurl;
 $myfile = fopen($fileurl, "r") or die("Unable to open file!");
 ini_set('max_execution_time', 300);
-                    require '../mysqlkeys.php';
+                    require '/mysqlkeys.php';
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -96,7 +96,7 @@ else
 <select name="eventid">
 <option value="">Select Event</option>
 <?php
-require '../mysqlkeys.php';
+require '/mysqlkeys.php';
 $con=mysqli_connect($host , $user , $password , $dbname );
 if (mysqli_connect_errno()){
 	echo "Failed to connect:".mysqli_connect_errno();
@@ -119,4 +119,4 @@ foreach ($results as $HostName){
           </div>
             </div>
 </div>
-      <?php include "../template/bottom.php" ?>
+      <?php include "/template/bottom.php" ?>
