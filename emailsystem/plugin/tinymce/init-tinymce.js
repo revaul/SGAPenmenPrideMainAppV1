@@ -116,27 +116,27 @@ tinymce.init({
       menu: [{
         text: 'First Name',
         onclick: function() {
-          editor.insertContent('<<First Name>>');
+          editor.insertContent('&lt;&lt;First Name&gt;&gt;');
         }
       }, {
         text: 'Last Name',
         onclick: function() {
-          editor.insertContent('<<Last Name>>');
+          editor.insertContent('&lt;&lt;Last Name&gt;&gt;');
         }
       }, {
         text: 'Email Address',
         onclick: function() {
-          editor.insertContent('<<Email Address>>');
+          editor.insertContent('&lt;&lt;Email Address&gt;&gt;');
         }
       }, {
         text: 'Points',
         onclick: function() {
-          editor.insertContent('<<Points>>');
+          editor.insertContent('&lt;&lt;Points&gt;&gt;');
         }
       }, {
         text: 'Tier',
         onclick: function() {
-          editor.insertContent('<<Tier>>');
+          editor.insertContent('&lt;&lt;Tier&gt;&gt;');
         }
       }]
     });
