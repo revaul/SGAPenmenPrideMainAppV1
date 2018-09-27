@@ -12,7 +12,7 @@
     <option value="0">All participants this semester (Recommended)</option>
     <option value="1">All known participants ever (Not Recommended)</option>
     </select></p>
-    <textarea class="tinymce"><img src="https://static.wixstatic.com/media/656490_ce6f44b9c3a44569af13f1cfaf31f5cf~mv2_d_2000_2000_s_2.png" alt="SNHU SGA Logo" style="height:220px;">
+    <textarea class="tinymce" name="message"><img src="https://static.wixstatic.com/media/656490_ce6f44b9c3a44569af13f1cfaf31f5cf~mv2_d_2000_2000_s_2.png" alt="SNHU SGA Logo" style="height:220px;">
     <img src="https://static.wixstatic.com/media/656490_c26adc909bd0401f8ca0132172b02b59~mv2.png" alt="SNHU SGA Penmen Pride Logo" style="height:220px;">
     <p style="color: #152C59; font-family: Arial, Helvetica, sans-serif;"><b>Dear [[First Name]],</b></p>
     <p style="color: #F3B329; font-family: Arial, Helvetica, sans-serif;"><b>So far, this semester YOU HAVE EARNED [[Points]] PENMEN PRIDE POINTS!</b></p>
