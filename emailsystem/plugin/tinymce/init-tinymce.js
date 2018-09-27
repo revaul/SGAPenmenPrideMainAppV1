@@ -21,7 +21,7 @@ tinymce.init({
   ],
 
   /* toolbar */
-  toolbar: "mybutton insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor",
+  toolbar: "mybutton | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor",
 
   /* style */
   style_formats: [{
@@ -111,21 +111,33 @@ tinymce.init({
   setup: function(editor) {
     editor.addButton('mybutton', {
       type: 'menubutton',
-      text: 'My Button',
+      text: 'Custom Mail Merge Fields',
       icon: false,
       menu: [{
-        text: 'Menu item 1',
+        text: 'First Name',
         onclick: function() {
-          editor.insertContent('&nbsp;<strong>Menu item 1 text inserted here!</strong>&nbsp;');
+          editor.insertContent('<<First Name>>');
         }
       }, {
-        text: 'Menu item 2',
-        menu: [{
-          text: 'Submenu item 1',
-          onclick: function() {
-            editor.insertContent('&nbsp;<em>Submenu item 1 text inserted here!</em>&nbsp;');
-          }
-        }]
+        text: 'Last Name',
+        onclick: function() {
+          editor.insertContent('<<Last Name>>');
+        }
+      }, {
+        text: 'Email Address',
+        onclick: function() {
+          editor.insertContent('<<Email Address>>');
+        }
+      }, {
+        text: 'Points',
+        onclick: function() {
+          editor.insertContent('<<Points>>');
+        }
+      }, {
+        text: 'Tier',
+        onclick: function() {
+          editor.insertContent('<<Tier>>');
+        }
       }]
     });
   }
