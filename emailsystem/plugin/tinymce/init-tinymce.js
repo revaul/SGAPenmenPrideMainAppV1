@@ -46,5 +46,26 @@ tinymce.init({
 			{title: "Right", icon: "alignright", format: "alignright"},
 			{title: "Justify", icon: "alignjustify", format: "alignjustify"}
 		]}
-	]
+	],
+	setup: function(editor) {
+    editor.addButton('mybutton', {
+      type: 'menubutton',
+      text: 'Custom Mail Merge Field',
+      icon: false,
+      menu: [{
+        text: 'Menu item 1',
+        onclick: function() {
+          editor.insertContent('&nbsp;<strong>Menu item 1 text inserted here!</strong>&nbsp;');
+        }
+      }, {
+        text: 'Menu item 2',
+        menu: [{
+          text: 'Submenu item 1',
+          onclick: function() {
+            editor.insertContent('&nbsp;<em>Submenu item 1 text inserted here!</em>&nbsp;');
+          }
+        }]
+      }]
+    });
+  }
 });
