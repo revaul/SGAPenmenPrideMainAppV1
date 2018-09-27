@@ -1,5 +1,5 @@
-<?php require "login/loginheader.php"; ?>
-<?php include "template/top.php"; ?>
+<?php require "../login/loginheader.php"; ?>
+<?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
@@ -143,4 +143,4 @@
   </div>
 </div>
 </div>
-<?php include "template/bottom.php" ?>
+<?php include "../template/bottom.php" ?>
