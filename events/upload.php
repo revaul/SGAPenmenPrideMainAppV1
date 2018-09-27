@@ -1,5 +1,7 @@
 <?php require "../login/loginheader.php"; ?>
 <?php include "../template/top.php"; ?>
+<!-- NOTE: This file requires the www-data group folder to have chown NOT chgrp permissions on the uploads folder. Also,  set permissions to chmod 755-->
+
 <div id="about" class="container-fluid">
       <div class="row">
           <div class="col-sm-2">

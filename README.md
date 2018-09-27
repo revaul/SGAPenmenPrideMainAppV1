@@ -34,4 +34,9 @@ $password="Create a Password";
 $dbname="ppv0008004";
 ?>
 ```
+## File permissions
+### Event Uploads
+Chmod 775
+chown www-data
+
 ## Mail System
