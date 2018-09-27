@@ -47,16 +47,4 @@ tinymce.init({
 			{title: "Justify", icon: "alignjustify", format: "alignjustify"}
 		]}
 	]
-
-	setup: function(editor) {
-        editor.addButton('mybutton', {
-            type: 'menubutton',
-            text: 'My button',
-            icon: false,
-            menu: [
-                {text: 'Hi', onclick: function() {editor.insertContent('Hello I am <B>Mark</b>');}},
-                {text: 'Insert text item 2', onclick: function() {editor.insertContent('It is a beautiful day');}}
-            ]
-        });
-    }
 });
