@@ -4,7 +4,7 @@
 		<title>TinyMCE - Setup</title>
 	</head>
 	<body>
-		<textarea class="tinymce"></textarea>
+		<textarea class="tinymce"><p>Hello World!</p></textarea>
 
 		<!-- javascript -->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
