@@ -75,6 +75,13 @@
 		        <li><a href="/trigger/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
         </ul>
       </li>
+      <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">EMAIL
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+          <li><a href="/emailsystem/mailtextentry.php">MAIL TEXT ENTRY</a></li>
+      </ul>
+    </li>
           <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MISC
         <span class="caret"></span></a>
