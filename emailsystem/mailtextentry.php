@@ -5,6 +5,7 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
+<h2>Send Penmen Pride Email</h2>
     <form action="../actions/actionnewevent.php" method="post">
     <p> <label> Event Name:   </label> <input type="text" name="name"/> </p>
     <p><label>Host:   </label>
