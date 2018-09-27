@@ -2,7 +2,9 @@
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
     <form action="../actions/actionnewevent.php" method="post">
     <p> <label> Event Name:   </label> <input type="text" name="name"/> </p>
     <p><label>Host:   </label>
@@ -138,8 +140,7 @@
 		<script type="text/javascript" src="plugin/tinymce/tinymce.min.js"></script>
 		<script type="text/javascript" src="plugin/tinymce/init-tinymce.js"></script>
   </div>
-  <div class="col-sm-4">
-    <span class="glyphicon glyphicon-signal logo"></span>
+  <div class="col-sm-1">
   </div>
 </div>
 </div>
