@@ -7,6 +7,16 @@
     <div class="col-sm-10">
         <div class="divHeader">
             <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
+            <table class="prizesheettable">
+              <col width="33%">
+              <col width="34%">
+              <col width="33%">
+              <tr>
+                <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
+                <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p></td>
+                <td><p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --> who knows</u></p></td>
+              </tr>
+            </table>
         </div>
         <h2 class="no-print">Prize Sheet</h2>
       </div>
@@ -18,7 +28,7 @@
       </div>
       <div class="col-sm-10">
 
-        <table class="prizesheettable">
+        <table class="prizesheettable no-print">
           <col width="33%">
           <col width="34%">
           <col width="33%">
@@ -38,12 +48,12 @@
       </div>
       <div class="col-sm-10">
 <table class="table table-striped">
-      <col width="10%">
-  <col width="35%">
-      <col width="15%">
-  <col width="10%">
-      <col width="10%">
-  <col width="20%">
+      <col width="8.64%">
+  <col width="13.14%">
+      <col width="20.90%">
+  <col width="19.15%">
+      <col width="23.90%">
+  <col width="14.27%">
 <tr>
 <th class="prizesheet prizesheettext">Date
 </th>
