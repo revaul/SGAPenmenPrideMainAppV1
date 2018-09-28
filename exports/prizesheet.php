@@ -17,13 +17,13 @@
       <div class="col-sm-1">
       </div>
       <div class="col-sm-3">
-        <p class="prizesheet prizesheetsubheading">Club: <u>SGA Penmen Pride</u></p>
+        <p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p>
       </div>
       <div class="col-sm-4">
-        <p class="prizesheet prizesheetsubheading">Event: <u>SGA Penmen Pride Prize Give Away</u></p>
+        <p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p>
       </div>
       <div class="col-sm-3">
-        <p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --></u></p>
+        <p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --> who knows</u></p>
       </div>
       <div class="col-sm-1">
       </div>
