@@ -20,7 +20,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM ppv0008003.emailmailmergeexport limit 5;";
+$sql = "SELECT * FROM ppv0008003.emailmailmergeexport limit 1;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
        $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
        try {
            //Server settings
-           $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+           $mail->SMTPDebug = 0;                                 // Enable verbose debug output
            $mail->isSMTP();                                      // Set mailer to use SMTP
            $mail->Host = $mailhost;  // Specify main and backup SMTP servers
            $mail->SMTPAuth = true;                               // Enable SMTP authentication
