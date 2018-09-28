@@ -23,7 +23,7 @@
         <p class="prizesheetfont prizesheetsubheading">Event: <u>SGA Penmen Pride Prize Give Away</u></p>
       </div>
       <div class="col-sm-3">
-        <p class="prizesheetfont prizesheetsubheading">Check Number: <u><<!-- TODO: Insert PHP Post Here. --></u></p>
+        <p class="prizesheetfont prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --></u></p>
       </div>
       <div class="col-sm-1">
       </div>
