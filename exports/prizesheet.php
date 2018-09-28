@@ -6,7 +6,7 @@
     </div>
     <div class="col-sm-10">
         <div class="divHeader">
-            <h2 class="prizesheetfont prizesheetheading">Prize Sheet</h2>
+            <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
         </div>
         <h2 class="no-print">Prize Sheet</h2>
       </div>
@@ -17,13 +17,13 @@
       <div class="col-sm-1">
       </div>
       <div class="col-sm-3">
-        <p class="prizesheetfont prizesheetsubheading">Club: <u>SGA Penmen Pride</u></p>
+        <p class="prizesheet prizesheetsubheading">Club: <u>SGA Penmen Pride</u></p>
       </div>
       <div class="col-sm-4">
-        <p class="prizesheetfont prizesheetsubheading">Event: <u>SGA Penmen Pride Prize Give Away</u></p>
+        <p class="prizesheet prizesheetsubheading">Event: <u>SGA Penmen Pride Prize Give Away</u></p>
       </div>
       <div class="col-sm-3">
-        <p class="prizesheetfont prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --></u></p>
+        <p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --></u></p>
       </div>
       <div class="col-sm-1">
       </div>
@@ -40,17 +40,17 @@
       <col width="10%">
   <col width="20%">
 <tr>
-<th class="prizesheetfont prizesheettext">Date
+<th class="prizesheet prizesheettext">Date
 </th>
-<th class="prizesheetfont prizesheettext">Amount
+<th class="prizesheet prizesheettext">Amount
 </th>
-<th class="prizesheetfont prizesheettext">Type of Prize
+<th class="prizesheet prizesheettext">Type of Prize
 </th>
-<th class="prizesheetfont prizesheettext">Name (Print)
+<th class="prizesheet prizesheettext">Name (Print)
 </th>
-<th class="prizesheetfont prizesheettext">Name (Signature)
+<th class="prizesheet prizesheettext">Name (Signature)
 </th>
-<th class="prizesheetfont prizesheettext">School ID
+<th class="prizesheet prizesheettext">School ID
 </th>
 </tr>
 
