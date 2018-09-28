@@ -4,6 +4,7 @@ body {
       color: #818181;
 
 }
+@media print{@page {size: landscape}}
 .prizesheet{
   text-align: center;
   text-transform: uppercase;
