@@ -58,6 +58,15 @@
 </tr>
 
 <?php
+$tier1cost=14.99;
+$tier1description="Tier 1 Prize";
+
+$tier2cost=10.00;
+$tier2description="Tier 2 Prize";
+
+$tier3cost=5.99;
+$tier3description="Tier 3 Prize";
+
 require '../mysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -72,10 +81,25 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+$tier=$row["tier"];
        ?><tr>
          <td>9-29-2018</td>
-         <td>$14.53</td>
-         <td>Blah Blah Blah</td>
+         <td>
+<?php
+if($tier=="Tier One"){
+  echo $tier1cost; ?> </td>
+  <td> <?php echo $tier1description;
+}
+ elseif($tier=="Tier Two"){
+   echo $tier2cost; ?> </td>
+   <td> <?php echo $tier2description;
+ }
+  else{
+    echo $tier3cost; ?> </td>
+    <td> <?php echo $tier3description;
+  }
+   ?>
+         </td>
          <td><?php echo $row["studentname"]; ?></td>
          <td></td>
          <td><?php echo $row["StudentID"]; ?></td></tr><?php
