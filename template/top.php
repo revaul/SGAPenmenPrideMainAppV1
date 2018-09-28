@@ -80,7 +80,7 @@
       <span class="caret"></span></a>
       <ul class="dropdown-menu">
           <li><a href="/emailsystem/mailtextentry.php">MAIL TEXT ENTRY</a></li>
-          <li><a href="/emailsystem/mailtextentry.php">PENDING EMAILS</a></li>
+          <li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>
       </ul>
     </li>
           <li class="dropdown">
