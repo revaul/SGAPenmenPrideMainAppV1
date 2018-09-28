@@ -38,7 +38,7 @@
       <col width="23.90%">
   <col width="14.27%">
   <tr>
-    <th>
+    <th colspan="6">
       <table class="prizesheettable">
         <col width="33%">
         <col width="34%">
