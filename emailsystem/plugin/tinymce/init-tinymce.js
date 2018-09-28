@@ -138,6 +138,11 @@ tinymce.init({
         onclick: function() {
           editor.insertContent('[[Tier]]');
         }
+      }, {
+        text: 'Portal Link',
+        onclick: function() {
+          editor.insertContent('[[Portal Link]]');
+        }
       }]
     });
   }
