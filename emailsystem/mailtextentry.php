@@ -6,7 +6,7 @@
     </div>
     <div class="col-sm-10">
 <h2>Send Penmen Pride Email</h2>
-    <form action="../phpmailer/sendmail.php" method="post">
+    <form action="../phpmailer/sendmailnew.php" method="post">
 <p> <label> Email Subject: </label> <input type="text" name="subject"/> </p>
     <textarea class="tinymce" name="message"><img src="https://static.wixstatic.com/media/656490_ce6f44b9c3a44569af13f1cfaf31f5cf~mv2_d_2000_2000_s_2.png" alt="SNHU SGA Logo" style="height:220px;">
     <img src="https://static.wixstatic.com/media/656490_c26adc909bd0401f8ca0132172b02b59~mv2.png" alt="SNHU SGA Penmen Pride Logo" style="height:220px;">
