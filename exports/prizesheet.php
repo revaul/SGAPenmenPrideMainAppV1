@@ -5,11 +5,8 @@
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-        <div class="divHeader">
-            <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
 
-        </div>
-        <h2 class="no-print prizesheet prizesheetheading">Prize Sheet</h2>
+        <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
       </div>
       <div class="col-sm-1">
       </div>
