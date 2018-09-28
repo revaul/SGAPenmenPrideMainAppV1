@@ -18,6 +18,9 @@ body {
 .prizesheettext{
   font-size: 14px;
 }
+.prizesheettable{
+  width:100%;
+}
 
 .linkbuttontopublic {
     background-color: #001E60;

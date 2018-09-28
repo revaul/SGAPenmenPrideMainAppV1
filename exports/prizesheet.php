@@ -18,7 +18,7 @@
       </div>
       <div class="col-sm-10">
 
-        <table class="noclassnow">
+        <table class="prizesheettable">
           <col width="33%">
           <col width="34%">
           <col width="33%">
