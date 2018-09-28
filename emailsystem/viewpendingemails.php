@@ -5,7 +5,7 @@
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-        <h2>Pending Emails To Be Sent/h2>
+        <h2>Pending Emails To Be Sent</h2>
 <table class="table table-striped">
       <col width="14%">
   <col width="43%">
