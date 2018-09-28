@@ -4,6 +4,20 @@ body {
       color: #818181;
 
 }
+.prizesheetfont{
+  text-align: center;
+  text-transform: uppercase;
+}
+.prizesheetheading{
+  font-size: 36px;
+}
+.prizesheetsubheading{
+  font-size: 16px;
+}
+.prizesheettext{
+  font-size: 14px;
+}
+
 .linkbuttontopublic {
     background-color: #001E60;
     color: white;
@@ -27,7 +41,7 @@ body {
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
-  }  
+  }
   .jumbotron {
       background-color: #001E60;
       color: #fff;
@@ -79,7 +93,7 @@ body {
       font-style: normal;
   }
   .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #f4511e;
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -155,14 +169,12 @@ body {
       -webkit-animation-duration: 1s;
       visibility: visible;
   }
-.centerheading{
-   text-align: center;
-}
+
   @keyframes slide {
     0% {
       opacity: 0;
       transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -172,7 +184,7 @@ body {
     0% {
       opacity: 0;
       -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
       opacity: 1;
       -webkit-transform: translateY(0%);
@@ -194,7 +206,7 @@ body {
     }
   }
 @media print
-{    
+{
     .no-print, .no-print *
     {
         display: none !important;
@@ -202,7 +214,7 @@ body {
     .divFooter {
     position: fixed;
     bottom: 0;
-      
+
   }
     .divHeader {
     position: fixed;

@@ -6,9 +6,32 @@
     </div>
     <div class="col-sm-10">
         <div class="divHeader">
-            <h2 class="centerheading">Prize Sheet2</h2>
+            <h2 class="prizesheetfont prizesheetheading">Prize Sheet</h2>
         </div>
         <h2 class="no-print">Prize Sheet</h2>
+      </div>
+      <div class="col-sm-1">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-3">
+        <p class="prizesheetfont prizesheetsubheading">Club: <u>SGA Penmen Pride</u></p>
+      </div>
+      <div class="col-sm-4">
+        <p class="prizesheetfont prizesheetsubheading">Event: <u>SGA Penmen Pride Prize Give Away</u></p>
+      </div>
+      <div class="col-sm-3">
+        <p class="prizesheetfont prizesheetsubheading">Check Number: <u><<!-- TODO: Insert PHP Post Here. --></u></p>
+      </div>
+      <div class="col-sm-1">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-10">
 <table class="table table-striped">
       <col width="10%">
   <col width="35%">
@@ -17,17 +40,17 @@
       <col width="10%">
   <col width="20%">
 <tr>
-<th>Event ID
+<th class="prizesheetfont prizesheettext">Date
 </th>
-<th>Event Name
+<th class="prizesheetfont prizesheettext">Amount
 </th>
-<th>Event Date
+<th class="prizesheetfont prizesheettext">Type of Prize
 </th>
-<th>Points
+<th class="prizesheetfont prizesheettext">Name (Print)
 </th>
-<th>Double Points
+<th class="prizesheetfont prizesheettext">Name (Signature)
 </th>
-<th>Host Name
+<th class="prizesheetfont prizesheettext">School ID
 </th>
 </tr>
 
@@ -38,7 +61,7 @@ $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoublePoints, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID order by eventnames.EventDate DESC";
 $result = $conn->query($sql);
@@ -55,7 +78,7 @@ if ($result->num_rows > 0) {
 	   ?></td></tr><?php
     }
 } else {
- 
+
 }
 $conn->close();
 ?>
