@@ -7,18 +7,9 @@
     <div class="col-sm-10">
         <div class="divHeader">
             <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
-            <table class="prizesheettable">
-              <col width="33%">
-              <col width="34%">
-              <col width="33%">
-              <tr>
-                <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
-                <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p></td>
-                <td><p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --> who knows</u></p></td>
-              </tr>
-            </table>
+
         </div>
-        <h2 class="no-print">Prize Sheet</h2>
+        <h2 class="no-print prizesheet prizesheetheading">Prize Sheet</h2>
       </div>
       <div class="col-sm-1">
       </div>
@@ -28,7 +19,7 @@
       </div>
       <div class="col-sm-10">
 
-        <table class="prizesheettable no-print">
+        <table class="prizesheettable">
           <col width="33%">
           <col width="34%">
           <col width="33%">
