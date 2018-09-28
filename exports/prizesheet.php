@@ -82,24 +82,25 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
 $tier=$row["tier"];
-       ?><tr>
-         <td>9-29-2018</td>
-         <td>
-<?php
+$tiercost;
+$tierdescription;
 if($tier=="Tier One"){
-  echo $tier1cost; ?> </td>
-  <td> <?php echo $tier1description;
+  $tiercost = $tier1cost;
+  $tierdescription = $tier1description;
 }
  elseif($tier=="Tier Two"){
-   echo $tier2cost; ?> </td>
-   <td> <?php echo $tier2description;
+   $tiercost = $tier2cost;
+   $tierdescription = $tier2description;
  }
   else{
-    echo $tier3cost; ?> </td>
-    <td> <?php echo $tier3description;
+    $tiercost = $tier3cost;
+    $tierdescription = $tier3description;
   }
-   ?>
-         </td>
+  $tiercostformatted = number_format($tiercost, 2, '.', '')
+       ?><tr>
+         <td>9-29-2018</td>
+         <td>$<?php echo $tiercostformatted; ?></td>
+         <td><?php echo $tierdescription; ?></td>
          <td><?php echo $row["studentname"]; ?></td>
          <td></td>
          <td><?php echo $row["StudentID"]; ?></td></tr><?php
