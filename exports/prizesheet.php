@@ -36,8 +36,8 @@
       </div>
       <div class="col-sm-10">
 <table class="table table-striped">
-      <col width="8.64%">
-  <col width="13.14%">
+      <col width="10.64%">
+  <col width="11.14%">
       <col width="20.90%">
   <col width="19.15%">
       <col width="23.90%">
