@@ -8,8 +8,8 @@
 <h2>Send Penmen Pride Email</h2>
     <form action="../phpmailer/sendmailnew.php" method="post">
 <p> <label> Email Subject: </label> <input type="text" name="subject"/> </p>
-    <textarea class="tinymce" name="message"><img src="https://static.wixstatic.com/media/656490_ce6f44b9c3a44569af13f1cfaf31f5cf~mv2_d_2000_2000_s_2.png" alt="SNHU SGA Logo" style="height:220px;">
-    <img src="https://static.wixstatic.com/media/656490_c26adc909bd0401f8ca0132172b02b59~mv2.png" alt="SNHU SGA Penmen Pride Logo" style="height:220px;">
+    <textarea class="tinymce" name="message"><img src="http://penmenpride.snhusga.org/images/sgalogo.png" alt="SNHU SGA Logo" style="height:220px;">
+    <img src="http://penmenpride.snhusga.org/images/penmenpridelogo.png" alt="SNHU SGA Penmen Pride Logo" style="height:220px;">
     <p style="color: #152C59;"><b>Dear [[First Name]],</b></p>
     <p style="color: #F3B329;"><b>So far, this semester YOU HAVE EARNED [[Points]] PENMEN PRIDE POINTS!</b></p>
     <p>Not sure what Penmen Pride points are? You have earned these points this past semester by attending on-campus events. At the end of the semester, all points are tallied and the top 300 students with the highest point amounts will receive prizes just for attending on-campus events! <b style="color: #152C59">The top 300 students will receive their prizes on Thursday, April 27th and Friday, April 28th.</b></p>
