@@ -27,12 +27,14 @@ if ($result->num_rows > 0) {
       $yummy   = array($row["StudentFirstName"], $row["StudentLastName"], $row["Points"], $row["EmailAddress"], $row["tier"], $row["randomkeycol"]);
 
       $newbodyhtml = str_replace($healthy, $yummy, $rawbody);
+      $fullbodyhtml = base64_encode($newbodyhtml);
       $newbodyalt = strip_tags($newbodyhtml);
+      $fullbodyalt = base64_encode($newbodyalt);
 $InsertStatements[$arrayamount][0] = $row["EmailAddress"];
 $InsertStatements[$arrayamount][1] = $subjectvar;
 $InsertStatements[$arrayamount][2] = $row["StudentFirstName"];
-$InsertStatements[$arrayamount][3] = $newbodyhtml;
-$InsertStatements[$arrayamount][4] = $newbodyalt;
+$InsertStatements[$arrayamount][3] = $fullbodyhtml;
+$InsertStatements[$arrayamount][4] = $fullbodyalt;
 $arrayamount++;
 
 
