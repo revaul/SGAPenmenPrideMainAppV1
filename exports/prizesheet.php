@@ -72,13 +72,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td> <?php echo $row["EventID"];
-	   ?></td><td><?php echo $row["EventName"];
-	   ?></td><td><?php echo $row["EventDate"];
-	   ?></td><td><?php echo $row["PointValue"];
-	   ?></td><td><?php echo $row["DoublePoints"];
-	   ?></td><td><?php echo $row["HostName"];
-	   ?></td></tr><?php
+       ?><tr>
+         <td>9-29-2018</td>
+         <td>$14.53</td>
+         <td>Blah Blah Blah</td>
+         <td><?php echo $row["studentname"]; ?></td>
+         <td></td>
+         <td><?php echo $row["StudentID"]; ?></td></tr><?php
     }
 } else {
 
