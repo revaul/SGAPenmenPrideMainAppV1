@@ -5,7 +5,7 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-<h2>Send Penmen Pride Email</h2>
+<h2>Send New Penmen Pride Email</h2>
     <form action="../phpmailer/sendmailnew.php" method="post">
 <p> <label> Email Subject: </label> <input type="text" name="subject"/> </p>
     <textarea class="tinymce" name="message"><img src="http://penmenpride.snhusga.org/images/sgalogo.png" alt="SNHU SGA Logo" style="height:220px;">

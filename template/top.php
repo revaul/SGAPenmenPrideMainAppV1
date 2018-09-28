@@ -79,7 +79,7 @@
       <a class="dropdown-toggle" data-toggle="dropdown" href="#">EMAIL
       <span class="caret"></span></a>
       <ul class="dropdown-menu">
-          <li><a href="/emailsystem/mailtextentry.php">MAIL TEXT ENTRY</a></li>
+          <li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li>
           <li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>
       </ul>
     </li>
