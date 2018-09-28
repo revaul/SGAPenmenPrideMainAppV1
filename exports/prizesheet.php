@@ -98,12 +98,12 @@ if($tier=="Tier One"){
   }
   $tiercostformatted = number_format($tiercost, 2, '.', '')
        ?><tr>
-         <td>9-29-2018</td>
-         <td>$<?php echo $tiercostformatted; ?></td>
-         <td><?php echo $tierdescription; ?></td>
-         <td><?php echo $row["studentname"]; ?></td>
-         <td></td>
-         <td><?php echo $row["StudentID"]; ?></td></tr><?php
+         <td class="prizesheet prizesheettext">9-29-2018</td>
+         <td class="prizesheet prizesheettext">$<?php echo $tiercostformatted; ?></td>
+         <td class="prizesheet prizesheettext"><?php echo $tierdescription; ?></td>
+         <td class="prizesheet prizesheettext"><?php echo $row["studentname"]; ?></td>
+         <td class="prizesheet prizesheettext"></td>
+         <td class="prizesheet prizesheettext"><?php echo $row["StudentID"]; ?></td></tr><?php
     }
 } else {
 
