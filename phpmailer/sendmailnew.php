@@ -1,4 +1,13 @@
 <?php
+require "../login/loginheader.php";
+require '../mysqlkeys.php';
+include "../template/top.php"; ?>
+<div id="about" class="container-fluid">
+      <div class="row">
+              <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
+<?php
 
 require "../login/loginheader.php";
 require '../mysqlkeys.php';
@@ -42,7 +51,6 @@ $arrayamount++;
 } else {
 
 }
-echo $arrayamount;
 for($x = 0; $x < $arrayamount; $x++) {
    $insertdaystmt = "INSERT INTO `ppv0008003`.`emailsystem` (`ToEmailAddress`, `ToSubject`, `ToFirstName`, `ToBodyHtml`, `ToBodyAlt`) VALUES ('".$InsertStatements[$x][0]."',
       '".$InsertStatements[$x][1]."',
@@ -57,5 +65,11 @@ for($x = 0; $x < $arrayamount; $x++) {
 }
 $conn->close();
 
-
 ?>
+<h2> All Emails Created </h2>
+</div>
+<div class="col-sm-1">
+</div>
+</div>
+</div>
+<?php include "../template/bottom.php" ?>
