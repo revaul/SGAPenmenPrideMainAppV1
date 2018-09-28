@@ -11,9 +11,9 @@
           <col width="34%">
           <col width="33%">
           <tr>
-            <td colspan="3">
+            <th colspan="3">
               <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
-            </td>
+            </th>
           </tr>
           <tr>
             <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
@@ -37,6 +37,25 @@
   <col width="19.15%">
       <col width="23.90%">
   <col width="14.27%">
+  <tr>
+    <th>
+      <table class="prizesheettable">
+        <col width="33%">
+        <col width="34%">
+        <col width="33%">
+        <tr>
+          <th colspan="3">
+            <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
+          </th>
+        </tr>
+        <tr>
+          <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
+          <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p></td>
+          <td><p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --> who knows</u></p></td>
+        </tr>
+      </table>
+    </th>
+  </tr>
 <tr>
 <th class="prizesheet prizesheettext">Date
 </th>
