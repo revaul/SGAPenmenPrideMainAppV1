@@ -1,16 +1,6 @@
 <?php require "../login/loginheader.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
-      <div class="row">
-              <div class="col-sm-1">
-    </div>
-    <div class="col-sm-10">
-
-        <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
-      </div>
-      <div class="col-sm-1">
-      </div>
-    </div>
     <div class="row">
       <div class="col-sm-1">
       </div>
@@ -20,6 +10,11 @@
           <col width="33%">
           <col width="34%">
           <col width="33%">
+          <tr>
+            <td colspan="3">
+              <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
+            </td>
+          </tr>
           <tr>
             <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
             <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p></td>

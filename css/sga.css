@@ -7,13 +7,14 @@ body {
 @media print{@page {size: landscape}}
 .prizesheet{
   text-align: center;
-  text-transform: uppercase;
 }
 .prizesheetheading{
   font-size: 36px;
+  text-transform: uppercase;
 }
 .prizesheetsubheading{
   font-size: 16px;
+  text-transform: uppercase;
 }
 .prizesheettext{
   font-size: 14px;
