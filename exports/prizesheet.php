@@ -37,7 +37,8 @@
   <col width="19.15%">
       <col width="23.90%">
   <col width="14.27%">
-  <tr>
+  <thead>
+    <tr>
     <th colspan="6">
       <table class="prizesheettable">
         <col width="33%">
@@ -70,7 +71,7 @@
 <th class="prizesheet prizesheettext">School ID
 </th>
 </tr>
-
+</thead>
 <?php
 $tier1cost=14.99;
 $tier1description="Tier 1 Prize";
