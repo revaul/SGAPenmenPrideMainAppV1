@@ -49,20 +49,20 @@
 </thead>
 <tbody>
 <?php
-$giveawayyear=2018;
-$giveawaymonth=5;
-$giveawayday=23;
+$giveawayyear= $_POST["dateyear"];
+$giveawaymonth= $_POST["datemonth"];
+$giveawayday= $_POST["dateday"];
 
 $date=$giveawaymonth.'-'.$giveawayday.'-'.$giveawayyear;
 
-$tier1cost=14.99;
-$tier1description="Tier 1 Prize";
+$tier1cost= $_POST["tier1cost"];
+$tier1description= $_POST["tier1desc"];
 
-$tier2cost=10.00;
-$tier2description="Tier 2 Prize";
+$tier2cost= $_POST["tier2cost"];
+$tier2description= $_POST["tier2desc"];
 
-$tier3cost=5.99;
-$tier3description="Tier 3 Prize";
+$tier3cost= $_POST["tier3cost"];
+$tier3description= $_POST["tier3desc"];
 
 require '../mysqlkeys.php';
 // Create connection

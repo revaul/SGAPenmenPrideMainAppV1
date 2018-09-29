@@ -30,7 +30,7 @@ foreach ($results as $years){
 ?>
 </select></p>
 <p><label>Month:   </label>
-<select name="eventmonth">
+<select name="datemonth">
 <option value="1">1-January</option>
     <option value="2">2-February</option>
     <option value="3">3-March</option>
@@ -45,8 +45,7 @@ foreach ($results as $years){
     <option value="12">12-December</option>
 </select></p>
 <p><label>Day:   </label>
-<select name="eventday">
-<option value="">Select Event Day</option>
+<select name="dateday">
 <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
