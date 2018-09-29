@@ -14,7 +14,12 @@
 <p> <label> Tier 2 Description:   </label> <input type="text" name="tier2desc"/> </p>
 <p> <label> Tier 3 Cost:   </label> <input type="text" name="tier3cost"/> </p>
 <p> <label> Tier 3 Description:   </label> <input type="text" name="tier3desc"/> </p>
-
+<p> <label> Check Number:   </label> <input type="text" name="check"/> </p>
+<p><label>Semester:   </label>
+<select name="semester">
+  <option value="Fall">Fall</option>
+  <option value="Spring">Spring</option>
+</select></p>
 <p><label>Year:   </label>
 <select name="dateyear">
   <option value="2018">2018</option>

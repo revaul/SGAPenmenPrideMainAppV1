@@ -26,8 +26,8 @@
         </tr>
         <tr>
           <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
-          <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p></td>
-          <td><p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --> who knows</u></p></td>
+          <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away <?php echo $_POST["semester"]; ?> <?php echo $_POST["dateyear"]; ?></u></p></td>
+          <td><p class="prizesheet prizesheetsubheading">Check Number: <u> <?php echo $_POST["check"] ?></u></p></td>
         </tr>
       </table>
     </th>
