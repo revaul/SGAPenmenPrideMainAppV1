@@ -210,8 +210,9 @@ body {
         font-size: 150px;
     }
   }
-@media print
-{
+@media print{
+  thead {display: table-header-group;}
+  tfoot {display: table-header-group;}
     .no-print, .no-print *
     {
         display: none !important;
