@@ -100,6 +100,11 @@ if($tier=="Tier One"){
 }
 $conn->close();
 ?>
+<tfoot>
+<tr class="prizesheet prizesheetsubheading">
+  <td colspan="6">PLEASE FILL OUT AND RETURN TO SGA BUSINESS MANAGER AS SOON AS POSSIBLE</td>
+</tr>
+</tfoot>
 </table>
         </div>
     <div class="col-sm-1">
