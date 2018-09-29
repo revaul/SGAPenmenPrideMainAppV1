@@ -7,7 +7,7 @@
           </div>
     <div class="col-sm-8">
     <h2>Setup Prize Sheet</h2>
-<form action="/prizesheet.php" method="post">
+<form action="prizesheet.php" method="post">
 <p> <label> Tier 1 Cost:   </label> <input type="text" name="tier1cost"/> </p>
 <p> <label> Tier 1 Description:   </label> <input type="text" name="tier1desc"/> </p>
 <p> <label> Tier 2 Cost:   </label> <input type="text" name="tier2cost"/> </p>
