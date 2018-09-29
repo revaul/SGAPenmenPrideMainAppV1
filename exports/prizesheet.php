@@ -47,6 +47,7 @@
 </th>
 </tr>
 </thead>
+<tbody>
 <?php
 $tier1cost=14.99;
 $tier1description="Tier 1 Prize";
@@ -100,6 +101,7 @@ if($tier=="Tier One"){
 }
 $conn->close();
 ?>
+</tbody>
 <tfoot>
 <tr class="prizesheet prizesheetsubheading">
   <td colspan="6">PLEASE FILL OUT AND RETURN TO SGA BUSINESS MANAGER AS SOON AS POSSIBLE</td>
