@@ -5,31 +5,6 @@
       <div class="col-sm-1">
       </div>
       <div class="col-sm-10">
-
-        <table class="prizesheettable">
-          <col width="33%">
-          <col width="34%">
-          <col width="33%">
-          <tr>
-            <th colspan="3">
-              <h2 class="prizesheet prizesheetheading">Prize Sheet</h2>
-            </th>
-          </tr>
-          <tr>
-            <td><p class="prizesheet prizesheetsubheading">Club: <u>SGA-Penmen Pride</u></p></td>
-            <td><p class="prizesheet prizesheetsubheading">Event: <u>Prize Give Away<!-- TODO:Insert PHP Post Here. --></u></p></td>
-            <td><p class="prizesheet prizesheetsubheading">Check Number: <u><!-- TODO: Insert PHP Post Here. --> who knows</u></p></td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="col-sm-1">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-1">
-      </div>
-      <div class="col-sm-10">
 <table class="table table-striped">
       <col width="10.64%">
   <col width="11.14%">
