@@ -17,17 +17,11 @@
 
 <p><label>Year:   </label>
 <select name="dateyear">
-<?php
-$query = "SELECT distinct YEAR(Date) as year FROM ppv0008003.datestosemesters;";
-$results=mysqli_query($con, $query);
-
-foreach ($results as $years){
-
-?>
-<option value="<?php echo $years["year"]; ?>"><?php echo $years["year"]; ?></option>
-<?php
-}
-?>
+  <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
 </select></p>
 <p><label>Month:   </label>
 <select name="datemonth">
