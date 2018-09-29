@@ -49,6 +49,12 @@
 </thead>
 <tbody>
 <?php
+$giveawayyear=2018;
+$giveawaymonth=5;
+$giveawayday=23;
+
+$date=$giveawaymonth.'-'.$giveawayday.'-'.$giveawayyear;
+
 $tier1cost=14.99;
 $tier1description="Tier 1 Prize";
 
@@ -89,7 +95,7 @@ if($tier=="Tier One"){
   }
   $tiercostformatted = number_format($tiercost, 2, '.', '')
        ?><tr>
-         <td class="prizesheet prizesheettext">9-29-2018</td>
+         <td class="prizesheet prizesheettext"><?php echo $date ?></td>
          <td class="prizesheet prizesheettext">$<?php echo $tiercostformatted; ?></td>
          <td class="prizesheet prizesheettext"><?php echo $tierdescription; ?></td>
          <td class="prizesheet prizesheettext"><?php echo $row["studentname"]; ?></td>
