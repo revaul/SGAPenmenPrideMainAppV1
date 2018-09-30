@@ -14,7 +14,7 @@
     <p style="color: #F3B329;"><b>So far, this semester YOU HAVE EARNED [[Points]] PENMEN PRIDE POINTS!</b></p>
     <p>Not sure what Penmen Pride points are? You have earned these points this past semester by attending on-campus events. At the end of the semester, all points are tallied and the top 300 students with the highest point amounts will receive prizes just for attending on-campus events! <b style="color: #152C59">The top 300 students will receive their prizes on Thursday, April 27th and Friday, April 28th.</b></p>
     <p style="color: #152C59;"><b><u>Prize Pickup will begin in the Student Center Lobby at 9 am on Thursday (4/27/17) until 3 pm and recommence at 9 am on Friday (4/28/17) until 3 pm.</u></b></p>
-    <p>Want to check your points at anytime? Want to see what events you've attended or compare your point totals against other semesters? Click the button below to view your personal Penmen Pride Portal!</p>
+    <p>Want to check your points at any time? Want to see what events you've attended or compare your point totals against other semesters? Click the button below to view your personal Penmen Pride Portal!</p>
 
       <table border="0" cellspacing="0" cellpadding="0" align="center">
         <tr>
