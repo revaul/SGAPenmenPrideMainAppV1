@@ -14,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
 
-	
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454242-1"></script>
 <script>
@@ -33,13 +33,13 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage"><img src="/images/PenmenPrideLogo.png" style="width:50px"></a>
+      <a class="navbar-brand" href="#myPage"><img src="/images/penmenpridelogo.png" style="width:50px"></a>
 
-    
+
 	</div>
-	
+
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
 	  </ul>
