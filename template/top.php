@@ -33,7 +33,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage"><img src="/images/PenmenPrideLogo.png" style="width:50px"></a>
+      <a class="navbar-brand" href="#myPage"><img src="/images/penmenpridelogo.png" style="width:50px"></a>
 
 
 	</div>
