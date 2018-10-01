@@ -29,8 +29,20 @@ if (isset($_SESSION['username'])) {
   <div style="display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;">
+    width: 25%;">
 	  <img src="/images/penmenpridelogo.png" alt="Penmen Pride Logo" style="width: 100%">
+  </div>
+    <div style="display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      text-align:center;
+      border: 2px solid red;
+      background-color: rgba(201, 76, 76, 0.2);
+   border-radius: 8px;
+   margin-top: 10px;">
+    <h3 style="margin-top: 10px;">Notice:</h3>
+<p>You have reached the private area for senators of the SNHU Student Government Association. All activity on this site is logged and is limited to specific current employees of SNHU and specific students of SNHU. Inappropriate use, including but not limited to access by unauthorized individuals will be pursued to the fullest extent of the law. If you require access to this site, please contact <a href="mailto:sga@snhu.edu">SGA</a>.</p>
 	  </div>
 	  <div class="container">
 
