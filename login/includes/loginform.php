@@ -49,9 +49,9 @@ class LoginForm extends DbConn
                 //Success! Register $myusername, $mypassword and return "true"
                 $success = 'true';
                     session_start();
-
+// NOTE: This is where the session is created.
                     $_SESSION['username'] = $myusername;
-
+$_SESSION['userlevel']=$result['adminlevel'];
             } elseif (password_verify($mypassword, $result['password']) && $result['verified'] == '0') {
 
                 //Account not yet verified
