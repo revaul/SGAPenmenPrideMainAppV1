@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level3.php"; ?>
 <?php include "../template/top.php"; ?>
 
 <div id="about" class="container-fluid">
@@ -12,7 +13,7 @@
 <p><label>Host:   </label>
 <select name="host">
 <option value="">Select Event Host</option>
-<?php 
+<?php
 require '../mysqlkeys.php';
 $con=mysqli_connect($host , $user , $password , $dbname );
 
@@ -145,7 +146,7 @@ foreach ($results as $HostName){
 <p><label>Event Year:   </label>
 <select name="eventyear">
 <option value="">Select Event Year</option>
-<?php 
+<?php
 $query = "SELECT distinct YEAR(Date) as year FROM ppv0008003.datestosemesters;";
 $results=mysqli_query($con, $query);
 

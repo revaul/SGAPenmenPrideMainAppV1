@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level4.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -52,7 +53,7 @@ $conn->close();
 ?>
 </table>
         </div>
-    
+
   </div>
 </div>
 <?php include "../template/bottom.php" ?>

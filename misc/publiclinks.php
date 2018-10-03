@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level3.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -44,7 +45,7 @@ $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $sql = "SELECT * FROM ppv0008003.randomkeyswithlink";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -59,13 +60,13 @@ if ($result->num_rows > 0) {
 	   ?></td><td><a href="<?php echo $row["link"];?>" target="_blank"><div class="linkbuttontopublic">Go to Portal</div></a></td></tr><?php
     }
 } else {
- 
+
 }
 $conn->close();
 ?>
 </table>
         </div>
-    
+
   </div>
 </div>
 <?php include "../template/bottom.php" ?>

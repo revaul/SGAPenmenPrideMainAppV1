@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level2.php"; ?>
 			  <?php
 				// IDEA: I want to change the file name to include csv and be shorter
 			   $eventid= $_POST["eventid"];

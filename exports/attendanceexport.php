@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level2.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
   <div class="row">
@@ -11,7 +12,7 @@
 <p><label>Event: </label>
 <select name="eventid">
 <option value="">Select Event</option>
-<?php 
+<?php
 require '../mysqlkeys.php';
 $con=mysqli_connect($host , $user , $password , $dbname );
 
@@ -32,7 +33,7 @@ foreach ($results as $HostName){
 <p> <input type="submit" /> </p>
 </form>
 </div>
-	     
+
 </div>
 	  <div class="col-sm-2">
           </div>

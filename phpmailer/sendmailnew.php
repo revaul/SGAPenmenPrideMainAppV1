@@ -1,5 +1,6 @@
 <?php
 require "../login/loginheader.php";
+require "../login/permissions/level4.php";
 require '../mysqlkeys.php';
 include "../template/top.php"; ?>
 <div id="about" class="container-fluid">

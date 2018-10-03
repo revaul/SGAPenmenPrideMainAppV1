@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level3.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">

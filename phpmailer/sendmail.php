@@ -7,6 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 require "../login/loginheader.php";
+require "../login/permissions/level4.php";
 require '../mysqlkeys.php';
 $subjectvar= $_POST["subject"];
 $rawbody= $_POST["message"];

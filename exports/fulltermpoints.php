@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level2.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -33,9 +34,9 @@ $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
-    
+
 $sql = "SELECT * FROM ppv0008003.finaltiersscaled;";
 $result = $conn->query($sql);
 
@@ -50,7 +51,7 @@ if ($result->num_rows > 0) {
 	   ?></td></tr><?php
     }
 } else {
- 
+
 }
 $conn->close();
 ?>

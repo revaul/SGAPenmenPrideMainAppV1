@@ -1,4 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
+<?php require "../login/permissions/level3.php"; ?>
 <?php
 
 	ini_set('max_execution_time', 300);
