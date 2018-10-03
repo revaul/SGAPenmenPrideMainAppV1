@@ -18,10 +18,7 @@ Thumbs.db
 mysqlkeys.php
 **/mysqlkeys.php
 public/publicmysqlkeys.php
-dbconf.php
-**/dbconf.php
-config.php
-**/config.php
+
 
 startupfiles/
 
