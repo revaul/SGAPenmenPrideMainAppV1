@@ -1,6 +1,6 @@
 <?php
 $userlevel = -1;
-$userlevel = $_SESSION['userlevel'] ?>
+$userlevel = $_SESSION['userlevel']; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
