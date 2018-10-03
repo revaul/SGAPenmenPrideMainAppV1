@@ -1,49 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="../css/main.css" rel="stylesheet" media="screen">
-    <meta charset="UTF-8">
-    <title>Verify User</title>
-  </head>
-  <body>
 <?php
-require 'includes/functions.php';
-include 'config.php';
+$userrole = 'loginpage';
+$title = 'Verify User';
+require 'misc/pagehead.php';
+?>
+</head>
+<body>
+<?php require 'misc/pullnav.php'; ?>
+<div class="container">
 
+<?php
 //Pulls variables from url. Can pass 1 (verified) or 0 (unverified/blocked) into url
-$uid = $_GET['uid'];
-$verify = $_GET['v'];
+$uid_decoded = base64_decode($_GET['uid']);
+$idarr = array($uid_decoded);
+$uids = json_encode($idarr);
 
-$e = new SelectEmail;
-$eresult = $e->emailPull($uid);
+$userarr = PHPLogin\UserData::userDataPull($uids, 0);
 
-$email = $eresult['email'];
-$username = $eresult['username'];
-
-$v = new Verify;
-
-if (isset($uid) && !empty(str_replace(' ', '', $uid)) && isset($verify) && !empty(str_replace(' ', '', $verify))) {
-
+try {
     //Updates the verify column on user
-    $vresponse = $v->verifyUser($uid, $verify);
+    $vresponse = PHPLogin\UserHandler::verifyUser($userarr, 1);
 
     //Success
-    if ($vresponse == 'true') {
-        echo $activemsg;
+    if ($vresponse['status'] == true) {
+        echo '<form class="form-signin" action="'.$conf->signin_url.'"><div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$conf->active_msg.'</div><br><input type="submit" class="btn btn-lg btn-primary btn-block" value="Click Here to Log In"></button></form>';
 
         //Send verification email
-        $m = new MailSender;
-        $m->sendMail($email, $username, $uid, 'Active');
+        $m = new PHPLogin\MailHandler;
+
+        //SEND MAIL
+        $m->sendMail($userarr, 'Active');
     } else {
         //Echoes error from MySQL
-        echo $vresponse;
+        echo $vresponse['message'];
     }
-} else {
-    //Validation error from empty form variables
-    echo 'An error occurred... click <a href="index.php">here</a> to go back.';
-};
-
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+}
 ?>
+</div>
 </body>
 </html>
