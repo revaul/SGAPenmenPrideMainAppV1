@@ -1,4 +1,5 @@
 <?php require "login/loginheader.php"; ?>
+<?php require "login/permissions/level1.php" ?>
 <?php include "template/top.php"; ?>
 <?php include "template/jumbotron.php"; ?>
 <div id="about" class="container-fluid">
