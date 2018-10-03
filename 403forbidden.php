@@ -1,5 +1,5 @@
 <?php
-require 'template/publictop.php';
+require 'template/top.php';
 
 ?>
 <div id="about" class="container-fluid">
