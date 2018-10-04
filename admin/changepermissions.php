@@ -42,10 +42,10 @@ margin-top: 10px;">
         <select name="userid">
         <?php
         if($admincount<=1){
-          $query = "SELECT * FROM loginsystem.NonAdminUsers where adminlevel!=6;";
+          $query = "SELECT * FROM loginsystem.NonAdminUsers where adminlevel!=6 and verified=1;";
         }
         else{
-        $query = "SELECT * FROM loginsystem.members where adminlevel!=6;";
+        $query = "SELECT * FROM loginsystem.members where adminlevel!=6 and verified=1;";
       }
         $results=mysqli_query($con, $query);
 
