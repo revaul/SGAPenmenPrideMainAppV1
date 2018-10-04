@@ -69,7 +69,7 @@ class MailSender
 
         try {
 
-            $mail->Send();
+            //$mail->Send();
 
         } catch (phpmailerException $e) {
 
