@@ -11,8 +11,8 @@ $pw2 = $_POST['password2'];
 
     //Enables moderator verification (overrides user self-verification emails)
 if (isset($admin_email)) {
-
-    $newemail = $admin_email;
+    //$newemail = $admin_email;
+    $newemail = $_POST['email'];
 
 } else {
 
@@ -49,7 +49,7 @@ if ($pw1 != $pw2) {
 
             //Send verification email
             $m = new MailSender;
-            $m->sendMail($newemail, $newuser, $newid, 'Verify');
+            $m->sendMail($admin_email, $newuser, $newid, 'Verify');
 
         } else {
             //Failure
