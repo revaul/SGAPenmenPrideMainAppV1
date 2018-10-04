@@ -156,7 +156,7 @@ foreach ($results as $years){
 <option value="<?php echo $years["year"]; ?>"><?php echo $years["year"]; ?></option>
 <?php
 }
-$conn->close();
+
 ?>
 </select></p>
 <p><label>Event Month:   </label>
