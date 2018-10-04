@@ -8,7 +8,8 @@ $newuser = $_POST['newuser'];
 $newpw = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 $pw1 = $_POST['password1'];
 $pw2 = $_POST['password2'];
-
+$newuserfirstname = $_POST['firstname'];
+$newuserlastname = $_POST['lastname'];
     //Enables moderator verification (overrides user self-verification emails)
 if (isset($admin_email)) {
     //$newemail = $admin_email;
@@ -40,7 +41,7 @@ if ($pw1 != $pw2) {
 
         $a = new NewUserForm;
 
-        $response = $a->createUser($newuser, $newid, $newemail, $newpw);
+        $response = $a->createUser($newuser, $newid, $newemail, $newpw, $newuserfirstname, $newuserlastname);
 
         //Success
         if ($response == 'true') {
