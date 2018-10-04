@@ -23,8 +23,6 @@
 </th>
 <th>Email
 </th>
-<th>Verified
-</th>
 <th>User Level
 </th>
 <th>User Disabled</th>
@@ -55,7 +53,6 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["firstname"];
 	   ?></td><td><?php echo $row["username"];
 	   ?></td><td><?php echo $row["email"];
-	   ?></td><td><?php echo $row["verified"];
 	   ?></td><td><?php echo $row["adminlevel"];
 	   ?></td><td><?php if($row["dis"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
 	   ?></td><td><?php if($row["giv"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
