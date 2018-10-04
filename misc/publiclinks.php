@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level3.php"; ?>
+<?php require "../login/permissions/level2.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -55,8 +55,8 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["StudentID"];
 	   ?></td><td><?php echo $row["StudentLastName"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
-	   ?></td><td><?php echo $row["Senator"];
-	   ?></td><td><?php echo $row["Faculty"];
+	   ?></td><td><?php if($row["Senator"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
+	   ?></td><td><?php if($row["Faculty"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
 	   ?></td><td><a href="<?php echo $row["link"];?>" target="_blank"><div class="linkbuttontopublic">Go to Portal</div></a></td></tr><?php
     }
 } else {

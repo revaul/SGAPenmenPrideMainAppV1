@@ -10,7 +10,7 @@ $userlevel = $_SESSION['userlevel']; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="/css/sga.css?<?php //echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet" type="text/css">
+  <link href="/css/sga.css<?php //echo "?".date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet" type="text/css">
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -36,7 +36,7 @@ $userlevel = $_SESSION['userlevel']; ?>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage"><img src="/images/penmenpridelogo.png" style="width:50px"></a>
+      <a class="navbar-brand" href="/"><img src="/images/penmenpridelogo.png" style="width:50px"></a>
 
 
 	</div>
@@ -98,11 +98,18 @@ $userlevel = $_SESSION['userlevel']; ?>
         <ul class="dropdown-menu">
           <li><a href="/misc/prizegiveaway.php">PRIZE GIVEAWAY</a></li>
 		  <?php if($userlevel>=3){ ?><li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li> <?php } ?>
-		<?php if($userlevel>=3){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
+		<?php if($userlevel>=2){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
         </ul>
       </li>
       <?php } ?>
-        <?php if($userlevel>=5){ ?><li><a href="/adminsystem/index.php">ADMIN</a></li><?php } ?>
+        <?php if($userlevel>=5){ ?><li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li>
+      <li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li>
+    </ul>
+  </li><?php } ?>
 
 		<li><a href="/login/logout.php">LOGOUT</a></li>
       </ul>

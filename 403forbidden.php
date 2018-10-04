@@ -1,4 +1,5 @@
 <?php
+require "login/loginheader.php";
 require 'template/top.php';
 
 ?>
