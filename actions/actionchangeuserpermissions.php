@@ -28,6 +28,13 @@ if($newuserlevel==0){
                   echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
               }
 }
+else{
+  $insertdaystmt = "UPDATE loginsystem.members SET verified = 1 WHERE id = '" . $userid . "';";
+              if ($conn->query($insertdaystmt) === TRUE) {
+              } else {
+                  echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
+              }
+}
 ?>
 <h2>Success User Permissions Changed!</h2></div>
     <div class="col-sm-1">
