@@ -56,7 +56,7 @@ $_SESSION['first']=$result['firstname'];
             } elseif (password_verify($mypassword, $result['password']) && $result['verified'] == '0') {
 
                 //Account not yet verified
-                $success = "<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Your account has been created, but you cannot log in until it has been verified</div>";
+                $success = "<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>You do not have permission to access this system. If you believe this to be an error, please contact the Executive Officer of SGA for permisions.</div>";
 
             } else {
 
