@@ -33,6 +33,7 @@
 <th>Can Upload Data</th>
 <th>Can Send Email Mail Merges</th>
 <th>Can Administer Users</th>
+<th>Super Admin (Cannot Be Deleted)</th>
 </tr>
 
 <?php
@@ -62,6 +63,7 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php if($row["data"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
 	   ?></td><td><?php if($row["send"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
 	   ?></td><td><?php if($row["admin"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
+	   ?></td><td><?php if($row["super"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
 	   ?></td></tr><?php
     }
 } else {
