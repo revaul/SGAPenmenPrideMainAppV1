@@ -1,12 +1,12 @@
-<?php 
-include '../template/publictop.php'; 
+<?php
+include '../template/publictop.php';
 require 'publicmysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $idnumnotsafe = $_GET["id"];
 $idnumlenchecked;
 if (strlen($idnumnotsafe)!=32){
@@ -16,7 +16,7 @@ else{
 $idnumlenchecked = $idnumnotsafe;
 }
 $idnumlower = strtolower($idnumlenchecked);
-$vowels = array("select", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ";" ,"and", "or", ",", "echo", "$");
+$vowels = array("select", "and", "or", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ";",  ",", "echo", "$");
 $idnocommands = str_replace($vowels,"",$idnumlower);
 $idclean;
 
@@ -36,16 +36,16 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        $totevents = $row["TotalEvents"];
-	    
+
 	    $totpoints = $row["TotalPoints"];
-	   
+
 	    $name = $row["PubFirstName"];
-	   
-	    
+
+
 	     }
 }
 else {
- 
+
 }
 if ($totpoints==0){
 $totevents=0;
@@ -67,7 +67,7 @@ else{
                 <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
 	    </div>
 		</div>
-    
+
 	<div class="row">
 	    <div class="col-sm-6 graphbox">
 		    <h4>Number of Points Per Semester</h4>
@@ -120,18 +120,18 @@ if ($result->num_rows > 0) {
                     <?php
     }
 } else {
- 
+
 }
 				?>
 			</table>
 		</div>
-		 
+
 		<script>
 			$(document).ready(function(){
   $.ajax({
-	  <?php 
+	  <?php
 	  $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
- 
+
 $url = $protocol . $_SERVER['HTTP_HOST'];
 	  ?>
     url : "<?php echo $url; ?>/public/chart1data.php?id=<?php echo $idclean; ?>",
@@ -158,7 +158,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
             pointHoverBorderColor: "rgba(59, 89, 152, 1)",
             data: totpoints
           }
-          
+
         ]
       };
       var ctx = $("#mycanvas1");
@@ -178,9 +178,9 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
 });
 			$(document).ready(function(){
   $.ajax({
-	  <?php 
+	  <?php
 	  $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
- 
+
 $url = $protocol . $_SERVER['HTTP_HOST'];
 	  ?>
     url : "<?php echo $url; ?>/public/chart2data.php?id=<?php echo $idclean; ?>",
@@ -207,7 +207,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
             pointHoverBorderColor: "rgba(59, 89, 152, 1)",
             data: totevents
           }
-          
+
         ]
       };
       var ctx = $("#mycanvas2");
@@ -226,7 +226,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
   });
 });
 		</script>
-		
+
         <div class="col-sm-1">
         </div>
     </div>
@@ -287,7 +287,7 @@ if ($result->num_rows > 0) {
                     <?php
     }
 } else {
- 
+
 }
 $conn->close();
 ?>
@@ -298,4 +298,3 @@ $conn->close();
     </div>
 </div>
 <?php include '../template/bottom.php' ?>
-
