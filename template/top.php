@@ -51,7 +51,9 @@ $userlevel = $_SESSION['userlevel']; ?>
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <?php if($userlevel>=3){ ?><li><a href="/events/newevent.php">NEW EVENT INFORMATION</a></li>
-          <li><a href="/events/upload.php">EVENT UPLOAD</a></li><?php } ?>
+          <li><a href="/events/upload.php">EVENT UPLOAD</a></li>
+          <li><a href="/events/chooseeventtoedit.php">EDIT AN EVENT</a></li>
+        <?php } ?>
 		  <li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li>
         </ul>
       </li><?php } ?>
