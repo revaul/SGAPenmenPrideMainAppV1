@@ -112,6 +112,7 @@ $userlevel = $_SESSION['userlevel']; ?>
     <ul class="dropdown-menu">
       <li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li>
       <li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li>
+      <li><a href="/admin/deleteuser.php">DELETE USER</a></li>
     </ul>
   </li><?php } ?>
 
