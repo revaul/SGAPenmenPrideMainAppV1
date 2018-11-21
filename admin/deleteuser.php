@@ -36,7 +36,19 @@ margin-top: 10px;">
 </div> <?php }
         ?>
         <form action="../actions/actiondeleteuser.php" method="post">
-
+          <div style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            width: 65%;
+            text-align:center;
+            border: 2px solid red;
+            background-color: rgba(201, 76, 76, 0.2);
+          border-radius: 8px;
+          margin-top: 10px;">
+          <h3 style="margin-top: 10px;">Notice:</h3>
+          <p>Note: Only delete a user to allow the user to change their password. If a user is disabled, change their permissions to disabled instead.</p>
+          </div>
 <!-- THIS IS FOR THE ANY USER IS FINE I.E. MORE THAN ONE ADMIN -->
         <p><label>Select User To Delete:   </label>
         <select name="userid">

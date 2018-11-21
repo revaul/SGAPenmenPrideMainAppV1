@@ -11,7 +11,7 @@ $userlevel = $_SESSION['userlevel']; ?>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="/css/sga.css<?php //echo "?".date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet" type="text/css">
+  <link href="/css/sga.css<?php echo "?".date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet" type="text/css">
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -46,7 +46,7 @@ $userlevel = $_SESSION['userlevel']; ?>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
 	  <?php if($userlevel>=1){ ?><li><a href="/">DASHBOARD</a></li> <?php } ?>
-		<?php if($userlevel>=2){ ?><li class="dropdown">
+		<?php if($userlevel>=1){ ?><li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EVENTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -54,7 +54,10 @@ $userlevel = $_SESSION['userlevel']; ?>
           <li><a href="/events/upload.php">EVENT UPLOAD</a></li>
           <li><a href="/events/chooseeventtoedit.php">EDIT AN EVENT</a></li>
         <?php } ?>
-		  <li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li>
+		  <?php if($userlevel>=2){ ?><li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li>
+      <?php } ?>
+      <?php if($userlevel>=1){ ?><li><a href="/events/chooseeventtoscanat.php">SCAN AN EVENT</a></li>
+      <?php } ?>
         </ul>
       </li><?php } ?>
 		<?php if($userlevel>=1){ ?><li class="dropdown">
@@ -115,8 +118,14 @@ $userlevel = $_SESSION['userlevel']; ?>
       <li><a href="/admin/deleteuser.php">DELETE USER</a></li>
     </ul>
   </li><?php } ?>
-
-		<li><a href="/login/logout.php">LOGOUT</a></li>
+  <li class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOWDY, <?php echo strtoupper($_SESSION['first']); ?>
+  <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="/admin/profile.php">EDIT MY PROFILE</a></li>
+  <li><a href="/login/logout.php">LOGOUT</a></li>
+  </ul>
+  </li>
       </ul>
     </div>
   </div>
