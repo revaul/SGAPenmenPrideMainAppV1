@@ -8,6 +8,7 @@
           </div>
     <div class="col-sm-8">
         <center><h2>Choose an Event To Scan At</h2>
+          <?php echo 'Current PHP version: ' . phpversion(); ?>
             <br>
             <!-- TODO: Need to Re-Evaluate the Pickup System. -->
 <form action="../actions/scanstudentidtoevents.php" method="post">
@@ -24,6 +25,7 @@
     $userlevel = $_SESSION['userlevel'];
 $query;
     if($userlevel==1){
+
       $query = "SELECT * FROM ppv0008003.scanningpeople join loginsystem.members on members.id=scanningpeople.personid join eventnames on eventnames.EventID=scanningpeople.eventids  where eventnames.eventdate='". date("Y")."-". date("m"). "-" .date("d") ."' and scanningpeople.personid='".$_SESSION['userid']."';";
       $test=$query;
 
