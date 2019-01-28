@@ -30,23 +30,43 @@ if($bothpass){
     if($scanner){
       $idnumnotsafe = $scanner;
       $idnumlenchecked;
+      if($scannertype==3){
+        if (strlen($idnumnotsafe)!=7){
+        $idnumlenchecked="0000001";
+        }
+        else{
+        $idnumlenchecked = $idnumnotsafe;
+        }
+      }
+      else{
       if (strlen($idnumnotsafe)!=16){
       $idnumlenchecked="0000001";
       }
       else{
       $idnumlenchecked = $idnumnotsafe;
       }
+    }
       $idnumlower = strtolower($idnumlenchecked);
       $vowels = array("select", "and", "or", "insert", "update", "delete", "execute", "show", "view", "create", "alter", "references", "index", "create", "view", " ", "routine", "event", "drop", "trigger", "grant", "option", "temporary", "table", "lock", ",", "echo", "$");
       $idnocommands = str_replace($vowels,"",$idnumlower);
       $idclean;
 
+if($scannertype==3){
+      if (strlen($idnocommands)!=7){
+      $idclean="0000001";
+      }
+      else{
+      $idclean = $idnocommands;
+      }
+    }
+    else{
       if (strlen($idnocommands)!=16){
       $idclean="0000001";
       }
       else{
       $idclean = $idnocommands;
       }
+    }
       ini_set('max_execution_time', 300);
                           require '../mysqlkeys.php';
                           $conn = new mysqli($host, $user, $password, $dbname);
