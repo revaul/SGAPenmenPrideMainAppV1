@@ -61,7 +61,7 @@ $userlevel = $_SESSION['userlevel']; ?>
       <?php } ?>
         </ul>
       </li><?php } ?>
-		<?php if($userlevel>=1){ ?><li class="dropdown">
+		<?php if($userlevel>=2){ ?><li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPORTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
