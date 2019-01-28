@@ -26,7 +26,7 @@ $query;
     if($userlevel==1){
 
       $query = "SELECT * FROM ppv0008003.scanningpeople join loginsystem.members on members.id=scanningpeople.personid join eventnames on eventnames.EventID=scanningpeople.eventids  where eventnames.eventdate='". date("Y")."-". date("m"). "-" .date("d") ."' and scanningpeople.personid='".$_SESSION['userid']."';";
-      $test=$query;
+
 
     }
       elseif($userlevel==2 || $userlevel==3){
@@ -47,7 +47,7 @@ $query;
   $con->close();
   ?>
   </select></p>
-  <?php echo $test;
+  <?php 
    if($userlevel<4){ ?> <input type="hidden" name="scannertype" value="0"> <?php } else { ?>
   <p><label>Choose Scanning Method:   </label><select name="scannertype">
 <option value="0">Scanning Via iPad</option>
