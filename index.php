@@ -15,11 +15,10 @@ if(isset($_SESSION['originaladdress'])){
   <div class="row">
     <div class="col-sm-8">
       <!-- IDEA: Change the text on the index to a status dashboard. -->
-      <h2>Penmen Pride Dashboard</h2><br>
       <h2>Welcome <?php echo $_SESSION['first']; ?>,</h2>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>test Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <h4>The Penmen Pride program is an initiative that has SNHU students enthusiastic about participating in events and programs around campus. This program enhances school spirit within our student body by implementing incentives for students to attend events. By having your event be a Penmen Pride event, you can look forward to students showing up excited to attend. Penmen Pride is just one of the ways that the Student Government Association builds student community spirit by creating a common goal among all SNHU students - to earn points, and win prizes!  </h4><br>
+
+
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
