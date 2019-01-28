@@ -148,7 +148,7 @@ $url = $protocol . $_SERVER['HTTP_HOST'];
         labels: PubSemester,
         datasets: [
           {
-            label: "Total Points:",
+            label: "Total Points",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(0, 30, 96, 1)",
