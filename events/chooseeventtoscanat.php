@@ -8,7 +8,6 @@
           </div>
     <div class="col-sm-8">
         <center><h2>Choose an Event To Scan At</h2>
-          <?php echo 'Current PHP version: ' . phpversion(); ?>
             <br>
             <!-- TODO: Need to Re-Evaluate the Pickup System. -->
 <form action="../actions/scanstudentidtoevents.php" method="post">
