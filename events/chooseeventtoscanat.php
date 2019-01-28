@@ -24,7 +24,7 @@
     $userlevel = $_SESSION['userlevel'];
 $query;
     if($userlevel==1){
-      $query = "SELECT * FROM ppv0008003.scanningpeople join loginsystem.members on members.id=scanningpeople.personid join eventnames on eventnames.EventID=scanningpeople.eventids  where EventDate=DATE_FORMAT(NOW(), '%Y-%m-%d') and scanningpeople.personid='".$_SESSION['userid']."';";
+      $query = "SELECT * FROM ppv0008003.scanningpeople join loginsystem.members on members.id=scanningpeople.personid join eventnames on eventnames.EventID=scanningpeople.eventids  where eventnames.eventdate='". date("Y")."-". date("M"). "-" .date("D") ."' and scanningpeople.personid='".$_SESSION['userid']."';";
       $test=$query;
 
     }
