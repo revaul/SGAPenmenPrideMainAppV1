@@ -1,5 +1,14 @@
 <?php require "login/loginheader.php"; ?>
 <?php require "login/permissions/level1.php"; ?>
+<?php
+if(isset($_SESSION['originaladdress'])){
+ $newoldurlforredirect = $_SESSION['originaladdress'];
+ unset($_SESSION['originaladdress']);
+ if($newoldurlforredirect!='/'){
+//return header("location:".$newoldurlforredirect);
+}
+}
+?>
 <?php include "template/top.php"; ?>
 <?php include "template/jumbotron.php"; ?>
 <div id="about" class="container-fluid">
