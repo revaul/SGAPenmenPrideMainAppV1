@@ -99,7 +99,7 @@ $userlevel = $_SESSION['userlevel']; ?>
       </ul>
     </li>
     <?php } ?>
-          <?php if($userlevel>=1){ ?>
+          <?php if($userlevel>=2){ ?>
             <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MISC
         <span class="caret"></span></a>
@@ -123,7 +123,7 @@ $userlevel = $_SESSION['userlevel']; ?>
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOWDY, <?php echo strtoupper($_SESSION['first']); ?>
   <span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <li><a href="/admin/profile.php">EDIT MY PROFILE</a></li>
+    <?php if($userlevel>=6){ ?><li><a href="/admin/profile.php">EDIT MY PROFILE</a></li> <?php } ?>
   <li><a href="/login/logout.php">LOGOUT</a></li>
   </ul>
   </li>
