@@ -14,6 +14,7 @@
   <p><label>Choose Event:   </label>
   <select name="event">
   <?php
+  $test;
   require '../mysqlkeys.php';
   $con=mysqli_connect($host , $user , $password , $dbname );
 
@@ -24,6 +25,8 @@
 $query;
     if($userlevel==1){
       $query = "SELECT * FROM ppv0008003.scanningpeople join loginsystem.members on members.id=scanningpeople.personid join eventnames on eventnames.EventID=scanningpeople.eventids  where EventDate=DATE_FORMAT(NOW(), '%Y-%m-%d') and scanningpeople.personid='".$_SESSION['userid']."';";
+      $test=$query;
+
     }
       elseif($userlevel==2 || $userlevel==3){
       $query = "SELECT * FROM ppv0008003.eventnames where EventDate=DATE_FORMAT(NOW(), '%Y-%m-%d');";
@@ -43,7 +46,8 @@ $query;
   $con->close();
   ?>
   </select></p>
-  <?php if($userlevel<4){ ?> <input type="hidden" name="scannertype" value="0"> <?php } else { ?>
+  <?php echo $test;
+   if($userlevel<4){ ?> <input type="hidden" name="scannertype" value="0"> <?php } else { ?>
   <p><label>Choose Scanning Method:   </label><select name="scannertype">
 <option value="0">Scanning Via iPad</option>
 <option value="1">Scanning Via Laptop USB Scanner</option>
