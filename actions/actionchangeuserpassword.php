@@ -22,14 +22,14 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$insertdaystmt = "UPDATE loginsystem.members SET password = " . $newpw . " WHERE id = '" . $userid . "';";
+$insertdaystmt = "UPDATE loginsystem.members SET password = '" . $newpw . "' WHERE id = '" . $userid . "';";
             if ($conn->query($insertdaystmt) === TRUE) {
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
             }
 }
 ?>
-<h2>Success User Permissions Changed!</h2></div>
+<h2>Success User Password Changed!</h2></div>
     <div class="col-sm-1">
     </div>
   </div>
