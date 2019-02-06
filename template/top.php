@@ -98,21 +98,17 @@ $userlevel = $_SESSION['userlevel']; ?>
         </ul>
       </li>
       <?php } ?>
-        <?php if($userlevel>=5){ ?><li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN
-    <span class="caret"></span></a>
-    <ul class="dropdown-menu">
-      <li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li>
-      <li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li>
-      <li><a href="/admin/changepassword.php">CHANGE USER PASSWORD</a></li>
-      <li><a href="/admin/deleteuser.php">DELETE USER</a></li>
-    </ul>
-  </li><?php } ?>
   <li class="dropdown">
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOWDY, <?php echo strtoupper($_SESSION['first']); ?>
   <span class="caret"></span></a>
   <ul class="dropdown-menu">
     <?php if($userlevel>=6){ ?><li><a href="/admin/profile.php">EDIT MY PROFILE</a></li> <?php } ?>
+    <?php if($userlevel>=5){ ?>
+    <li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li>
+    <li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li>
+    <li><a href="/admin/changepassword.php">CHANGE USER PASSWORD</a></li>
+    <li><a href="/admin/deleteuser.php">DELETE USER</a></li>
+    <?php } ?>
   <li><a href="/login/logout.php">LOGOUT</a></li>
   </ul>
   </li>
