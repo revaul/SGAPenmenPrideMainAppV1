@@ -46,7 +46,7 @@ $userlevel = $_SESSION['userlevel']; ?>
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-	  <?php if($userlevel>=1){ ?><li><a href="/">DASHBOARD</a></li> <?php } ?>
+	  <?php if($userlevel>=1){ ?><li><a href="/">HOME</a></li> <?php } ?>
 		<?php if($userlevel>=1){ ?><li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EVENTS
         <span class="caret"></span></a>
@@ -75,37 +75,25 @@ $userlevel = $_SESSION['userlevel']; ?>
         </ul>
       </li>
       <?php } ?>
-      <?php if($userlevel>=3){ ?>
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">TRIGGER
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="/trigger/duplicates.php">DUPLICATE ELIMINATION</a></li>
-            <li><a href="/trigger/studentidtolisting.php">SCANNERLINK STUDENT LISTING</a></li>
-            <li><a href="/trigger/year.php">UPDATE SEMESTERS/YEARS</a></li>
-            <li><a href="/trigger/dates.php">UPDATE DATES</a></li>
-			      <li><a href="/trigger/tallypoints.php">TALLY POINTS</a></li>
-		        <li><a href="/trigger/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
-        </ul>
-      </li>
-      <?php } ?>
-      <?php if($userlevel>=4){ ?>
-      <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">EMAIL
-      <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-          <li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li>
-          <li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>
-      </ul>
-    </li>
-    <?php } ?>
           <?php if($userlevel>=2){ ?>
             <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MISC
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="/misc/prizegiveaway.php">PRIZE GIVEAWAY</a></li>
-		  <?php if($userlevel>=3){ ?><li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li> <?php } ?>
+		  <?php if($userlevel>=3){ ?><li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li>
+      <li><a href="/trigger/duplicates.php">DUPLICATE ELIMINATION</a></li>
+      <li><a href="/trigger/studentidtolisting.php">SCANNERLINK STUDENT LISTING</a></li>
+      <li><a href="/trigger/year.php">UPDATE SEMESTERS/YEARS</a></li>
+      <li><a href="/trigger/dates.php">UPDATE DATES</a></li>
+      <li><a href="/trigger/tallypoints.php">TALLY POINTS</a></li>
+      <li><a href="/trigger/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
+<?php } ?>
+<?php if($userlevel>=4){ ?>
+  <li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li>
+  <li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>
+  <?php } ?>
+
 		<?php if($userlevel>=2){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
         </ul>
       </li>
