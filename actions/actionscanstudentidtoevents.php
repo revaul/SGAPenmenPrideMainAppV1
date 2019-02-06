@@ -14,6 +14,7 @@ $scannertype= $_POST["scannertype"];
 $eventname= $_POST["eventname"];
 $bothpass=TRUE;
 $scanner= $_POST["scanner"];
+echo $scanner;
 if (!is_numeric($scannertype)) {
         $bothpass=FALSE;
     }
@@ -81,7 +82,7 @@ if($scannertype==3){
     // $("#newformtorevertback").submit();
 //});
 </script>
-<form name="newformtorevertback" id="newformtorevertback" action="scanstudentidtoevents.php" method="post">
+<form name="newformtorevttttertback" id="newformtorevertback" action="scanstudentidtoevents.php" method="post">
   <input type="hidden" name="event" value="<?php echo $eventname; ?>">
   <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
 </form>
