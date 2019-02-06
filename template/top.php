@@ -29,7 +29,7 @@ $userlevel = $_SESSION['userlevel']; ?>
 </script>
 
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="document.newformtorevertback.submit()">
 
 <nav class="navbar navbar-default navbar-fixed-top no-print">
   <div class="container">

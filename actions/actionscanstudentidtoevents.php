@@ -77,9 +77,9 @@ if($scannertype==3){
                   if ($conn->query($insertdaystmt) === TRUE) {
                     ?>
 <script>
-$(document).ready(function(){
-     $("#newformtorevertback").submit();
-});
+//$(document).ready(function(){
+    // $("#newformtorevertback").submit();
+//});
 </script>
 <form name="newformtorevertback" id="newformtorevertback" action="scanstudentidtoevents.php" method="post">
   <input type="hidden" name="event" value="<?php echo $eventname; ?>">
