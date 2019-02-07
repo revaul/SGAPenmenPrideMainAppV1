@@ -6,11 +6,7 @@
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+
       <!--<script>
       $(document).on("keypress", ":input:not(textarea)", function(event) {
     return event.keyCode != 13;
@@ -40,7 +36,7 @@
 
 <input type="hidden" name="eventname" value="<?php echo $eventname; ?>">
 <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
-<input type="text" style="display:block;margin:auto;text-align:center;width:400px;height:200px;" name="scanner" autofocus>
+<input type="text" style="display:block;margin:auto;text-align:center;width:800px;height:400px;" name="scanner" autofocus>
 <br>
 <input style="display:block;margin:auto;text-align:center" type="submit">
     </form>
