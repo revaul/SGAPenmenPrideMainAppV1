@@ -40,7 +40,7 @@
 
 <input type="hidden" name="eventname" value="<?php echo $eventname; ?>">
 <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
-<input type="text" style="display:block;margin:auto;text-align:center;" name="scanner" autofocus>
+<input type="text" style="display:block;margin:auto;text-align:center;width:400px;height:200px;" name="scanner" autofocus>
 <br>
 <input style="display:block;margin:auto;text-align:center" type="submit">
     </form>
