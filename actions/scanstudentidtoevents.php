@@ -11,11 +11,11 @@
       <br>
       <br>
       <br>
-      <script>
+      <!--<script>
       $(document).on("keypress", ":input:not(textarea)", function(event) {
     return event.keyCode != 13;
 });
-      </script>
+</script>-->
       <?php
       // TODO: Post Field Verification
       $scannertype= $_POST["scannertype"];
