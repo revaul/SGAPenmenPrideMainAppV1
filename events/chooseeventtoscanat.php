@@ -47,10 +47,10 @@ $query;
   $con->close();
   ?>
   </select></p>
-  <?php 
+  <?php
    if($userlevel<4){ ?> <input type="hidden" name="scannertype" value="0"> <?php } else { ?>
   <p><label>Choose Scanning Method:   </label><select name="scannertype">
-<option value="0">Scanning Via iPad</option>
+<option value="1">Scanning Via iPad</option>
 <option value="1">Scanning Via Laptop USB Scanner</option>
 <option value="2">Scanning Via Manually Entering Email</option>
 <option value="3">Scanning Via Manually Entering Student ID Number</option>
