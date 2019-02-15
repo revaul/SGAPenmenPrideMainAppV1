@@ -10,6 +10,7 @@
 <?php
 // TODO: Post Field Verification
 $eventname= $_POST["name"];
+$eventtype= $_POST["eventtype"];
 $eventhost= $_POST["host"];
 $eventpoints= $_POST["pointvalue"];
 $eventdoublepoints= $_POST["doublepoints"];
@@ -37,7 +38,7 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$insertdaystmt = "INSERT INTO `ppv0008003`.`eventnames` (`EventName`, `EventDate`, `PointValue`, `DoublePoints`, `HostID`) VALUES ('".$eventname."', '".$eventnewdate."', ".$eventpoints.", ".$eventdoublepoints.", '".$eventhost."');";
+$insertdaystmt = "INSERT INTO `ppv0008003`.`eventnames` (`EventName`, `EventDate`, `PointValue`, `DoublePoints`, `HostID`, `EventType`) VALUES ('".$eventname."', '".$eventnewdate."', ".$eventpoints.", " . $eventdoublepoints . ", '".$eventhost."', ". $eventtype .");";
             if ($conn->query($insertdaystmt) === TRUE) {
             } else {
                 echo "Error: " . $insertdaystmt . "<br>" . $conn->error;

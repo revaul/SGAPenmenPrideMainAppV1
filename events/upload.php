@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level3.php"; ?>
+<?php require "../login/permissions/level4.php"; ?>
 <?php include "../template/top.php"; ?>
 <!-- NOTE: This file requires the www-data group folder to have chown NOT chgrp permissions on the uploads folder. Also,  set permissions to chmod 755-->
 
@@ -22,7 +22,7 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
       $expensions= array("txt");
 
       if(in_array($file_ext,$expensions)=== false){
-         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+         $errors[]="extension not allowed, please choose a txt file.";
       }
       if($file_size > 2097152){
          $errors[]='File size must be excately 2 MB';

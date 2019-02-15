@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level2.php"; ?>
+<?php require "../login/permissions/level3.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -11,8 +11,9 @@
       <col width="10%">
   <col width="35%">
       <col width="15%">
-  <col width="10%">
-      <col width="10%">
+  <col width="6%">
+      <col width="7%">
+      <col width="7%">
   <col width="20%">
 <tr>
 <th>Event ID
@@ -24,6 +25,8 @@
 <th>Points
 </th>
 <th>Double Points
+</th>
+<th>Event type
 </th>
 <th>Host Name
 </th>
@@ -38,7 +41,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoublePoints, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID order by eventnames.EventDate DESC";
+$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoublePoints, eventtypes.EventTypeName, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID join eventtypes on eventtypes.ideventtypes=eventnames.eventtype order by eventnames.EventDate DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -49,6 +52,7 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["EventDate"];
 	   ?></td><td><?php echo $row["PointValue"];
 	   ?></td><td><?php echo $row["DoublePoints"];
+     ?></td><td><?php echo $row["EventTypeName"];
 	   ?></td><td><?php echo $row["HostName"];
 	   ?></td></tr><?php
     }

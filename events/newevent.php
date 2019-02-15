@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level3.php"; ?>
+<?php require "../login/permissions/level4.php"; ?>
 <?php include "../template/top.php"; ?>
 
 <div id="about" class="container-fluid">
@@ -85,58 +85,34 @@ foreach ($results as $HostName){
 <option value="48">48</option>
 <option value="49">49</option>
 <option value="50">50</option>
-<option value="51">51</option>
-<option value="52">52</option>
-<option value="53">53</option>
-<option value="54">54</option>
-<option value="55">55</option>
-<option value="56">56</option>
-<option value="57">57</option>
-<option value="58">58</option>
-<option value="59">59</option>
-<option value="60">60</option>
-<option value="61">61</option>
-<option value="62">62</option>
-<option value="63">63</option>
-<option value="64">64</option>
-<option value="65">65</option>
-<option value="66">66</option>
-<option value="67">67</option>
-<option value="68">68</option>
-<option value="69">69</option>
-<option value="70">70</option>
-<option value="71">71</option>
-<option value="72">72</option>
-<option value="73">73</option>
-<option value="74">74</option>
-<option value="75">75</option>
-<option value="76">76</option>
-<option value="77">77</option>
-<option value="78">78</option>
-<option value="79">79</option>
-<option value="80">80</option>
-<option value="81">81</option>
-<option value="82">82</option>
-<option value="83">83</option>
-<option value="84">84</option>
-<option value="85">85</option>
-<option value="86">86</option>
-<option value="87">87</option>
-<option value="88">88</option>
-<option value="89">89</option>
-<option value="90">90</option>
-<option value="91">91</option>
-<option value="92">92</option>
-<option value="93">93</option>
-<option value="94">94</option>
-<option value="95">95</option>
-<option value="96">96</option>
-<option value="97">97</option>
-<option value="98">98</option>
-<option value="99">99</option>
 <option value="100">100</option>
 <option value="1000">1000</option>
+</select></p>
+<p><label>Event Type:   </label>
+<select name="eventtype">
+<option value="">Select Event Type</option>
+<?php
+require '../mysqlkeys.php';
+$con=mysqli_connect($host , $user , $password , $dbname );
 
+if (mysqli_connect_errno()){
+	echo "Failed to connect:".mysqli_connect_errno();
+	}
+$query = "select * from eventtypes;";
+$results=mysqli_query($con, $query);
+
+foreach ($results as $HostName){
+
+?>
+<option value="<?php echo $HostName["IDEventTypes"]; ?>"><?php echo $HostName["EventTypeName"]; ?></option>
+<?php
+}
+?>
+</select></p>
+<p> <label>Double Points:   </label><select name="doublepoints">
+<option value="">Yes or No</option>
+<option value="1">Yes</option>
+<option value="0">No</option>
 </select></p>
 <p> <label>Double Points:   </label><select name="doublepoints">
 <option value="">Yes or No</option>

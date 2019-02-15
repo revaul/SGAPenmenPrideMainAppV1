@@ -30,7 +30,7 @@ $query;
 
     }
       elseif($userlevel==2 || $userlevel==3){
-      $query = "SELECT * FROM ppv0008003.eventnames where EventDate=DATE_FORMAT(NOW(), '%Y-%m-%d');";
+      $query = "SELECT * FROM ppv0008003.eventnames where eventnames.eventdate='". date("Y")."-". date("m"). "-" .date("d") ."';";
         }
         else{
           $query = "SELECT * FROM ppv0008003.eventnames order by eventnames.EventDate DESC;";
@@ -51,9 +51,9 @@ $query;
    if($userlevel<4){ ?> <input type="hidden" name="scannertype" value="0"> <?php } else { ?>
   <p><label>Choose Scanning Method:   </label><select name="scannertype">
 <option value="1">Scanning Via iPad</option>
-<option value="1">Scanning Via Laptop USB Scanner</option>
+<!--<option value="1">Scanning Via Laptop USB Scanner</option>
 <option value="2">Scanning Via Manually Entering Email</option>
-<option value="3">Scanning Via Manually Entering Student ID Number</option>
+<option value="3">Scanning Via Manually Entering Student ID Number</option>-->
   </select>
   </p>
 <?php } ?>

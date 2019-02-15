@@ -46,31 +46,29 @@ $userlevel = $_SESSION['userlevel']; ?>
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-	  <?php if($userlevel>=1){ ?><li><a href="/">HOME</a></li> <?php } ?>
-		<?php if($userlevel>=1){ ?><li class="dropdown">
+	  <?php if($userlevel>=1){ ?><li><a href="/">HOME</a></li>
+		<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EVENTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <?php if($userlevel>=3){ ?><li><a href="/events/newevent.php">NEW EVENT INFORMATION</a></li>
-          <li><a href="/events/upload.php">EVENT UPLOAD</a></li>
-          <li><a href="/events/chooseeventtoedit.php">EDIT AN EVENT</a></li>
-        <?php } ?>
-		  <?php if($userlevel>=2){ ?><li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li>
-      <?php } ?>
-      <?php if($userlevel>=1){ ?><li><a href="/events/chooseeventtoscanat.php">SCAN AN EVENT</a></li>
-      <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/newevent.php">NEW EVENT INFORMATION</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/upload.php">EVENT UPLOAD</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/chooseeventtoedit.php">EDIT AN EVENT</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/uploadcsv.php">EVENT CSV UPLOAD</a></li> <?php } ?>
+            <?php if($userlevel>=3){ ?> <li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li> <?php } ?>
+            <?php if($userlevel>=1){ ?> <li><a href="/events/chooseeventtoscanat.php">SCAN AN EVENT</a></li> <?php } ?>
         </ul>
       </li><?php } ?>
-		<?php if($userlevel>=2){ ?><li class="dropdown">
+		<?php if($userlevel>=3){ ?><li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPORTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <?php if($userlevel>=2){ ?><li><a href="/exports/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li>
-		<li><a href="/exports/attendanceexportwithid.php">EVENT ATTENDANCE INFORMATION WITH STUDENT IDS</a></li>
-		  <li><a href="#">EVENT ATTENDANCE NUMBERS</a></li>
-          <li><a href="/exports/OSIExport.php">OSI DATA CONVERSION</a></li>
-            <li><a href="/exports/fulltermpoints.php">TERM POINTS</a></li> </li><?php } ?>
-            <li><a href="/exports/setupprizesheet.php">PRIZE SHEETS</a></li>
+            <?php if($userlevel>=3){ ?><li><a href="/exports/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li><?php } ?>
+		        <?php if($userlevel>=3){ ?><li><a href="/exports/attendanceexportwithid.php">EVENT ATTENDANCE INFORMATION WITH STUDENT IDS</a></li><?php } ?>
+		        <?php if($userlevel>=3){ ?><li><a href="#">EVENT ATTENDANCE NUMBERS</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/exports/OSIExport.php">OSI DATA CONVERSION</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/exports/fulltermpoints.php">TERM POINTS</a></li> </li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/exports/setupprizesheet.php">PRIZE SHEETS</a></li><?php } ?>
 
         </ul>
       </li>
@@ -80,21 +78,17 @@ $userlevel = $_SESSION['userlevel']; ?>
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MISC
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/misc/prizegiveaway.php">PRIZE GIVEAWAY</a></li>
-		  <?php if($userlevel>=3){ ?><li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li>
-      <li><a href="/trigger/duplicates.php">DUPLICATE ELIMINATION</a></li>
-      <li><a href="/trigger/studentidtolisting.php">SCANNERLINK STUDENT LISTING</a></li>
-      <li><a href="/trigger/year.php">UPDATE SEMESTERS/YEARS</a></li>
-      <li><a href="/trigger/dates.php">UPDATE DATES</a></li>
-      <li><a href="/trigger/tallypoints.php">TALLY POINTS</a></li>
-      <li><a href="/trigger/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li>
-<?php } ?>
-<?php if($userlevel>=4){ ?>
-  <li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li>
-  <li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>
-  <?php } ?>
-
-		<?php if($userlevel>=2){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
+            <?php if($userlevel>=2){ ?><li><a href="/misc/prizegiveaway.php">PRIZE GIVEAWAY</a></li><?php } ?>
+		        <?php if($userlevel>=4){ ?><li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/trigger/duplicates.php">DUPLICATE ELIMINATION</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/trigger/studentidtolisting.php">SCANNERLINK STUDENT LISTING</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/trigger/year.php">UPDATE SEMESTERS/YEARS</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/trigger/dates.php">UPDATE DATES</a></li><?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/trigger/tallypoints.php">TALLY POINTS</a></li><?php } ?>
+            <?php if($userlevel>=5){ ?><li><a href="/trigger/randomkeygenerator.php">RANDOM KEY GENERATOR</a></li><?php } ?>
+            <?php if($userlevel>=5){ ?><li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li><?php } ?>
+            <?php if($userlevel>=5){ ?><li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>  <?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
         </ul>
       </li>
       <?php } ?>
@@ -102,13 +96,11 @@ $userlevel = $_SESSION['userlevel']; ?>
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOWDY, <?php echo strtoupper($_SESSION['first']); ?>
   <span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <?php if($userlevel>=6){ ?><li><a href="/admin/profile.php">EDIT MY PROFILE</a></li> <?php } ?>
-    <?php if($userlevel>=5){ ?>
-    <li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li>
-    <li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li>
-    <li><a href="/admin/changepassword.php">CHANGE USER PASSWORD</a></li>
-    <li><a href="/admin/deleteuser.php">DELETE USER</a></li>
-    <?php } ?>
+            <?php if($userlevel>=1){ ?><li><a href="/admin/profile.php">EDIT MY PROFILE</a></li> <?php } ?>
+            <?php if($userlevel>=6){ ?><li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li><?php } ?>
+            <?php if($userlevel>=6){ ?><li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li><?php } ?>
+            <?php if($userlevel>=6){ ?><li><a href="/admin/changepassword.php">CHANGE USER PASSWORD</a></li><?php } ?>
+            <?php if($userlevel>=6){ ?><li><a href="/admin/deleteuser.php">DELETE USER</a></li><?php } ?>
   <li><a href="/login/logout.php">LOGOUT</a></li>
   </ul>
   </li>
