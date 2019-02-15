@@ -67,7 +67,8 @@ while (($row = fgetcsv($fileHandle, 0, ",")) !== FALSE) {
 
     }
     else{
-    $lineremove = str_replace(array("\r", "\n"), '', $line);
+    $linelower = strtolower($line);
+    $lineremove = str_replace(array("\r", "\n"), '', $linelower);
     $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (".$eventid.", '".$lineremove."');";
     echo $insertdaystmt;
     if ($conn->query($insertdaystmt) === TRUE) {
