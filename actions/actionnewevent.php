@@ -38,11 +38,18 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$insertdaystmt = "INSERT INTO `ppv0008003`.`eventnames` (`EventName`, `EventDate`, `PointValue`, `DoublePoints`, `HostID`, `EventType`) VALUES ('".$eventname."', '".$eventnewdate."', ".$eventpoints.", " . $eventdoublepoints . ", '".$eventhost."', ". $eventtype .");";
-            if ($conn->query($insertdaystmt) === TRUE) {
-            } else {
-                echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-            }
+$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssiiii", $field1, $field2, $field3, $field4, $field5, $field6);
+
+$field1=$eventname;
+$field2=$eventnewdate;
+$field3=$eventpoints;
+$field4=$eventdoublepoints;
+$field5=$eventhost;
+$field6=$eventtype;
+$stmt->execute();
+$stmt->close();
+$conn->close();
 
 ?>
 <h2>Success Event Added!</h2></div>
