@@ -14,6 +14,7 @@ $mail->Host = $mailhost;
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPKeepAlive = true;
+$mail->SMTPDebug = 2;
 $mail->Port = $mailport;
 $mail->Username = $mailusername;
 $mail->Password = $mailpassword;
@@ -28,28 +29,30 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM ppv0008003.PendingEmails;";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($result->num_rows > 0)
+{
     // output data of each row
     while($row = $result->fetch_assoc()) {
       $mail->addAddress($row["ToEmailAddress"], $row["ToFirstName"]);
       $mail->Subject = $row["ToSubject"];
       $mail->Body = base64_decode($row["ToBodyHtml"]);
       $mail->AltBody = base64_decode($row["ToBodyAlt"]);
-      if (!$mail->send()) {
-       echo "Mailer Error (" . str_replace("@", "&#64;", $row["email"]) . ') ' . $mail->ErrorInfo . '<br />';
-       break; //Abandon sending
-   } else {
-
-$stmt = $conn->prepare("UPDATE 'ppv0008003'.'emailsystem' SET 'ToSent' = 1 WHERE 'EmailID' = ?;
-");
-$stmt->bind_param("i", $field1);
-
-$field1=$row["EmailID"];
-
-$stmt->execute();
-   }
+      if (!$mail->send())
+        {
+          echo "Mailer Error (" . str_replace("@", "&#64;", $row["email"]) . ') ' . $mail->ErrorInfo . '<br />';
+          break; //Abandon sending
+        }
+      else
+        {
+          $stmt = $conn->prepare("UPDATE ppv0008003.emailsystem SET ToSent = 1 WHERE EmailID = ?");
+          $stmt->bind_param("i", $field1);
+          $field1=$row["EmailID"];
+          $stmt->execute();
+        }
     }
-} else {
+}
+else
+{
 
 }
 $conn->close();
