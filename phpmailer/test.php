@@ -7,11 +7,13 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 require '../mysqlkeys.php';
-
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+$x = 1; 
+while($x <= 5){
+$mail = new PHPMailer(true);
+                       // Passing `true` enables exceptions
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = $mailhost;  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -34,5 +36,7 @@ try {
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+}
+$x++;
 }
 ?>
