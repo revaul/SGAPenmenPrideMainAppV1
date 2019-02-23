@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-require ‘./mysqlkeys.php’;
+require '../mysqlkeys.php';
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
@@ -21,7 +21,7 @@ try {
     $mail->Port = $mailport;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($mailusername, 'Ryan Evaul');
+    $mail->setFrom($mailusername, $mailnamefrom);
     $mail->addAddress('ryan.evaul@snhu.edu', 'Ryan');     // Add a recipient
 
     //Content
