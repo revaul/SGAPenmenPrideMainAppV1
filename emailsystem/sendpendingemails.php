@@ -7,36 +7,52 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require '../phpmailer/vendor/autoload.php';
 require '../mysqlkeys.php';
-$x = 1;
-while($x <= 5){
-$mail = new PHPMailer(true);
+
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host = $mailhost;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'tls';
+$mail->SMTPKeepAlive = true;
+$mail->Port = $mailport;
+$mail->Username = $mailusername;
+$mail->Password = $mailpassword;
+$mail->setFrom($mailusername, $mailnamefrom);
+
+$conn = new mysqli($host, $user, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM ppv0008003.PendingEmails;";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      $mail->addAddress($row["ToEmailAddress"], $row["ToFirstName"]);
+      $mail->Subject = $row["ToSubject"];
+      $mail->Body = base64_decode($row["ToBodyHtml"]);
+      $mail->AltBody = base64_decode($row["ToBodyAlt"]);
+      if (!$mail->send()) {
+       echo "Mailer Error (" . str_replace("@", "&#64;", $row["email"]) . ') ' . $mail->ErrorInfo . '<br />';
+       break; //Abandon sending
+   } else {
+
+$stmt = $conn->prepare("UPDATE 'ppv0008003'.'emailsystem' SET 'ToSent' = 1 WHERE 'EmailID' = ?;
+");
+$stmt->bind_param("i", $field1);
+
+$field1=$row["EmailID"];
+
+$stmt->execute();
+   }
+    }
+} else {
+
+}
+$conn->close();
+
                        // Passing `true` enables exceptions
-try {
-    //Server settings
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = $mailhost;  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = $mailusername;                 // SMTP username
-    $mail->Password = $mailpassword;                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = $mailport;                                    // TCP port to connect to
-
-    //Recipients
-    $mail->setFrom($mailusername, $mailnamefrom);
-    $mail->addAddress('ryan.evaul@snhu.edu', 'Ryan');     // Add a recipient
-
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-}
-$x++;
-}
 ?>
