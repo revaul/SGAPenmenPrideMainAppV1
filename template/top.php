@@ -57,6 +57,8 @@ $userlevel = $_SESSION['userlevel']; ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/uploadcsv.php">EVENT CSV UPLOAD</a></li> <?php } ?>
             <?php if($userlevel>=3){ ?> <li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li> <?php } ?>
             <?php if($userlevel>=1){ ?> <li><a href="/events/chooseeventtoscanat.php">SCAN AN EVENT</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/eventscanningpeople.php">EVENT PERSON SCANNER LISTING</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/addscanningpeople.php">ADD SCANNING PEOPLE</a></li> <?php } ?>
         </ul>
       </li><?php } ?>
 		<?php if($userlevel>=3){ ?><li class="dropdown">

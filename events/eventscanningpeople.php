@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level3.php"; ?>
+<?php require "../login/permissions/level4.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -49,7 +49,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td><a href=/actions/deletescannerperson.php?personscannerid=<?php echo $row["idscanningpeople"];?> target="_blank"><div class="linkbuttontopublic">Delete</div></a></td><td> <?php echo $row["eventid"];
+       ?><tr><td><a href=/actions/actiondeletescannerperson.php?personscannerid=<?php echo $row["idscanningpeople"];?> target="_blank"><div class="linkbuttontopublic">Delete</div></a></td><td> <?php echo $row["eventid"];
 	   ?></td><td><?php echo $row["eventname"];
 	   ?></td><td><?php echo $row["eventdate"];
 	   ?></td><td><?php echo $row["hostname"];
