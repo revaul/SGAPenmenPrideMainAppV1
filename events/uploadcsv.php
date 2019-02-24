@@ -42,6 +42,7 @@ $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
    if($fileurl!="TEST"){
 	   $eventid= $_POST["eventid"];
    echo $fileurl;
+   echo "<br>";
 ini_set('max_execution_time', 300);
                     require '../mysqlkeys.php';
                     $conn = new mysqli($host, $user, $password, $dbname);
