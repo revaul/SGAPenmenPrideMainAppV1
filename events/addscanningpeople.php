@@ -10,7 +10,7 @@
         <center><h2>Choose an Event To Scan At</h2>
             <br>
             <!-- TODO: Need to Re-Evaluate the Pickup System. -->
-<form action="../actions/scanstudentidtoevents.php" method="post">
+<form action="../actions/actionaddpersonscanning.php" method="post">
   <p><label>Choose Event:   </label>
   <select name="event">
   <?php
@@ -39,7 +39,7 @@
   </select></p>
   <?php ?>
 
-  <p><label>Choose A Person:   </label><select name="scannertype">
+  <p><label>Choose A Person:   </label><select name="scannerperson">
 
   <?php
 
