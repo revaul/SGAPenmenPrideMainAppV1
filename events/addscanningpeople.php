@@ -51,7 +51,7 @@
   foreach ($results as $HostName){
 
   ?>
-  <option value="<?php echo $HostName["id"]; ?>"><?php echo $HostName["lastname"].", ".$HostName["firstname"]." - ".$HostName["email"] ; ?></option>
+  <option value="<?php echo $HostName["id"]; ?>"><?php echo $HostName["lastname"].", ".$HostName["firstname"]." - ".$HostName["username"]." - ".$HostName["email"] ; ?></option>
   <?php
   }
 
