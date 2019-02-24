@@ -15,12 +15,6 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$insertdaystmt = "DELETE FROM `ppv0008003`.`scanningpeople` WHERE idscanningpeople = '" . $userid . "';";
-            if ($conn->query($insertdaystmt) === TRUE) {
-            } else {
-                echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-            }
-
 
             $stmt = $conn->prepare("DELETE FROM `ppv0008003`.`scanningpeople` WHERE idscanningpeople = ?");
             $stmt->bind_param("i", $field1);
