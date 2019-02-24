@@ -92,6 +92,9 @@ $eventid2 = scrubnum($eventid);
       $checkeventhost= $_POST["checkeventhost"];
       $hostname= $_POST["hostname"];
 
+      $checkeventtype= $_POST["checkeventtype"];
+      $eventtype= $_POST["eventtype"];
+
 if ($checkeventname==1 && $eventid2!=0) {
     $eventname2 = scrub($eventname);
     $insertdaystmt = "UPDATE ppv0008003.eventnames SET EventName = '". $eventname2 . "' WHERE EventID =" . $eventid2 . ";";
@@ -135,6 +138,14 @@ if ($checkdonottotal==1 && $eventid2!=0 && scrubmarkercheck($donottotal)==1) {
 if ($checkeventhost==1 && $eventid2!=0) {
     $pointvalue2 = scrubnum($hostname);
     $insertdaystmt = "UPDATE ppv0008003.eventnames SET HostID = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
+    if ($conn->query($insertdaystmt) === true) {
+    } else {
+        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
+    }
+}
+if ($checkeventtype==1 && $eventid2!=0) {
+    $pointvalue2 = scrubnum($eventtype);
+    $insertdaystmt = "UPDATE ppv0008003.eventnames SET EventType = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
     if ($conn->query($insertdaystmt) === true) {
     } else {
         echo "Error: " . $insertdaystmt . "<br>" . $conn->error;

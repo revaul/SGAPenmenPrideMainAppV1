@@ -26,7 +26,9 @@
 </th>
 <th>Double Points
 </th>
-<th>Event type
+<th>Do Not Total
+</th>
+<th>Event Type
 </th>
 <th>Host Name
 </th>
@@ -41,7 +43,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoublePoints, eventtypes.EventTypeName, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID join eventtypes on eventtypes.ideventtypes=eventnames.eventtype order by eventnames.EventDate DESC";
+$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue,
+eventnames.DoNotTotal, eventnames.DoublePoints, eventtypes.EventTypeName, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID join eventtypes on eventtypes.ideventtypes=eventnames.eventtype order by eventnames.EventDate DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -52,7 +55,9 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["EventDate"];
 	   ?></td><td><?php echo $row["PointValue"];
 	   ?></td><td><?php echo $row["DoublePoints"];
-     ?></td><td><?php echo $row["EventTypeName"];
+     ?></td><td><?php echo $row["DoNotTotal"];
+	   ?></td><td><?php echo
+     $row["EventTypeName"];
 	   ?></td><td><?php echo $row["HostName"];
 	   ?></td></tr><?php
     }

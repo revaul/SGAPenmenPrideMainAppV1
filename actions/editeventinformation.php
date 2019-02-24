@@ -227,6 +227,34 @@ if (is_numeric($eventname)) {
             } ?>
        </select> </td>
      </tr>
+     <tr>
+      <th rowspan="2">Event Type</th>
+       <td><input type="radio" name="checkeventtype" value="0" checked> No Change</td>
+       <td><label>The event type is currently listed as: &nbsp;&nbsp;</label> <?php echo $row["EventType"]; ?> </td>
+       </tr>
+       <tr>
+         <td><input type="radio" name="checkeventtype" value="1"> Change</td>
+         <td><label>New Event Type:   </label>
+         <select name="eventtype">
+           <?php
+           require '../mysqlkeys.php';
+           $con=mysqli_connect($host , $user , $password , $dbname );
+
+           if (mysqli_connect_errno()){
+           	echo "Failed to connect:".mysqli_connect_errno();
+           	}
+           $query = "select * from eventtypes;";
+           $results=mysqli_query($con, $query);
+
+           foreach ($results as $HostName){
+
+           ?>
+           <option value="<?php echo $HostName["IDEventTypes"]; ?>"><?php echo $HostName["EventTypeName"]; ?></option>
+           <?php
+           }
+           ?>
+         </select> </td>
+       </tr>
    </table>
        <script>
  $( function() {
