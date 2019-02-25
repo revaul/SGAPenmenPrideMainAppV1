@@ -114,7 +114,7 @@ foreach ($results as $HostName){
 <option value="1">Yes</option>
 <option value="0">No</option>
 </select></p>
-<p> <label>Double Points:   </label><select name="doublepoints">
+<p> <label>Test Event:   </label><select name="eventtest">
 <option value="">Yes or No</option>
 <option value="1">Yes</option>
 <option value="0">No</option>

@@ -15,6 +15,7 @@ $eventhost= $_POST["host"];
 $eventpoints= $_POST["pointvalue"];
 $eventdoublepoints= $_POST["doublepoints"];
 $eventdatewrong= $_POST["eventdate"];
+$eventtest= $_POST["eventtest"];
 $eventdatescrubbed = scrub($eventdatewrong);
 $eventmonth = substr($eventdatescrubbed, 0, 2);
 $eventday = substr($eventdatescrubbed, 3, 2);
@@ -38,8 +39,8 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssiiii", $field1, $field2, $field3, $field4, $field5, $field6);
+$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssiiiii", $field1, $field2, $field3, $field4, $field5, $field6, $field7);
 
 $field1=$eventname;
 $field2=$eventnewdate;
@@ -47,6 +48,7 @@ $field3=$eventpoints;
 $field4=$eventdoublepoints;
 $field5=$eventhost;
 $field6=$eventtype;
+$field7=$eventtest;
 $stmt->execute();
 $stmt->close();
 $conn->close();
