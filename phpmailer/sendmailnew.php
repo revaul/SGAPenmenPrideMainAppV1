@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
       $healthy = array("[[First Name]]", "[[Last Name]]", "[[Points]]", "[[Email Address]]", "[[Tier]]", "[[Portal Link]]", "[[Ranking]]");
 
 
-      $yummy   = array($row["StudentFirstName"], $row["StudentLastName"], $row["Points"], $row["EmailAddress"], $row["tier"], $row["randomkeycol"], $row["Ranking"]);
+      $yummy   = array($row["StudentFirstName"], $row["StudentLastName"], $row["Points"], $row["EmailAddress"], $row["tier"], $row["randomkeycol"], $row["ranking"]);
 
       $newbodyhtml = str_replace($healthy, $yummy, $rawbody);
       $fullbodyhtml = base64_encode($newbodyhtml);
