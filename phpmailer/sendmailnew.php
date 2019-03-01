@@ -31,10 +31,10 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      $healthy = array("[[First Name]]", "[[Last Name]]", "[[Points]]", "[[Email Address]]", "[[Tier]]", "[[Portal Link]]");
+      $healthy = array("[[First Name]]", "[[Last Name]]", "[[Points]]", "[[Email Address]]", "[[Tier]]", "[[Portal Link]]", "[[Ranking]]");
 
 
-      $yummy   = array($row["StudentFirstName"], $row["StudentLastName"], $row["Points"], $row["EmailAddress"], $row["tier"], $row["randomkeycol"]);
+      $yummy   = array($row["StudentFirstName"], $row["StudentLastName"], $row["Points"], $row["EmailAddress"], $row["tier"], $row["randomkeycol"], $row["Ranking"]);
 
       $newbodyhtml = str_replace($healthy, $yummy, $rawbody);
       $fullbodyhtml = base64_encode($newbodyhtml);

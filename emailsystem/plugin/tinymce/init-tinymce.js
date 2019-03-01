@@ -139,6 +139,11 @@ tinymce.init({
           editor.insertContent('[[Tier]]');
         }
       }, {
+        text: 'Ranking',
+        onclick: function() {
+          editor.insertContent('[[Ranking]]');
+        }
+      }, {
         text: 'Portal Link',
         onclick: function() {
           editor.insertContent('[[Portal Link]]');
