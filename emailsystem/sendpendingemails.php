@@ -49,6 +49,8 @@ if ($result->num_rows > 0)
           $field1=$row["EmailID"];
           $stmt->execute();
         }
+        $mail->clearAddresses();
+    $mail->clearAttachments();
     }
 }
 else
