@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 $idnumnotsafe = $_GET["id"];
 $idnumlenchecked;
 if (strlen($idnumnotsafe)!=32){
-$idnumlenchecked="9bce422057d28895fa132da3d68f065b";
+$idnumlenchecked="65d610c1ef2cf3dc6885d76536b62c92";
 }
 else{
 $idnumlenchecked = $idnumnotsafe;
@@ -21,7 +21,7 @@ $idnocommands = str_replace($vowels,"",$idnumlower);
 $idclean;
 
 if (strlen($idnocommands)!=32){
-$idclean="9bce422057d28895fa132da3d68f065b";
+$idclean="65d610c1ef2cf3dc6885d76536b62c92";
 }
 else{
 $idclean = $idnocommands;
