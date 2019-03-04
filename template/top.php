@@ -91,6 +91,7 @@ $userlevel = $_SESSION['userlevel']; ?>
             <?php if($userlevel>=5){ ?><li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li><?php } ?>
             <?php if($userlevel>=5){ ?><li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>  <?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/misc/listsemesters.php">SEMESTER LISTING</a></li> <?php } ?>
         </ul>
       </li>
       <?php } ?>
