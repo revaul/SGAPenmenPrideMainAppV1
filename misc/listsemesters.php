@@ -8,13 +8,14 @@
     <div class="col-sm-10">
         <h2>Penmen Pride Semester Listing</h2>
 <table class="table table-striped">
-      <col width="10%">
-  <col width="35%">
-      <col width="15%">
-  <col width="6%">
-      <col width="7%">
-      <col width="7%">
-  <col width="20%">
+      <col width="12.5%">
+  <col width="12.5%">
+      <col width="12.5%">
+  <col width="12.5%">
+      <col width="12.5%">
+      <col width="12.5%">
+  <col width="12.5%">
+  <col width="12.5%">
 <tr>
 <th>Semester
 </th>
