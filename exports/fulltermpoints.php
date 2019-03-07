@@ -18,9 +18,9 @@
 </th>
 <th>Points
 </th>
-<th>Semester
+<th>Ranking
 </th>
-<th>ranking
+<th>Semester
 </th>
 <th>First Name
 </th>
@@ -44,8 +44,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
        ?><tr><td> <?php echo $row["EmailAddress"];
 	   ?></td><td><?php echo $row["Points"];
+     ?></td><td><?php echo $row["ranking"];
 	   ?></td><td><?php echo $row["Semester"];
-	   ?></td><td><?php echo $row["ranking"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
 	   ?></td></tr><?php
     }
