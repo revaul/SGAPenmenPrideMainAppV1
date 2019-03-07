@@ -8,12 +8,11 @@
     <div class="col-sm-10">
         <h2>Full Term Points</h2>
 <table class="table table-striped">
-      <col width="10%">
-  <col width="45%">
+      <col width="35%">
+  <col width="15%">
       <col width="15%">
   <col width="10%">
-      <col width="10%">
-  <col width="10%">
+      <col width="20%">
 <tr>
 <th>Email Address
 </th>
@@ -21,7 +20,7 @@
 </th>
 <th>Semester
 </th>
-<th>Tier
+<th>ranking
 </th>
 <th>First Name
 </th>
@@ -46,7 +45,7 @@ if ($result->num_rows > 0) {
        ?><tr><td> <?php echo $row["EmailAddress"];
 	   ?></td><td><?php echo $row["Points"];
 	   ?></td><td><?php echo $row["Semester"];
-	   ?></td><td><?php echo $row["tier"];
+	   ?></td><td><?php echo $row["ranking"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
 	   ?></td></tr><?php
     }
