@@ -47,6 +47,21 @@ if ($result->num_rows > 0) {
 else {
 
 }
+$sql = "SELECT * FROM ppv0008004.pubranking where Pubrandomkeycol='".$idclean."';";
+
+$result = $conn->query($sql);
+$totrank;
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       $totrank = $row["Pubranking"];
+
+
+	     }
+}
+else {
+$totrank=5000;
+}
 if ($totpoints==0){
 $totevents=0;
 }
@@ -64,7 +79,9 @@ else{
                 <?php echo $name; ?>,</h2>
             <h3>This semester you have earned
                 <?php echo $totpoints; ?> point<?php if ($totpoints!=1){echo "s";}?> and attended
-                <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>.</h3>
+                <?php echo $totevents; ?> event<?php if ($totevents!=1){echo "s";}?>. Your current ranking is: <?php echo $totrank; ?>.</h3>
+                  <h4>Please Note: Scans may take 24 hours to appear. Additionally, club meeting attendance may take up to two weeks to appear. Any issues or concerns of missing points can be directed to the Penmen Pride Committee via email at <a href = "mailto:sga@snhu.edu">sga@snhu.edu</a> </h4>
+                  
 	    </div>
 		</div>
 
