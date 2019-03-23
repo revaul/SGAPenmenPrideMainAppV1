@@ -68,15 +68,24 @@ if($scannertype==3){
       $idclean = $idnocommands;
       }
     }
-      ini_set('max_execution_time', 300);
-                          require '../mysqlkeys.php';
-                          $conn = new mysqli($host, $user, $password, $dbname);
-                               if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-      $insertdaystmt = "INSERT INTO `ppv0008003`.`scanner` (`EventID`, `Scanner`) VALUES (". $eventname . ", '". $idclean ."');";
-                  if ($conn->query($insertdaystmt) === TRUE) {
-                    ?>
+    ini_set('max_execution_time', 300);
+
+                        $conn = new mysqli($host, $user, $password, $dbname);
+                             if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $stmt = $conn->prepare("INSERT INTO ppv0008003.scanner (EventID, Scanner, user) VALUES (?,?,?)");
+    $stmt->bind_param("iss", $field1, $field2, $field3);
+
+    $field1=$eventname;
+    $field2=$idclean;
+    $field3=$_SESSION['username'];
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+
+?>
+
 <script>
 //$(document).ready(function(){
     // $("#newformtorevertback").submit();
@@ -87,9 +96,7 @@ if($scannertype==3){
   <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
 </form>
  <?php
-                  } else {
-                      echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-                  }
+
     }
         }
 else{
