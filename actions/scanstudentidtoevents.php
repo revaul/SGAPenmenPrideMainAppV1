@@ -36,7 +36,7 @@
 
 <input type="hidden" name="eventname" value="<?php echo $eventname; ?>">
 <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
-<input type="text" placeholder="CLICK THIS BOX BEFORE EACH SCAN" style="display:block;margin:auto;text-align:center;width:800px;height:400px;" name="scanner" autofocus>
+<input type="text" placeholder="<?php if($scannertype==3){echo "Enter Student ID (Including Zero)"; } else { echo "CLICK THIS BOX BEFORE EACH SCAN"; } ?>" style="display:block;margin:auto;text-align:center;width: <?php if($scannertype==3){echo '20'; } else { echo '800'; } ?>px;height:<?php if($scannertype==3){echo '20'; } else { echo '400'; } ?>px;" name="scanner" autofocus>
 <br>
 <input style="display:block;margin:auto;text-align:center" type="submit">
     </form>
