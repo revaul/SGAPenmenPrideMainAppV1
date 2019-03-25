@@ -38,6 +38,7 @@
 <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
 <input type="text" placeholder="<?php if($scannertype==3){echo "Enter Student ID (Including Zero)"; } else { echo "CLICK THIS BOX BEFORE EACH SCAN"; } ?>" style="display:block;margin:auto;text-align:center;width: <?php if($scannertype==3){echo '400'; } else { echo '800'; } ?>px;height:<?php if($scannertype==3){echo '30'; } else { echo '400'; } ?>px;" name="scanner" autofocus id="<?php if($scannertype==3){echo 'text'; } else { echo 'idbox'; } ?>">
 <br>
+<?php if($scannertype==3){ echo "<br> <br> <br> <br> <br>";} else{ } ?>
 <input style="display:block;margin:auto;text-align:center" type="submit">
     </form>
     <br/>
