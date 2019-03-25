@@ -36,9 +36,15 @@
 
 <input type="hidden" name="eventname" value="<?php echo $eventname; ?>">
 <input type="hidden" name="scannertype" value="<?php echo $scannertype; ?>">
-<input type="text" placeholder="<?php if($scannertype==3){echo "Enter Student ID (Including Zero)"; } else { echo "CLICK THIS BOX BEFORE EACH SCAN"; } ?>" style="display:block;margin:auto;text-align:center;width: <?php if($scannertype==3){echo '400'; } else { echo '800'; } ?>px;height:<?php if($scannertype==3){echo '30'; } else { echo '400'; } ?>px;" name="scanner" autofocus>
+<input type="text" placeholder="<?php if($scannertype==3){echo "Enter Student ID (Including Zero)"; } else { echo "CLICK THIS BOX BEFORE EACH SCAN"; } ?>" style="display:block;margin:auto;text-align:center;width: <?php if($scannertype==3){echo '400'; } else { echo '800'; } ?>px;height:<?php if($scannertype==3){echo '30'; } else { echo '400'; } ?>px;" name="scanner" autofocus id="<?php if($scannertype==3){echo 'text'; } else { echo 'idbox'; } ?>">
 <br>
 <input style="display:block;margin:auto;text-align:center" type="submit">
+    </form>
+    <br/>
+    <form action="../actions/scanstudentidtoevents.php" method="post">
+      <input type="hidden" name="event" value="<?php echo $eventname; ?>">
+      <input type="hidden" name="scannertype" value="<?php if($scannertype==1){echo '3'; } else{ echo '1'; } ?>">
+<input style="display:block;margin:auto;text-align:center" type="submit" value="<?php if($scannertype==1){echo 'Enter Student ID Number';} else{ echo 'Scan ID Card';} ?>">
     </form>
     <?php
         }

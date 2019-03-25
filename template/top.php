@@ -15,11 +15,22 @@ $userlevel = $_SESSION['userlevel']; ?>
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="/js/hex.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454242-1"></script>
+<!-- keyboard widget css & script -->
+<link href="/css/keyboard.css" rel="stylesheet">
+<script src="/js/jquery.keyboard.js"></script>
+
+<!-- css for the preview keyset extension -->
+<link href="/css/keyboard-previewkeyset.css" rel="stylesheet">
+
+<!-- keyboard optional extensions - include ALL (includes mousewheel) -->
+<script src="/js/jquery.keyboard.extension-all.js"></script>
+<script src="/js/hex.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
