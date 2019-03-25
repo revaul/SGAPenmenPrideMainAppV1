@@ -17,14 +17,27 @@ if (isset($_SESSION['username'])) {
     <link href="/css/keyboard.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/js/jquery.keyboard.js"></script>
+    <?php
+//Detect special conditions devices
+$iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$iPhone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$iPad    = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
 
-    <!-- css for the preview keyset extension -->
-    <link href="/css/keyboard-previewkeyset.css" rel="stylesheet">
+//do something with this information
+if( $iPod || $iPhone || $iPad){
+    ?>
+<script src="/js/jquery.keyboard.js"></script>
+<!-- css for the preview keyset extension -->
+<link href="/css/keyboard-previewkeyset.css" rel="stylesheet">
 
-    <!-- keyboard optional extensions - include ALL (includes mousewheel) -->
-    <script src="/js/jquery.keyboard.extension-all.js"></script>
-    <script src="/js/hex.js"></script>
+<!-- keyboard optional extensions - include ALL (includes mousewheel) -->
+<script src="/js/jquery.keyboard.extension-all.js"></script>
+<script src="/js/hex.js"></script>
+    <?php
+}
+?>
+
+
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454242-1"></script>
 <script>
