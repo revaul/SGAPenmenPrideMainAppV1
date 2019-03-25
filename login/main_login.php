@@ -51,31 +51,41 @@ if( $iPod || $iPhone || $iPad){
   </head>
 
   <body>
+    <div class="container">
+      <div class="row">
+      <div class="col-sm-7">
   <div style="display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;">
+    width: 70%;">
 	  <img src="/images/penmenpridelogo.png" alt="Penmen Pride Logo" style="width: 100%">
   </div>
     <div style="display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 65%;
+      width: 85%;
       text-align:center;
       border: 2px solid red;
       background-color: rgba(201, 76, 76, 0.2);
    border-radius: 8px;
    margin-top: 10px;">
     <h3 style="margin-top: 10px;">Notice:</h3>
-<p>You have reached the private area for senators of the SNHU Student Government Association. All activity on this site is logged and is limited to specific current employees of SNHU and specific students of SNHU. Inappropriate use, including but not limited to access by unauthorized individuals will be pursued to the fullest extent of the law. If you require access to this site, please contact <a href="mailto:sga@snhu.edu">SGA</a>.</p>
+<p>You have reached the private area for members of the SNHU Student Government Association. All activity on this site is logged and is limited to specific current employees of SNHU and specific students of SNHU. Inappropriate use, including but not limited to access by unauthorized individuals will be pursued to the fullest extent of the law. If you require access to this site, please contact <a href="mailto:sga@snhu.edu">SGA</a>.</p>
 	  </div>
-	  <div class="container">
+  </div>
+	  <div class="col-sm-5">
 
 
       <form class="form-signin" name="form1" method="post" action="checklogin.php">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input name="myusername" id="myusername" type="text" class="form-control" placeholder="Username" autofocus>
+<?php if( $iPod || $iPhone || $iPad){ ?>
+  <br> <br> <br> <br> <br> <br> <br> <br>
+<?php } ?>
         <input name="mypassword" id="mypassword" type="password" class="form-control" placeholder="Password">
+        <?php if( $iPod || $iPhone || $iPad){ ?>
+          <br> <br> <br> <br> <br> <br> <br> <br>
+        <?php } ?>
         <!-- The checkbox remember me is not implemented yet...
         <label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
@@ -88,7 +98,8 @@ if( $iPod || $iPhone || $iPad){
       </form>
 
     </div> <!-- /container -->
-
+</div>
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-2.2.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
