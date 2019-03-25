@@ -32,7 +32,7 @@ if($admincount<=1){ ?> <div style="display: block;
 border-radius: 8px;
 margin-top: 10px;">
 <h3 style="margin-top: 10px;">Notice:</h3>
-<p>There is currently only one user with level 5 permissions in the system. You will not be able to delete the level 5 user until another user has been promoted to level 5 permissions. This is to prevent a situation where no one would have level 5 permissions.</p>
+<p>There is currently only one user with level 6 permissions in the system. You will not be able to delete the level 6 user until another user has been promoted to level 6 permissions. This is to prevent a situation where no one would have level 6 permissions.</p>
 </div> <?php }
         ?>
         <form action="../actions/actiondeleteuser.php" method="post">
