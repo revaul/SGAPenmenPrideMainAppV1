@@ -88,7 +88,7 @@ if( $iPod || $iPhone || $iPad){
         <ul class="dropdown-menu">
             <?php if($userlevel>=3){ ?><li><a href="/exports/attendanceexport.php">EVENT ATTENDANCE INFORMATION</a></li><?php } ?>
 		        <?php if($userlevel>=3){ ?><li><a href="/exports/attendanceexportwithid.php">EVENT ATTENDANCE INFORMATION WITH STUDENT IDS</a></li><?php } ?>
-		        <?php if($userlevel>=3){ ?><li><a href="#">EVENT ATTENDANCE NUMBERS</a></li><?php } ?>
+		        <?php if($userlevel>=3){ ?><li><a href="/events/eventattendancecounts.php">EVENT ATTENDANCE NUMBERS</a></li><?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/exports/OSIExport.php">OSI DATA CONVERSION</a></li><?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/exports/fulltermpoints.php">TERM POINTS</a></li> </li><?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/exports/setupprizesheet.php">PRIZE SHEETS</a></li><?php } ?>
