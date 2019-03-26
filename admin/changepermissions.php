@@ -45,7 +45,7 @@ margin-top: 10px;">
           $query = "SELECT * FROM loginsystem.NonAdminUsers where adminlevel!=6 ;";
         }
         else{
-        $query = "SELECT * FROM loginsystem.members where adminlevel!=6;";
+        $query = "SELECT * FROM loginsystem.members where adminlevel!=7;";
       }
         $results=mysqli_query($con, $query);
 
