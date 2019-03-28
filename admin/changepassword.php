@@ -21,13 +21,13 @@
         <p><label>Select User To Change:   </label>
         <select name="userid">
         <?php
-        $query = "SELECT * FROM loginsystem.members where adminlevel!=6;";
+        $query = "SELECT * FROM loginsystem.members where adminlevel!=6 order by lastname, firstname;";
         $results=mysqli_query($con, $query);
 
         foreach ($results as $HostName){
 
         ?>
-        <option value="<?php echo $HostName["id"]; ?>"> <?php echo $HostName["username"] . " - " . $HostName["email"] . " - Current Level: " . $HostName["adminlevel"]; ?> </option>
+        <option value="<?php echo $HostName["id"]; ?>"> <?php echo $HostName["lastname"] . ", " . $HostName["firstname"] . " - " . $HostName["username"] . " - " . $HostName["email"] . " - Current Level: " . $HostName["adminlevel"]; ?> </option>
 <?php } ?>
         </select></p>
 
