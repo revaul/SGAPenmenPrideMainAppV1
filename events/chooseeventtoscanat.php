@@ -25,7 +25,7 @@
 $query;
     if($userlevel==1){
 
-      $query = "SELECT * FROM ppv0008003.scanningpeoplebyhostandevent where eventdate=curdate() and scanningpeople.personid='".$_SESSION['userid']."';";
+      $query = "SELECT * FROM ppv0008003.scanningpeoplebyhostandevent where eventdate=curdate() and personid='".$_SESSION['userid']."';";
 
 
     }
