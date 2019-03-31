@@ -30,10 +30,10 @@ $query;
 
     }
       elseif($userlevel==2 || $userlevel==3){
-      $query = "SELECT * FROM ppv0008003.eventnames where eventnames.eventdate='". date("Y")."-". date("m"). "-" .date("d") ."';";
+      $query = "SELECT * FROM ppv0008003.eventnames where eventnames.eventdate=curdate();";
         }
         else{
-          $query = "SELECT * FROM ppv0008003.eventnames order by eventnames.EventDate DESC;";
+          $query = "SELECT *, abs(datediff(eventdate, curdate())) as daysfromdate FROM ppv0008003.eventnames order by abs(datediff(eventdate, curdate())), eventdate;";
         }
 
   $results=mysqli_query($con, $query);
