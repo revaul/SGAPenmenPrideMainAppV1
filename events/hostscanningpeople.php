@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        ?><tr><td><a href=/actions/actiondeletescannerhost.php?hostscannerid=<?php echo $row["idscanninghostmember"];?> target="_blank"><div class="linkbuttontopublic">Delete</div></a></td><td> <?php echo $row["hostid"];
-	   ?></td><td><?php echo $row["hostname"];
+	   ?></td><td><?php echo $row["HostName"];
 	   ?></td><td><?php echo $row["firstname"];
      ?></td><td><?php echo $row["lastname"];
 	   ?></td><td><?php echo $row["username"];
