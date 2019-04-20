@@ -80,6 +80,7 @@ if( $iPod || $iPhone || $iPad){
             <?php if($userlevel>=3){ ?> <li><a href="/events/fulleventlisting.php">EVENT LISTING</a></li> <?php } ?>
             <?php if($userlevel>=3){ ?> <li><a href="/events/fullhostlisting.php">HOST LISTING</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/eventscanningpeople.php">EVENT PERSON SCANNER LISTING</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/hostscanningpeople.php">HOST PERSON SCANNER LISTING</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/addscanningpeople.php">ADD SCANNING PEOPLE</a></li> <?php } ?>
             <?php if($userlevel>=1){ ?> <li><a href="/events/chooseeventtoscanat.php">SCAN AN EVENT</a></li> <?php } ?>
         </ul>
