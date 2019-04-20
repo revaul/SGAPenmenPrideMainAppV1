@@ -9,12 +9,11 @@
         <h2>Penmen Pride Host Scanning People List</h2>
 <table class="table table-striped">
       <col width="10%">
-  <col width="35%">
-      <col width="15%">
-  <col width="6%">
-      <col width="7%">
-      <col width="7%">
-  <col width="20%">
+  <col width="10%">
+      <col width="32%">
+  <col width="16%">
+      <col width="16%">
+      <col width="16%">
 <tr>
   <th>Delete
   </th>
