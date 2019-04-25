@@ -28,7 +28,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM ppv0008003.emailsystem;";
+$sql = "SELECT * FROM ppv0008003.PendingEmails;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
