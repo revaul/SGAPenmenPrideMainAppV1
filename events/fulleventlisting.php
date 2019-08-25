@@ -10,7 +10,8 @@
 <table class="table table-striped">
       <col width="10%">
   <col width="35%">
-      <col width="15%">
+      <col width="7%">
+      <col width="8%">
   <col width="6%">
       <col width="7%">
       <col width="7%">
@@ -21,6 +22,8 @@
 <th>Event Name
 </th>
 <th>Event Date
+</th>
+<th>Semester
 </th>
 <th>Points
 </th>
@@ -43,8 +46,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue,
-eventnames.DoNotTotal, eventnames.DoublePoints, eventtypes.EventTypeName, eventhosts.HostName FROM eventnames join eventhosts on eventnames.HostID=eventhosts.HostID join eventtypes on eventtypes.ideventtypes=eventnames.eventtype order by eventnames.EventDate DESC";
+$sql = "SELECT eventnames.EventID, eventnames.EventName, eventnames.EventDate, eventnames.PointValue, eventnames.DoNotTotal, eventnames.DoublePoints, eventtypes.EventTypeName, eventhosts.HostName, semester.semester FROM eventnames  join eventhosts on eventnames.HostID=eventhosts.HostID join eventtypes on eventtypes.ideventtypes=eventnames.eventtype  join datestosemesters on eventnames.EventDate=datestosemesters.Date join semester on datestosemesters.semester=semester.Semeseter order by eventnames.EventDate DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -53,6 +55,7 @@ if ($result->num_rows > 0) {
        ?><tr><td> <?php echo $row["EventID"];
 	   ?></td><td><?php echo $row["EventName"];
 	   ?></td><td><?php echo $row["EventDate"];
+     ?></td><td><?php echo $row["semester"];
 	   ?></td><td><?php echo $row["PointValue"];
 	   ?></td><td><?php echo $row["DoublePoints"];
      ?></td><td><?php echo $row["DoNotTotal"];
