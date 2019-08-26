@@ -7,11 +7,12 @@
     </div>
     <div class="col-sm-10">
         <h2>Penmen Pride Time Information</h2>
-        <h3>Years</h3>
+        <br>
+        <a href=/trigger/dates.php><div class="linkbuttontopublic">Rebuild Dates</div></a>
+        <h3>School Years</h3>
 <table class="table table-striped">
       <col width="30%">
   <col width="25%">
-      <col width="25%">
       <col width="25%">
 <tr>
 <th>School Year
@@ -19,8 +20,6 @@
 <th>Begin Year
 </th>
 <th>End Year
-</th>
-<th>Edit School Year
 </th>
 </tr>
 
@@ -42,7 +41,6 @@ if ($result->num_rows > 0) {
        ?><tr><td> <?php echo $row["SchoolYear"];
 	   ?></td><td><?php echo $row["begin"];
 	   ?></td><td><?php echo $row["end"];
-     ?></td><td><?php echo $row["begin"];
 	   ?></td></tr><?php
     }
 } else {
@@ -51,6 +49,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </table>
+<br>
 <h3>Semesters</h3>
 <table class="table table-striped">
 <col width="16%">
