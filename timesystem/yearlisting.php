@@ -8,7 +8,7 @@
     <div class="col-sm-10">
         <h2>Penmen Pride Time Information</h2>
         <br>
-        <a href=/trigger/dates.php><div class="linkbuttontopublic" style="float:right">Rebuild Dates</div></a>
+        <div style="float:right"><a href=/trigger/datelisting.php><div class="linkbuttontopublic">Date Listing</div></a><a href=/trigger/dates.php><div class="linkbuttontopublic">Rebuild Dates</div></a></div>
         <h3>School Years</h3>
 <table class="table table-striped">
       <col width="30%">
