@@ -85,7 +85,7 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT semester.Semester, semester.BeginDate, semester.EndDate, semester.Goal, semester.SchoolYear, semester.SemType, semester.SemShort, semester.SemIDNum from semester;";
+$sql = "SELECT semester.Semester, semester.BeginDate, semester.EndDate, semester.Goal, semester.SchoolYear, semester.SemType, semester.SemShort, semester.SemIDNum from semester order by semester.BeginDate;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
