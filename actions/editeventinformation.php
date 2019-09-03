@@ -47,6 +47,16 @@ if (is_numeric($eventname)) {
      <td><label> New Event Date:   </label> <input type="text" id="datepicker" name="eventdate"></td>
      </tr>
      <tr>
+       <th rowspan="2">Event Location</th>
+       <td><input type="radio" name="checkeventloc" value="0" checked> No Change</td>
+       <td><label>The event date is currently listed as: &nbsp;&nbsp;</label><?php echo $row["eventLocation"]; ?> </td>
+     </tr>
+     <tr>
+       
+       <td><input type="radio" name="checkeventloc" value="1"> Change</td>
+      <td><label> New Event Location:   </label> <input type="text" name="eventloc"></td>
+      </tr>
+     <tr>
       <th rowspan="2">Event Points</th>
       <td><input type="radio" name="checkpointvalue" value="0" checked> No Change</td>
       <td><label>The event point value is currently listed as: &nbsp;&nbsp;</label><?php echo $row["PointValue"]; ?> point(s)</td>
