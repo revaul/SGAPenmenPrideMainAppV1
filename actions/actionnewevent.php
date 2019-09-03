@@ -10,6 +10,7 @@
 <?php
 // TODO: Post Field Verification
 $eventname= $_POST["name"];
+$eventloc= $_POST["location"];
 $eventtype= $_POST["eventtype"];
 $eventhost= $_POST["host"];
 $eventpoints= $_POST["pointvalue"];
@@ -39,8 +40,8 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssiiiii", $field1, $field2, $field3, $field4, $field5, $field6, $field7);
+$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssiiiii", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
 
 $field1=$eventname;
 $field2=$eventnewdate;
@@ -49,6 +50,7 @@ $field4=$eventdoublepoints;
 $field5=$eventhost;
 $field6=$eventtype;
 $field7=$eventtest;
+$field8=$eventloc;
 $stmt->execute();
 $stmt->close();
 $conn->close();

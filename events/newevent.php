@@ -88,6 +88,7 @@ foreach ($results as $HostName){
 <option value="100">100</option>
 <option value="1000">1000</option>
 </select></p>
+<p> <label> Event Location:   </label> <input type="text" name="location"/> </p>
 <p><label>Event Type:   </label>
 <select name="eventtype">
 <option value="">Select Event Type</option>
