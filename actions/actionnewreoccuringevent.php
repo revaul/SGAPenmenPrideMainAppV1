@@ -53,8 +53,12 @@ ini_set('max_execution_time', 300);
 $stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
 
+$DateN=strtotime($eventstart);
+$DateO=strtotime($eventend);
+While($DateN<=$DateO){
+if(date_format($DateN,"N")=$eventDoW){
 $field1=$eventname;
-$field2=$eventnewdate;
+$field2=date_format($eventnewdate,"Y-m-d");
 $field3=$eventpoints;
 $field4=$eventdoublepoints;
 $field5=$eventhost;
@@ -62,6 +66,9 @@ $field6=$eventtype;
 $field7=$eventtest;
 $field8=$eventloc;
 $stmt->execute();
+}
+date_add($DateN,date_interval_create_from_date_string("1 days"));
+}
 $stmt->close();
 $conn->close();
 
