@@ -82,6 +82,7 @@ if( $iPod || $iPhone || $iPad){
             <?php if($userlevel>=4){ ?> <li><a href="/events/eventscanningpeople.php">EVENT PERSON SCANNER LISTING</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/hostscanningpeople.php">HOST PERSON SCANNER LISTING</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/addscanningpeople.php">ADD SCANNING PEOPLE</a></li> <?php } ?>
+              <?php if($userlevel>=4){ ?> <li><a href="/events/addscanningpeoplehost.php">ADD HOST SCANNING PEOPLE</a></li> <?php } ?>
             <?php if($userlevel>=1){ ?> <li><a href="/events/chooseeventtoscanat.php">SCAN AN EVENT</a></li> <?php } ?>
         </ul>
       </li><?php } ?>
@@ -115,7 +116,7 @@ if( $iPod || $iPhone || $iPad){
             <?php if($userlevel>=5){ ?><li><a href="/emailsystem/mailtextentry.php">SEND NEW PENMEN PRIDE EMAIL</a></li><?php } ?>
             <?php if($userlevel>=5){ ?><li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>  <?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
-            <?php if($userlevel>=3){ ?><li><a href="/misc/listsemesters.php">SEMESTER LISTING</a></li> <?php } ?>
+            <?php if($userlevel>=3){ ?><li><a href="/misc/yearlisting.php">SEMESTER & SCHOOL YEAR ADJUSTMENT</a></li> <?php } ?>
         </ul>
       </li>
       <?php } ?>
