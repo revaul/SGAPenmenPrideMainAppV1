@@ -56,7 +56,7 @@ $stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $fiel
 $eventstarttime=strtotime($eventstart);
 $eventendtime=strtotime($eventend);
 While($eventstarttime<=$eventendtime){
-if(date_format($eventstarttime,"N")=$eventdowstr){
+if(date_format($eventstarttime,"N")==$eventdowstr){
 $field1=$eventname;
 $field2=date_format($eventstarttime,"Y-m-d");
 $field3=$eventpoints;
