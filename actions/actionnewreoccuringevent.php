@@ -22,6 +22,10 @@ $eventdatestart= $_POST["eventdatestart"];
 $eventstart = fixdate($eventdatestart);
 $eventdateend= $_POST["eventdateend"];
 $eventend = fixdate($eventdateend);
+echo $eventdatestart . "<br/>";
+echo $eventdateend . "<br/>";
+echo $eventstart . "<br/>";
+echo $eventend . "<br/>";
 
 
 function scrub($x) {
@@ -50,13 +54,18 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
+//$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+//$stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
 
 $eventstarttime=strtotime($eventstart);
 $eventendtime=strtotime($eventend);
+echo $eventstarttime . "<br/>";
+echo $eventendtime . "<br/>";
+
 While($eventstarttime<=$eventendtime){
+   echo "IN WHILE" . "<br/>";
 if(date_format($eventstarttime,"N")==$eventdowstr){
+  echo "IN IF" . "<br/>";
 $field1=$eventname;
 $field2=date_format($eventstarttime,"Y-m-d");
 $field3=$eventpoints;
@@ -65,10 +74,12 @@ $field5=$eventhost;
 $field6=$eventtype;
 $field7=$eventtest;
 $field8=$eventloc;
-$stmt->execute();
+//$stmt->execute();
 }
+echo "OUT IF" . "<br/>";
 date_add($eventstarttime,date_interval_create_from_date_string("1 days"));
 }
+echo "OUT While" . "<br/>";
 $stmt->close();
 $conn->close();
 
