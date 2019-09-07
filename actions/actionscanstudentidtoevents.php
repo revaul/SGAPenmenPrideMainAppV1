@@ -44,6 +44,9 @@ if($bothpass){
         }
       }
       else{
+        $idnumlower = strtolower($idnumnotsafe);
+        $vowels = array("e");
+        $idnumnotsafe = str_replace($vowels,"",$idnumlower);
       if (strlen($idnumnotsafe)!=16){
       $idnumlenchecked="0000001";
       }
