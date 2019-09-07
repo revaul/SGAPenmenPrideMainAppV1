@@ -64,6 +64,9 @@ echo $eventendtime . "<br/>";
 
 While($eventstarttime<=$eventendtime){
    echo "IN WHILE" . "<br/>";
+   echo date_format($eventstarttime,"Y-m-d") . "<br/>";
+   echo date_format($eventendtime,"Y-m-d") . "<br/>";
+   echo date_format($eventstarttime,"N");
 if(date_format($eventstarttime,"N")==$eventdowstr){
   echo "IN IF" . "<br/>";
 $field1=$eventname;
