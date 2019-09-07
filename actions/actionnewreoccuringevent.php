@@ -57,8 +57,8 @@ ini_set('max_execution_time', 300);
 //$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 //$stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
 
-$eventstarttime=strtotime($eventstart);
-$eventendtime=strtotime($eventend);
+$eventstarttime=date_create($eventstart);
+$eventendtime=date_create($eventend);
 echo $eventstarttime . "<br/>";
 echo $eventendtime . "<br/>";
 
