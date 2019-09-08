@@ -1,5 +1,4 @@
-
-<?php
+<?php require '../mysqlkeys.php';
 // TODO: Post Field Verification
 $eventname= $_POST["name"];
 $eventloc= $_POST["location"];
@@ -7,13 +6,24 @@ $eventtypemask= $_POST["eventtypemask"];
 $eventhost= $_POST["host"];
 $eventpoints= $_POST["pointvalue"];
 $eventdoublepoints= $_POST["doublepoints"];
-$eventdatewrong= $_POST["eventdate"];
+$eventdateinit= $_POST["eventdate"];
 $eventtest= $_POST["eventtest"];
-$eventdatescrubbed = scrub($eventdatewrong);
-$eventmonth = substr($eventdatescrubbed, 0, 2);
-$eventday = substr($eventdatescrubbed, 3, 2);
-$eventyear=substr($eventdatescrubbed, 6, 4);
-$eventnewdate= $eventyear."-".$eventmonth."-".$eventday;
+$eventstartdateinit= $_POST["eventstartdate"];
+$eventenddateinit= $_POST["eventenddate"];
+$eventdatefin = fixdate($eventdateinit);
+$eventstartdatefin = fixdate($eventstartdateinit);
+$eventenddatefin = fixdate($eventenddateinit);
+
+echo $eventname. "<br />";
+echo $eventloc. "<br />";
+echo $eventtypemask. "<br />";
+echo $eventhost. "<br />";
+echo $eventpoints. "<br />";
+echo $eventdoublepoints. "<br />";
+echo $eventdatefin. "<br />";
+echo $eventstartdatefin. "<br />";
+echo $eventenddatefin. "<br />";
+
 function scrub($x) {
 $z;
   $idnumlower = strtolower($x);
@@ -26,7 +36,15 @@ $z;
   }
     return $z;
 }
-ini_set('max_execution_time', 300);
+function fixdate($x) {
+  $eventdatescrubbed = scrub($x);
+  $eventmonth = substr($eventdatescrubbed, 0, 2);
+  $eventday = substr($eventdatescrubbed, 3, 2);
+  $eventyear=substr($eventdatescrubbed, 6, 4);
+  $eventnewdate= $eventyear."-".$eventmonth."-".$eventday;
+  return $eventnewdate;
+}
+/**ini_set('max_execution_time', 300);
 
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
@@ -46,5 +64,5 @@ $field8=$eventloc;
 $stmt->execute();
 $stmt->close();
 $conn->close();
-
+**/
 ?>
