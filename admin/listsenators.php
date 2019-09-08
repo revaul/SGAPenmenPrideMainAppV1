@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["StudentLastName"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
 	   ?></td><td><?php if($row["Senator"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
-	   ?></td><td><form action="../actions/actionchangesenatorstatus.php" method="post"><input type="hidden" name="useremail" value="<?php echo $row["EmailAddress"]; ?>"> <input type="submit" /> </form></td></tr>
+	   ?></td><td><form action="../actions/actionchangesenatorstatus.php" method="post"><input type="hidden" name="useremail" value="<?php echo $row["EmailAddress"]; ?>"> <input type="submit" value="Change Status" /> </form></td></tr>
      <?php
     }
 } else {
