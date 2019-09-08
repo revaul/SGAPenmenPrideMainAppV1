@@ -123,13 +123,13 @@ foreach ($results as $HostName){
 <p><label>Event Start Date Range:   </label> <input type="text" id="datepicker" name="eventdatestart"></p>
 <p><label>Event End Date Range:   </label> <input type="text" id="datepicker1" name="eventdateend"></p>
 <p> <label>Day of Week:   </label><select name="eventDoW">
-<option value="1">Monday</option>
-<option value="2">Tuesday</option>
-<option value="3">Wednesday</option>
-<option value="4">Thursday</option>
-<option value="5">Friday</option>
-<option value="6">Saturday</option>
-<option value="7">Sunday</option>
+<option value="2">Monday</option>
+<option value="3">Tuesday</option>
+<option value="4">Wednesday</option>
+<option value="5">Thursday</option>
+<option value="6">Friday</option>
+<option value="7">Saturday</option>
+<option value="1">Sunday</option>
 </select></p>
 <script>
 $( function() {
