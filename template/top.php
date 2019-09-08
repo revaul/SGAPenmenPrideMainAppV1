@@ -73,6 +73,7 @@ if( $iPod || $iPhone || $iPad){
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <?php if($userlevel>=4){ ?> <li><a href="/events/newevent.php">NEW EVENT INFORMATION</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/events/newreoccuringevent.php">NEW REOCCURING EVENT INFORMATION</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/newhost.php">NEW HOST INFORMATION</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/upload.php">EVENT UPLOAD</a></li> <?php } ?>
             <?php if($userlevel>=4){ ?> <li><a href="/events/chooseeventtoedit.php">EDIT AN EVENT</a></li> <?php } ?>
