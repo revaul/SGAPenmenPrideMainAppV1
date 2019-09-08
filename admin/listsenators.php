@@ -48,12 +48,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td> <?php echo $row["emailaddress"];
+       ?><tr><td> <?php echo $row["EmailAddress"];
 	   ?></td><td><?php echo $row["StudentID"];
 	   ?></td><td><?php echo $row["StudentLastName"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
 	   ?></td><td><?php if($row["Senator"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
-	   ?></td><td><a href="<?php echo $row["emailaddress"];?>" target="_blank"><div class="linkbuttontopublic">Change Status</div></a></td></tr><?php
+	   ?></td><td><a href="<?php echo $row["EmailAddress"];?>" target="_blank"><div class="linkbuttontopublic">Change Status</div></a></td></tr>
+     <?php
     }
 } else {
 
