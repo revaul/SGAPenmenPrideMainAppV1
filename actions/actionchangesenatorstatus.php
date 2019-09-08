@@ -9,7 +9,6 @@
 <?php
 // TODO: Post Field Verification
 $personscannerid= $_POST["useremail"];
-echo $personscannerid;
 ini_set('max_execution_time', 300);
                     require '../mysqlkeys.php';
                     $conn = new mysqli($host, $user, $password, $dbname);
