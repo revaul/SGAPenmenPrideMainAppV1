@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level2.php"; ?>
+<?php require "../login/permissions/level4.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
 	   ?></td><td><?php echo $row["StudentLastName"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
 	   ?></td><td><?php if($row["Senator"]==1){ ?><span class="glyphicon glyphicon-ok"></span><?php } else { ?><span class="glyphicon glyphicon-remove"></span><?php }
-	   ?></td><td><a href="<?php echo $row["EmailAddress"];?>" target="_blank"><div class="linkbuttontopublic">Change Status</div></a></td></tr>
+	   ?></td><td><form action="../actions/actionchangesenatorstatus.php" method="post"><input type="hidden" name="useremail" value="<?php echo $row["EmailAddress"]; ?>"> <input type="submit" /> </form></td></tr>
      <?php
     }
 } else {
