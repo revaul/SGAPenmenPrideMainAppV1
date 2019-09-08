@@ -22,10 +22,7 @@ $eventdatestart= $_POST["eventdatestart"];
 $eventstart = fixdate($eventdatestart);
 $eventdateend= $_POST["eventdateend"];
 $eventend = fixdate($eventdateend);
-echo $eventdatestart . "<br/>";
-echo $eventdateend . "<br/>";
-echo $eventstart . "<br/>";
-echo $eventend . "<br/>";
+
 
 
 function scrub($x) {
@@ -54,40 +51,26 @@ ini_set('max_execution_time', 300);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-//$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-//$stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
 
-$eventstarttime=date_create($eventstart);
-$eventendtime=date_create($eventend);
-echo $eventstarttime . "<br/>";
-echo $eventendtime . "<br/>";
+$stmt = $conn->prepare("CALL `ppv0008003`.`newreoccuringevent`(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("siiiisisss", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8, $field9, $field10);
 
-While($eventstarttime<=$eventendtime){
-   echo "IN WHILE" . "<br/>";
-   echo date_format($eventstarttime,"Y-m-d") . "<br/>";
-   echo date_format($eventendtime,"Y-m-d") . "<br/>";
-   echo date_format($eventstarttime,"N");
-if(date_format($eventstarttime,"N")==$eventdowstr){
-  echo "IN IF" . "<br/>";
 $field1=$eventname;
-$field2=date_format($eventstarttime,"Y-m-d");
-$field3=$eventpoints;
-$field4=$eventdoublepoints;
-$field5=$eventhost;
-$field6=$eventtype;
-$field7=$eventtest;
-$field8=$eventloc;
-//$stmt->execute();
-}
-echo "OUT IF" . "<br/>";
-date_add($eventstarttime,date_interval_create_from_date_string("1 days"));
-}
-echo "OUT While" . "<br/>";
+$field2=$eventpoints;
+$field3=$eventhost;
+$field4=$eventtest;
+$field5=$eventdoublepoints;
+$field6=$eventloc;
+$field7=$eventtype;
+$field8=$eventstart;
+$field9=$eventend;
+$field10=$eventdow;
+$stmt->execute();
 $stmt->close();
 $conn->close();
 
 ?>
-<h2>Success Event Added!</h2></div>
+<h2>Success Events Added!</h2></div>
     <div class="col-sm-1">
     </div>
   </div>
