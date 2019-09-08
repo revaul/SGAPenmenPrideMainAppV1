@@ -3,7 +3,7 @@
 $eventname= $_POST["name"];
 $eventloc= $_POST["location"];
 $eventtypemask= $_POST["eventtypemask"];
-$eventhost= $_POST["host"];
+$eventhostname= $_POST["host"];
 $eventdateinit= $_POST["eventdate"];
 $eventstartdateinit= $_POST["eventstartdate"];
 $eventenddateinit= $_POST["eventenddate"];
@@ -11,6 +11,7 @@ $eventreoccuring= $_POST["reocurring"];
 $eventpoints;
 $eventdoublepoints=0;
 $eventtest=0;
+$eventhost=31;
 
 function scrub($x) {
 $z;
