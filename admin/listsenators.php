@@ -48,7 +48,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td> <?php echo $row["EmailAddress"];
+       ?><tr><td><?php echo $row["EmailAddress"];
 	   ?></td><td><?php echo $row["StudentID"];
 	   ?></td><td><?php echo $row["StudentLastName"];
 	   ?></td><td><?php echo $row["StudentFirstName"];
