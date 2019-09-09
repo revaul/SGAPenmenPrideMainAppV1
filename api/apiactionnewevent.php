@@ -8,10 +8,12 @@ $eventdateinit= $_POST["eventdate"];
 $eventstartdateinit= $_POST["eventstartdate"];
 $eventenddateinit= $_POST["eventenddate"];
 $eventreoccuring= $_POST["reocurring"];
+$eventdowday= $_POST["eventdow"];
 $eventpoints;
 $eventdoublepoints=0;
 $eventtest=0;
 $eventhost=31;
+$eventdow;
 
 function scrub($x) {
 $z;
@@ -38,9 +40,55 @@ else{
   $eventtypenum=2;
   $eventpoints=2;
 }
+
+if($eventdowday=="Sunday"){
+  $eventdow=1;
+}
+else if($eventdowday=="Monday"){
+  $eventdow=2;
+}
+else if($eventdowday=="Tuesday"){
+  $eventdow=3;
+}
+else if($eventdowday=="Wednesday"){
+  $eventdow=4;
+}
+else if($eventdowday=="Thursday"){
+  $eventdow=5;
+}
+else if($eventdowday=="Friday"){
+  $eventdow=6;
+}
+else{
+  $eventdow=7;
+}
+
 if($eventreoccuring=="Reocurring"){
   $eventstartdatefin = fixdate($eventstartdateinit);
   $eventenddatefin = fixdate($eventenddateinit);
+  ini_set('max_execution_time', 300);
+
+                      $conn = new mysqli($host, $user, $password, $dbname);
+                           if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+
+  $stmt = $conn->prepare("CALL `ppv0008003`.`newreoccuringevent`(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+  $stmt->bind_param("siiiisisss", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8, $field9, $field10);
+
+  $field1=$eventname;
+  $field2=$eventpoints;
+  $field3=$eventhost;
+  $field4=$eventtest;
+  $field5=$eventdoublepoints;
+  $field6=$eventloc;
+  $field7=$eventtypenum;
+  $field8=$eventstartdatefin;
+  $field9=$eventenddatefin;
+  $field10=$eventdow;
+  $stmt->execute();
+  $stmt->close();
+  $conn->close();
 }
 else{
   $eventdatefin = fixdate($eventdateinit);
