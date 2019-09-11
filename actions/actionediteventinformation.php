@@ -62,10 +62,14 @@ $z;
 
                   return $z;
       }
-      $conn = new mysqli($host, $user, $password, $dbname);
-           if ($conn->connect_error) {
-               die("Connection failed: " . $conn->connect_error);
-           }
+      ini_set('max_execution_time', 300);
+
+                          $conn = new mysqli($host, $user, $password, $dbname);
+                               if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+
 $eventid= $_POST["eventid"];
 $eventid2 = scrubnum($eventid);
 
@@ -97,59 +101,68 @@ $eventid2 = scrubnum($eventid);
 
 if ($checkeventname==1 && $eventid2!=0) {
     $eventname2 = scrub($eventname);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET EventName = '". $eventname2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET EventName = ? WHERE EventID =?");
+    $stmt->bind_param("si", $field1, $field2);
+    $field1=$eventname2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
 }
 if ($checkpointvalue==1 && $eventid2!=0) {
     $pointvalue2 = scrubnum($pointvalue);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET PointValue = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET PointValue = ? WHERE EventID =?");
+    $stmt->bind_param("ii", $field1, $field2);
+    $field1=$pointvalue2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
+
 }
 if ($checkdoublepoints==1 && $eventid2!=0 && scrubmarkercheck($doublepoints)==1) {
     $pointvalue2 = scrubnum($doublepoints);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET DoublePoints = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET DoublePoints = ? WHERE EventID =?");
+    $stmt->bind_param("ii", $field1, $field2);
+    $field1=$pointvalue2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
 }
 if ($checkgiveaway==1 && $eventid2!=0 && scrubmarkercheck($semestergiveaway)==1) {
     $pointvalue2 = scrubnum($semestergiveaway);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET SemesterGiveaway = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET SemesterGiveaway = ? WHERE EventID =?");
+    $stmt->bind_param("ii", $field1, $field2);
+    $field1=$pointvalue2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
 }
 if ($checkdonottotal==1 && $eventid2!=0 && scrubmarkercheck($donottotal)==1) {
     $pointvalue2 = scrubnum($donottotal);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET DoNotTotal = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET DoNotTotal = ? WHERE EventID =?");
+    $stmt->bind_param("ii", $field1, $field2);
+    $field1=$pointvalue2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
+
 }
 if ($checkeventhost==1 && $eventid2!=0) {
     $pointvalue2 = scrubnum($hostname);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET HostID = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET HostID = ? WHERE EventID =?");
+    $stmt->bind_param("ii", $field1, $field2);
+    $field1=$pointvalue2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
 }
 if ($checkeventtype==1 && $eventid2!=0) {
     $pointvalue2 = scrubnum($eventtype);
-    $insertdaystmt = "UPDATE ppv0008003.eventnames SET EventType = '". $pointvalue2 . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET EventType = ? WHERE EventID =?");
+    $stmt->bind_param("ii", $field1, $field2);
+    $field1=$pointvalue2;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
 }
 if ($checkeventdate==1 && $eventid2!=0) {
     $eventdatescrubbed = scrub($eventdatewrong);
@@ -157,13 +170,14 @@ if ($checkeventdate==1 && $eventid2!=0) {
     $eventday = substr($eventdatescrubbed, 3, 2);
 $eventyear=substr($eventdatescrubbed, 6, 4);
     $eventnewdate= $eventyear."-".$eventmonth."-".$eventday;
-  $insertdaystmt = "UPDATE ppv0008003.eventnames SET EventDate = '". $eventnewdate . "' WHERE EventID =" . $eventid2 . ";";
-    if ($conn->query($insertdaystmt) === true) {
-    } else {
-        echo "Error: " . $insertdaystmt . "<br>" . $conn->error;
-    }
+    $stmt = $conn->prepare("UPDATE ppv0008003.eventnames SET EventDate = ? WHERE EventID =?");
+    $stmt->bind_param("si", $field1, $field2);
+    $field1=$eventnewdate;
+    $field2=$eventid2;
+    $stmt->execute();
+    $stmt->close();
 }
-$conn->close();
+  $conn->close();
        ?>
        <h2>All Changes Made</h2>
      </div>
