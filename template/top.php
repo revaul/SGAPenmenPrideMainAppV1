@@ -1,4 +1,5 @@
 <?php
+header('Cache-Control: max-age=600');
 $userlevel = -1;
 $userlevel = $_SESSION['userlevel']; ?>
 <!DOCTYPE html>
