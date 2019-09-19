@@ -7,7 +7,7 @@
     </div>
     <div class="col-sm-10">
         <h2>Campus Recreation Data Portal</h2>
-<iframe width="933" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiNGY2NjAxZWEtMmFkYi00ZGRkLWE3ZTYtNzBiMGFjZDBhNmU4IiwidCI6ImE4ZWVjMjgxLWFhYTMtNGRhZS1hYzliLTlhMzk4YjkyMTVlNyIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
+<iframe width=auto height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNGY2NjAxZWEtMmFkYi00ZGRkLWE3ZTYtNzBiMGFjZDBhNmU4IiwidCI6ImE4ZWVjMjgxLWFhYTMtNGRhZS1hYzliLTlhMzk4YjkyMTVlNyIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
     <div class="col-sm-1">
     </div>
