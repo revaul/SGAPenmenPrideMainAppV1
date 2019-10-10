@@ -67,7 +67,7 @@ if($scannertype==3){
     else{
       if (strlen($idnocommands)!=16){
       $idclean="0000001";
-            
+
       }
       else{
       $idclean = $idnocommands;
@@ -84,6 +84,15 @@ if($scannertype==3){
 
     $field1=$eventname;
     $field2=$idclean;
+    $field3=$_SESSION['username'];
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner) VALUES (?,?,?)");
+    $stmt->bind_param("iss", $field1, $field2, $field3);
+
+    $field1=$eventname;
+    $field2=$scanner;
     $field3=$_SESSION['username'];
     $stmt->execute();
     $stmt->close();
