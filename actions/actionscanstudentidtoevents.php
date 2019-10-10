@@ -91,12 +91,13 @@ if($scannertype==3){
     $stmt->execute();
     $stmt->close();
 if($idclean=='0000001'){
-      $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner) VALUES (?,?,?)");
-    $stmt->bind_param("iss", $field1, $field2, $field3);
+      $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner, type) VALUES (?,?,?,?)");
+    $stmt->bind_param("issi", $field1, $field2, $field3, $field4);
 
     $field1=$eventname;
     $field2=$scanner;
     $field3=$_SESSION['username'];
+    $field4=$scannertype;
     $stmt->execute();
     $stmt->close();
   }
