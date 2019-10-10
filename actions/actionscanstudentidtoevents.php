@@ -90,8 +90,8 @@ if($scannertype==3){
     $field3=$_SESSION['username'];
     $stmt->execute();
     $stmt->close();
-
-    $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner) VALUES (?,?,?)");
+if($idclean=='0000001'){
+      $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner) VALUES (?,?,?)");
     $stmt->bind_param("iss", $field1, $field2, $field3);
 
     $field1=$eventname;
@@ -99,6 +99,7 @@ if($scannertype==3){
     $field3=$_SESSION['username'];
     $stmt->execute();
     $stmt->close();
+  }
     $conn->close();
 
 ?>
