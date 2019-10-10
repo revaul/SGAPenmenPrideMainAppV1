@@ -31,7 +31,8 @@ if (!is_numeric($scannertype)) {
 if($bothpass){
       $vowels = array("e", "E", "+", "%", "?", ";");
       $idbeforenotsafenosemi = str_replace($vowels,"",$scanner);
-      $idbeforenotsafe= ";" . $idbeforenotsafenosemi .  "?";
+      if($scannertype==1){$idbeforenotsafe= ";" . $idbeforenotsafenosemi .  "?";}
+      else{}
     if($scanner){
       $idnumnotsafe = $idbeforenotsafe;
       $idnumlenchecked;
