@@ -31,10 +31,7 @@ if (!is_numeric($scannertype)) {
 if($bothpass){
       $vowels = array("e", "E", "+", "%", "?", ";");
       $idbeforenotsafenosemi = str_replace($vowels,"",$scanner);
-      if($scannertype==1){$idbeforenotsafe= ";" . $idbeforenotsafenosemi .  "?";}
-      else{
-        $idbeforenotsafe=$idbeforenotsafenosemi;
-      }
+      $idbeforenotsafe= ";" . $idbeforenotsafenosemi .  "?";
     if($scanner){
       $idnumnotsafe = $idbeforenotsafe;
       $idnumlenchecked;
@@ -73,7 +70,7 @@ if($scannertype==3){
     else{
       if (strlen($idnocommands)!=16){
       $idclean="0000001";
-
+            
       }
       else{
       $idclean = $idnocommands;
@@ -93,17 +90,6 @@ if($scannertype==3){
     $field3=$_SESSION['username'];
     $stmt->execute();
     $stmt->close();
-if($idclean=='0000001'){
-      $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner, type) VALUES (?,?,?,?)");
-    $stmt->bind_param("issi", $field1, $field2, $field3, $field4);
-
-    $field1=$eventname;
-    $field2=$scanner;
-    $field3=$_SESSION['username'];
-    $field4=$scannertype;
-    $stmt->execute();
-    $stmt->close();
-  }
     $conn->close();
 
 ?>

@@ -15,15 +15,22 @@ $eventtype= $_POST["eventtype"];
 $eventhost= $_POST["host"];
 $eventpoints= $_POST["pointvalue"];
 $eventdoublepoints= $_POST["doublepoints"];
+$eventdatewrong= $_POST["eventdatestart"];
 $eventtest= $_POST["eventtest"];
 $eventdow= $_POST["eventDoW"];
-$eventdowstr = strval($eventdow);
-$eventdatestart= $_POST["eventdatestart"];
-$eventstart = fixdate($eventdatestart);
-$eventdateend= $_POST["eventdateend"];
-$eventend = fixdate($eventdateend);
-
-
+$eventdatescrubbed = scrub($eventdatewrong);
+$eventmonth = substr($eventdatescrubbed, 0, 2);
+$eventday = substr($eventdatescrubbed, 3, 2);
+$eventyear=substr($eventdatescrubbed, 6, 4);
+$eventnewdate= $eventyear."-".$eventmonth."-".$eventday;
+$eventstart=$eventnewdate;
+$eventdatewrong= $_POST["eventdateend"];
+$eventdatescrubbed = scrub($eventdatewrong);
+$eventmonth = substr($eventdatescrubbed, 0, 2);
+$eventday = substr($eventdatescrubbed, 3, 2);
+$eventyear=substr($eventdatescrubbed, 6, 4);
+$eventnewdate= $eventyear."-".$eventmonth."-".$eventday;
+$eventend=$eventnewdate;
 
 function scrub($x) {
 $z;
@@ -37,40 +44,36 @@ $z;
   }
     return $z;
 }
-function fixdate($x) {
-  $eventdatescrubbed=scrub($x);
-  $eventmonth = substr($eventdatescrubbed, 0, 2);
-  $eventday = substr($eventdatescrubbed, 3, 2);
-  $eventyear=substr($eventdatescrubbed, 6, 4);
-  $eventnewdate= $eventyear."-".$eventmonth."-".$eventday;
-  return $eventnewdate;
-}
 ini_set('max_execution_time', 300);
 
                     $conn = new mysqli($host, $user, $password, $dbname);
                          if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$stmt = $conn->prepare("INSERT INTO ppv0008003.eventnames (EventName, EventDate, PointValue, DoublePoints, HostID, EventType, DoNotTotal, eventLocation) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssiiiiis", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8);
 
-$stmt = $conn->prepare("CALL `ppv0008003`.`newreoccuringevent`(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("siiiisisss", $field1, $field2, $field3, $field4, $field5, $field6, $field7, $field8, $field9, $field10);
-
+$DateN=strtotime($eventstart);
+$DateO=strtotime($eventend);
+While($DateN<=$DateO){
+if(date_format($DateN,"N")=$eventDoW){
 $field1=$eventname;
-$field2=$eventpoints;
-$field3=$eventhost;
-$field4=$eventtest;
-$field5=$eventdoublepoints;
-$field6=$eventloc;
-$field7=$eventtype;
-$field8=$eventstart;
-$field9=$eventend;
-$field10=$eventdow;
+$field2=date_format($eventnewdate,"Y-m-d");
+$field3=$eventpoints;
+$field4=$eventdoublepoints;
+$field5=$eventhost;
+$field6=$eventtype;
+$field7=$eventtest;
+$field8=$eventloc;
 $stmt->execute();
+}
+date_add($DateN,date_interval_create_from_date_string("1 days"));
+}
 $stmt->close();
 $conn->close();
 
 ?>
-<h2>Success Events Added!</h2></div>
+<h2>Success Event Added!</h2></div>
     <div class="col-sm-1">
     </div>
   </div>
