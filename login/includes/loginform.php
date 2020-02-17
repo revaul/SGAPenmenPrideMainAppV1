@@ -70,7 +70,7 @@ try {
     $stmt = $db->conn->prepare("INSERT INTO ".$tbl_attempts." (ip, attempts, lastlogin, username) values(:ip, 0, :lastlogin, :username)");
     $stmt->bindParam(':ip', $ip_address);
     $stmt->bindParam(':lastlogin', $datetimeNow);
-    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':username', $myusername);
     $stmt->execute();
     $curr_attempts++;
     $err = '';
