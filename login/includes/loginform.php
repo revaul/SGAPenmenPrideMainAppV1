@@ -55,6 +55,32 @@ $_SESSION['userlevel']=$result['adminlevel'];
 $_SESSION['first']=$result['firstname'];
 $_SESSION['last']=$result['lastname'];
 $_SESSION['userid']=$result['id'];
+try {
+    $db = new DbConn;
+    $conf = new GlobalConf;
+    $tbl_attempts = $db->tbl_attempts;
+    $ip_address = $conf->ip_address;
+    $login_timeout = $conf->login_timeout;
+    $max_attempts = $conf->max_attempts;
+
+    $datetimeNow = date("Y-m-d H:i:s");
+    $attcheck = checkAttempts($username);
+    $curr_attempts = $attcheck['attempts'];
+
+    $stmt = $db->conn->prepare("INSERT INTO ".$tbl_attempts." (ip, attempts, lastlogin, username) values(:ip, 0, :lastlogin, :username)");
+    $stmt->bindParam(':ip', $ip_address);
+    $stmt->bindParam(':lastlogin', $datetimeNow);
+    $stmt->bindParam(':username', $username);
+    $stmt->execute();
+    $curr_attempts++;
+    $err = '';
+
+} catch (PDOException $e) {
+
+    $err = "Error: " . $e->getMessage();
+
+}
+
             } elseif (password_verify($mypassword, $result['password']) && $result['verified'] == '0') {
 
                 //Account not yet verified
