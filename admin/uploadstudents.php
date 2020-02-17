@@ -66,7 +66,7 @@ $(document).ready(function() {
 ?>
 
       <h2>Penmen Pride Student Listing File Uploader</h2>
-      <p><a href="/misc/StudentTest.csv">Example File to Upload</a></p>
+      <p><a href="/misc/StudentTest.csv">Example File to Upload</a> MAKE SURE YOU CHANGE THE VALUES IN COLUMN B TO TEXT FORMAT AND INCLUDE THE LEADING ZEROS =text(a1,"0000000")</p>
       <div id="response" class="<?php if(!empty($type)) { echo $type . " display-block"; } ?>"><?php if(!empty($message)) { echo $message; } ?></div>
     <div class="outer-scontainer">
         <div class="row">
