@@ -105,6 +105,7 @@ if( $iPod || $iPhone || $iPad){
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MISC
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
+          <?php if($userlevel>=4){ ?> <li><a href="/events/uploadcsv.php">UPLOAD STUDENT INFORMATION</a></li> <?php } ?>
             <?php if($userlevel>=2){ ?><li><a href="/misc/prizegiveaway.php">PRIZE GIVEAWAY</a></li><?php } ?>
 		        <?php if($userlevel>=4){ ?><li><a href="/uploadpeople.php">IMPORT STUDENTS</a></li><?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/trigger/duplicates.php">DUPLICATE ELIMINATION</a></li><?php } ?>
