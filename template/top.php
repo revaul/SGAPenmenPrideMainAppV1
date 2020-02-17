@@ -126,6 +126,7 @@ if( $iPod || $iPhone || $iPad){
   <ul class="dropdown-menu">
             <?php if($userlevel>=1){ ?><li><a href="/admin/profile.php">EDIT MY PROFILE</a></li> <?php } ?>
             <?php if($userlevel>=6){ ?><li><a href="/admin/listusers.php">LIST USERS AND PRIVILEGES</a></li><?php } ?>
+            <?php if($userlevel>=6){ ?><li><a href="/admin/listsenators.php">LIST SENATORS</a></li><?php } ?>
             <?php if($userlevel>=6){ ?><li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li><?php } ?>
             <?php if($userlevel>=6){ ?><li><a href="/admin/changepassword.php">CHANGE USER PASSWORD</a></li><?php } ?>
             <?php if($userlevel>=6){ ?><li><a href="/admin/deleteuser.php">DELETE USER</a></li><?php } ?>
