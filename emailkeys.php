@@ -1,7 +1,8 @@
 <?php
-if ($mailfrom == null) {
+//if $mailfrom == null) {
 require '/mysqlkeys.php';
 // Create connection
+
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -25,5 +26,5 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 else {}
-}
+//}
 ?>
