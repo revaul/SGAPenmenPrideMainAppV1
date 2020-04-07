@@ -1,6 +1,6 @@
 <?php
 //if $mailfrom == null) {
-require '/mysqlkeys.php';
+require 'mysqlkeys.php';
 // Create connection
 
 $conn = new mysqli($host, $user, $password, $dbname);
