@@ -8,7 +8,7 @@ $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "select "SELECT * FROM ppv0008003.EmailLoginInfo;";
+$sql = "SELECT * FROM ppv0008003.EmailLoginInfo;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
