@@ -1,6 +1,6 @@
 <?php
 if ($mailfrom == null) {
-require '../mysqlkeys.php';
+require '/mysqlkeys.php';
 // Create connection
 $conn = new mysqli($host, $user, $password, $dbname);
 // Check connection
@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
        echo $row["epw"];
        echo $row["ea"];
-       echo $row["efn"]; 
+       echo $row["efn"];
        echo $row["eh"];
        echo $row["es"];
        echo $row["ep"];
