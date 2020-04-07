@@ -41,7 +41,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td><a href=/timesystem/edityear.php?year=<?php echo $row["SchoolYear"];?> target="_blank"><div class="linkbuttontopublic">Date Listing</div></a></td><td> <?php echo $row["SchoolYear"];
+       ?><tr><td><a href=/timesystem/edityear.php?year=<?php echo $row["SchoolYear"];?> target="_blank"><div class="linkbuttontopublic">Edit</div></a></td><td> <?php echo $row["SchoolYear"];
 	   ?></td><td><?php echo $row["begin"];
 	   ?></td><td><?php echo $row["end"];
 	   ?></td></tr><?php
