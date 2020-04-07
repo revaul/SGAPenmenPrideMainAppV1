@@ -11,10 +11,13 @@
         <div style="float:right"><a href=/timesystem/datelisting.php><div class="linkbuttontopublic">Date Listing</div></a><a href=/trigger/dates.php><div class="linkbuttontopublic">Rebuild Dates</div></a></div>
         <h3>School Years</h3>
 <table class="table table-striped">
-      <col width="30%">
+  <col width="5%">
+      <col width="25%">
   <col width="25%">
       <col width="25%">
 <tr>
+  <th>Edit
+  </th>
 <th>School Year
 </th>
 <th>Begin Year
@@ -38,7 +41,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td> <?php echo $row["SchoolYear"];
+       ?><tr><td><a href=/timesystem/edityear.php?year=<?php echo $row["SchoolYear"];?> target="_blank"><div class="linkbuttontopublic">Date Listing</div></a></td><td> <?php echo $row["SchoolYear"];
 	   ?></td><td><?php echo $row["begin"];
 	   ?></td><td><?php echo $row["end"];
 	   ?></td></tr><?php
