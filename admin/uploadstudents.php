@@ -72,6 +72,7 @@ $(document).ready(function() {
           <li>In Cell C1, enter the following formula <em>=text(b1,"0000000")</em></li>
           <li>Copy Cell C1, paste the results in column C in each row where there is a value.</li>
           <li>Select Column C, Copy the column, paste into Column C the values NOT the formula.</li>
+          <li>Delete Column B</li>
         </ol>
       <div id="response" class="<?php if(!empty($type)) { echo $type . " display-block"; } ?>"><?php if(!empty($message)) { echo $message; } ?></div>
     <div class="outer-scontainer">
