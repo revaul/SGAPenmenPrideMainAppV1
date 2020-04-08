@@ -58,6 +58,11 @@ if($bothpass){
     $field3=$_SESSION['username'];
     $stmt->execute();
     $stmt->close();
+    ?>
+    <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center>
+
+    <i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
+     <?php
   }
 else{
       $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner, scannertype) VALUES (?,?,?,?)");
@@ -69,14 +74,18 @@ else{
     $field4=$scannertype;
     $stmt->execute();
     $stmt->close();
+    ?>
+    <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center>
+
+    <i class="fa fa-exclamation-triangle" style="font-size:200px;color:red;display:block;text-align:center"></i>
+     <?php
+
   }
     $conn->close();
 
 ?>
 
-<center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center>
 
-<i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
 <script>
 //$(document).ready(function(){
     // $("#newformtorevertback").submit();
