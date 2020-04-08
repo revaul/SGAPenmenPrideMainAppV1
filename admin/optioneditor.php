@@ -46,8 +46,7 @@ if($row["idoptions"]==1){
 else{
      echo $row["optionvalue"];
    }
-	   ?></td><td><?php echo $row["idoptions"];
-	   ?></td></tr><?php
+	   ?></td><td><a href=/action/editoption.php?oid=<?php echo $row["idoptions"];?> target="_blank"><div class="linkbuttontopublic">Edit</div></a></td></tr><?php
     }
 } else {
 
