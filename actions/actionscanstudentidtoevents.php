@@ -16,23 +16,27 @@ $scannertype= $_POST["scannertype"];
 $eventname= $_POST["eventname"];
 $bothpass=TRUE;
 $scanner= $_POST["scanner"];
-$idclean="";
 $scanner_first = substr($scanner,0,1);
 $scanner_length = strlen($scanner);
+$scanner_id="";
 
-if($scanner_first=='0' || $scanner_first=='+' || $scanner_first==';' || $scanner_first=='1'|| $scanner_first=='2' || $scanner_first=='7'){
-
+if(($scanner_first=='+' || $scanner_first==';') && $scannertype==1 && ($scanner_length==16 || $scanner_length==15)) {
+$scanner_id=substr($scanner,2,7);
+}
+elseif($scanner_first=='7' && $scannertype==1){
+  $scanner_id=substr($scanner,1,7);
+}
+elseif(($scanner_first=='0' || $scanner_first=='1'|| $scanner_first=='2') && $scannertype==3 && $scanner_length==7){
+  $scanner_id=$scanner;
+}
+elseif(($scanner_first=='9') && $scannertype==3 && $scanner_length==6){
+  $scanner_id= "0" + $scanner;
+  $scanner=$scanner_id;
 }
 else{
   $bothpass=FALSE;
 }
 
-if($scanner_length==16 || $scanner_length==15 || $scanner_length==7 || $scanner_length==17 || $scanner_length==14){
-
-}
-else{
-  $bothpass=FALSE;
-}
 
 ini_set('max_execution_time', 300);
 
