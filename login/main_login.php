@@ -70,7 +70,7 @@ if( $iPod || $iPhone || $iPad){
    border-radius: 8px;
    margin-top: 10px;">
     <h3 style="margin-top: 10px;">Notice:</h3>
-<p>You have reached the private area for members of the SNHU Student Government Association. All activity on this site is logged and is limited to specific current employees of SNHU and specific students of SNHU. Inappropriate use, including but not limited to access by unauthorized individuals will be pursued to the fullest extent of the law. If you require access to this site, please contact <a href="mailto:sga@snhu.edu">SGA</a>.</p>
+<p>You have reached the restricted area for approved users of the SNHU Student Government Penmen Pride Committee. All activity on this site is logged and is limited to specific current employees of SNHU and specific students of SNHU. Inappropriate use, including but not limited to access by unauthorized individuals will be pursued to the fullest extent of the law. If you require access to this site, please contact <a href="mailto:sga@snhu.edu">SGA</a>.</p>
 	  </div>
   </div>
 	  <div class="col-sm-5">
