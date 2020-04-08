@@ -73,9 +73,9 @@ else{
     $conn->close();
 
 ?>
-<div class="studentidphoto">
+<i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
 <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center>
-</div>
+
 <i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
 <script>
 //$(document).ready(function(){
