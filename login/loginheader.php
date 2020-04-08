@@ -2,7 +2,7 @@
 session_start();
 /*
 //PUT THIS HEADER ON TOP OF EACH UNIQUE PAGE
-if($_SESSION['username']=='rce423'){
+if($_SESSION['userlevel']>=6){
 }
 else{
   header("Location: http://penmenpride.snhusga.org/maintenance.php");
