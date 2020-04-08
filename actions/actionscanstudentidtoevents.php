@@ -73,7 +73,7 @@ else{
     $conn->close();
 
 ?>
-<img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo">
+<img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="margin-left: auto; margin-right:auto; width:30%;">
 
 <i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
 <script>
