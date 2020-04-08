@@ -26,12 +26,6 @@ $_SESSION['mailsecurity']= $row["es"];
 } else {
 }
 $conn->close();
-echo "Hello";
-echo $_SESSION['mailhost'];
-echo $_SESSION['mailport'];
-echo $_SESSION['mailnamefrom'];
-echo $_SESSION['mailusername'];
-echo $_SESSION['mailpassword'];
-echo $_SESSION['mailsecurity'];
+
 //}
 ?>
