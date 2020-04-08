@@ -11,18 +11,37 @@
 <i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
 <?php
 // TODO: Post Field Verification
+
 $scannertype= $_POST["scannertype"];
 $eventname= $_POST["eventname"];
 $bothpass=TRUE;
 $scanner= $_POST["scanner"];
+$idclean="";
+$scanner_first = substr($scanner,0,1);
+$scanner_length = strlen($scanner);
 
+if($scanner_first=='0' || $scanner_first=='+' || $scanner_first==';' || $scanner_first=='1'|| $scanner_first=='2' || $scanner_first=='7'){
 
-    ini_set('max_execution_time', 300);
+}
+else{
+  $bothpass=FALSE;
+}
 
-                        $conn = new mysqli($host, $user, $password, $dbname);
-                             if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+if($scanner_length==16 || $scanner_length==15 || $scanner_length==7 || $scanner_length==17 || $scanner_length==14){
+
+}
+else{
+  $bothpass=FALSE;
+}
+
+ini_set('max_execution_time', 300);
+
+                    $conn = new mysqli($host, $user, $password, $dbname);
+                         if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if($bothpass){
     $stmt = $conn->prepare("INSERT INTO ppv0008003.scanner (EventID, Scanner, user) VALUES (?,?,?)");
     $stmt->bind_param("iss", $field1, $field2, $field3);
 
@@ -31,7 +50,8 @@ $scanner= $_POST["scanner"];
     $field3=$_SESSION['username'];
     $stmt->execute();
     $stmt->close();
-/*
+  }
+else{
       $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner, type) VALUES (?,?,?,?)");
     $stmt->bind_param("issi", $field1, $field2, $field3, $field4);
 
@@ -41,7 +61,7 @@ $scanner= $_POST["scanner"];
     $field4=$scannertype;
     $stmt->execute();
     $stmt->close();
-    */
+  }
     $conn->close();
 
 ?>
