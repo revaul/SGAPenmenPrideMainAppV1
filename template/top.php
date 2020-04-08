@@ -131,6 +131,7 @@ if( $iPod || $iPhone || $iPad){
             <?php if($userlevel>=6){ ?><li><a href="/admin/changepermissions.php">CHANGE USER PRIVILEGES</a></li><?php } ?>
             <?php if($userlevel>=6){ ?><li><a href="/admin/changepassword.php">CHANGE USER PASSWORD</a></li><?php } ?>
             <?php if($userlevel>=6){ ?><li><a href="/admin/deleteuser.php">DELETE USER</a></li><?php } ?>
+            <?php if($userlevel>=6){ ?><li><a href="/admin/optioneditor.php">EDIT SYSTEM OPTIONS</a></li><?php } ?>
   <li><a href="/login/logout.php">LOGOUT</a></li>
   </ul>
   </li>
