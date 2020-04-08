@@ -56,11 +56,7 @@ $scanner= $_POST["scanner"];
 </form>
  <?php
 
-    }
-        }
-else{
-          ?> <h3>Error</h3> <?php
-        }
+
 
 ?>
 
