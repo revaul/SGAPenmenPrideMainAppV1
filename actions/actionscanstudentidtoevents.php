@@ -75,8 +75,7 @@ else{
     $stmt->execute();
     $stmt->close();
     ?>
-    <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center>
-
+  
     <i class="fa fa-exclamation-triangle" style="font-size:200px;color:red;display:block;text-align:center"></i>
      <?php
 
