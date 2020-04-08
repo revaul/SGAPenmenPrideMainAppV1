@@ -1,6 +1,6 @@
 <?php
-header("Location: http://penmenpride.snhusga.org/maintenance.php");
-exit();
+/*header("Location: http://penmenpride.snhusga.org/maintenance.php");
+exit();*/
 //PUT THIS HEADER ON TOP OF EACH UNIQUE PAGE
 session_start();
 $_SESSION['originaladdress']=$_SERVER['REQUEST_URI'];
