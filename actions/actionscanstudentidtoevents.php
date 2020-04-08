@@ -52,7 +52,7 @@ if($bothpass){
     $stmt->close();
   }
 else{
-      $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner, type) VALUES (?,?,?,?)");
+      $stmt = $conn->prepare("INSERT INTO ppv0008003.badscans (badscanevent, badscan, scanner, scannertype) VALUES (?,?,?,?)");
     $stmt->bind_param("issi", $field1, $field2, $field3, $field4);
 
     $field1=$eventname;
