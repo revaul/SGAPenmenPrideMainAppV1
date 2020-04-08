@@ -1,4 +1,6 @@
 <?php
+if (session_id() == "")
+  session_start();
 //if $mailfrom == null) {
 include 'mysqlkeys.php';
 // Create connection
