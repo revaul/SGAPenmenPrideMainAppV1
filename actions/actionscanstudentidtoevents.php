@@ -7,7 +7,6 @@
               <div class="col-sm-1">
     </div>
     <div class="col-sm-10">
-      <h2 style="text-align:center">Scan Logged</h2>
 
 <?php
 // TODO: Post Field Verification
@@ -59,6 +58,8 @@ if($bothpass){
     $stmt->execute();
     $stmt->close();
     ?>
+    <h2 style="text-align:center">Scan Logged</h2>
+
     <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center>
 
     <i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
@@ -75,7 +76,7 @@ else{
     $stmt->execute();
     $stmt->close();
     ?>
-  
+  <h2 style="text-align:center">Scan Error</h2>
     <i class="fa fa-exclamation-triangle" style="font-size:200px;color:red;display:block;text-align:center"></i>
      <?php
 
