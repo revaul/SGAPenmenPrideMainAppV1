@@ -12,7 +12,9 @@
   <col width="40%">
       <col width="20%">
 <tr>
-<th>Option Description
+  <th>Option Grouping
+  </th>
+  <th>Option Description
 </th>
 <th>Option Value
 </th>
@@ -29,13 +31,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM ppv0008003.options;";
+$sql = "SELECT * FROM ppv0008003.options left join optionsgroups on options.optionsgroup=optionsgroups.idoptionsgroups;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       ?><tr><td> <?php echo $row["optiondesc"];
+       ?><tr><td><?php echo $row["groupdesc"];
+  	   ?></td><td> <?php echo $row["optiondesc"];
 	   ?></td><td><?php echo $row["optionvalue"];
 	   ?></td><td><?php echo $row["idoptions"];
 	   ?></td></tr><?php
