@@ -1,5 +1,5 @@
 <?php
-header("Location: http://penmenpride.snhusga.org");
+header("Location: http://penmenpride.snhusga.org/maintenance.php");
 exit();
 //PUT THIS HEADER ON TOP OF EACH UNIQUE PAGE
 session_start();
