@@ -39,7 +39,13 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
        ?><tr><td><?php echo $row["groupdesc"];
   	   ?></td><td> <?php echo $row["optiondesc"];
-	   ?></td><td><?php echo $row["optionvalue"];
+	   ?></td><td><?php
+if($row["idoptions"]==1){
+  ?>&#9679; &#9679; &#9679;<?php
+}
+else{
+     echo $row["optionvalue"];
+   }
 	   ?></td><td><?php echo $row["idoptions"];
 	   ?></td></tr><?php
     }
