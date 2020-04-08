@@ -33,6 +33,10 @@ elseif($scanner_first=='9' && $scannertype==3 && $scanner_length==6){
   $scanner_id= "0" . $scanner;
   $scanner=$scanner_id;
 }
+elseif($scanner_first=='8' && $scannertype==3 && $scanner_length==6){
+  $scanner_id= "0" . $scanner;
+  $scanner=$scanner_id;
+}
 else{
   $bothpass=FALSE;
 }
