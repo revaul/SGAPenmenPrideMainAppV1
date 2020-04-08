@@ -8,7 +8,7 @@
     </div>
     <div class="col-sm-10">
       <h2 style="text-align:center">Scan Logged</h2>
-<i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
+
 <?php
 // TODO: Post Field Verification
 
@@ -73,7 +73,9 @@ else{
     $conn->close();
 
 ?>
+<img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $scanner_id; ?>.jpg" alt="Student ID Photo">
 
+<i class="fa fa-check-square-o" style="font-size:200px;color:green;display:block;text-align:center"></i>
 <script>
 //$(document).ready(function(){
     // $("#newformtorevertback").submit();
