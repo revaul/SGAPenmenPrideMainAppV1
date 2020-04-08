@@ -1,5 +1,5 @@
 <?php require "../login/loginheader.php"; ?>
-<?php require "../login/permissions/level3.php"; ?>
+<?php require "../login/permissions/level6.php"; ?>
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
@@ -16,6 +16,7 @@ if (is_numeric($eventname)) { ?>
             <label> New Value:   </label> <input type="text" name="ovu"/>
 
    <input type="submit" /> </p>
+ <?php } ?>
 </form>
 </div>
     <div class="col-sm-1">
