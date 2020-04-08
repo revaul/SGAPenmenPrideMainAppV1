@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
   	   ?></td><td> <?php echo $row["optiondesc"];
 	   ?></td><td><?php
 if($row["idoptions"]==1){
-  ?>&#9679; &#9679; &#9679;<?php
+  ?>&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;<?php
 }
 else{
      echo $row["optionvalue"];
