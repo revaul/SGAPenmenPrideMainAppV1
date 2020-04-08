@@ -29,8 +29,8 @@ elseif($scanner_first=='7' && $scannertype==1){
 elseif(($scanner_first=='0' || $scanner_first=='1'|| $scanner_first=='2') && $scannertype==3 && $scanner_length==7){
   $scanner_id=$scanner;
 }
-elseif(($scanner_first=='9') && $scannertype==3 && $scanner_length==6){
-  $scanner_id= "0" + $scanner;
+elseif($scanner_first=='9' && $scannertype==3 && $scanner_length==6){
+  $scanner_id= "0" . $scanner;
   $scanner=$scanner_id;
 }
 else{
