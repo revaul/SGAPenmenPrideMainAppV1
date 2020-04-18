@@ -3,9 +3,8 @@
 <?php include "../template/top.php"; ?>
 <div id="about" class="container-fluid">
       <div class="row">
-              <div class="col-sm-1">
-    </div>
-    <div class="col-sm-10">
+
+    <div class="col-sm-12">
         <h2>Penmen Pride Scan Dashboard</h2>
 <table class="table table-striped">
       <col width="15%">
@@ -61,8 +60,7 @@ $conn->close();
 ?>
 </table>
         </div>
-    <div class="col-sm-1">
-    </div>
+    
   </div>
 </div>
 <?php include "../template/bottom.php" ?>
