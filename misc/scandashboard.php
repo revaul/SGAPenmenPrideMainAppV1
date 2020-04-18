@@ -6,25 +6,9 @@
 
     <div class="col-sm-12">
         <h2>Penmen Pride Scan Dashboard</h2>
-<table class="table table-striped">
-      <col width="15%">
-  <col width="10%">
-      <col width="15%">
-      <col width="10%">
-      <col width="15%">
-  <col width="10%">
-      <col width="15%">
-      <col width="10%">
-<tr>
-<th> </th>
-<th> </th>
-<th> </th>
-<th> </th>
-<th> </th>
-<th> </th>
-<th> </th>
-<th> </th>
-</tr>
+        </div>
+        </div>
+
 
 <?php
 $c=1;
@@ -43,24 +27,24 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
 if($c==1){
-       ?><tr><?php } ?>
-         <td> <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $row["IDPhoto"]; ?>.jpg" alt="Student ID Photo" style="width:200px;"></center></td>
-         <td><?php echo $row["times"]; ?></br>
+       ?>  <div class="row">
+       <?php } ?>
+         <div class="col-sm-1"> <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $row["IDPhoto"]; ?>.jpg" alt="Student ID Photo" style="width:100%;"></center></div>
+          <div class="col-sm-2"> <?php echo $row["times"]; ?></br>
          <?php echo $row["EventID"]." - ".$row["EventName"]; ?></br>
        <?php echo $row["HostName"]; ?></br>
-     <?php echo $row["IDLast"].", ".$row["IDFirst"]; ?></br></td>
-  <?php if($c==4){?></tr><?php
-    $c++;
+     <?php echo $row["IDLast"].", ".$row["IDFirst"]; ?></br></div>
+  <?php if($c==4){?></div><?php
+    $c=0;
 }
+$c++;
     }
 } else {
 
 }
 $conn->close();
 ?>
-</table>
-        </div>
-    
-  </div>
+
+
 </div>
 <?php include "../template/bottom.php" ?>
