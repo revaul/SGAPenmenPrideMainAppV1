@@ -8,7 +8,7 @@ $uri = $_SERVER['REQUEST_URI']; ?>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Penmen Pride Database</title>
   <meta charset="utf-8">
-  <?php if($uri='/misc/scandashboard.php'){
+  <?php if($uri=='/misc/scandashboard.php'){
     ?><meta http-equiv="refresh" content="30" ><?php
   } ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
