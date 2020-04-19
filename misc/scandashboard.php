@@ -43,18 +43,17 @@ $c++;
 
 }
 if($c==2){ ?>
-  <div class="col-sm-3">blah</div>
-  <div class="col-sm-3">Blah</div>
-  <div class="col-sm-3">Blah</div>
+  <div class="col-sm-9"> </div>
+
   </div>
 <?php }
 elseif($c==3){ ?>
-  <div class="col-sm-3">Blah</div>
-  <div class="col-sm-3">Blah</div>
+  <div class="col-sm-6"> </div>
+
   </div>
 <?php }
 elseif($c==4){ ?>
-  <div class="col-sm-3">Blah</div>
+  <div class="col-sm-3"> </div>
   </div>
 <?php }
 $conn->close();
