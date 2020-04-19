@@ -30,10 +30,10 @@ if($c==1){
        ?>  <div class="row">
        <?php } ?>
          <div class="col-sm-1"> <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $row["IDPhoto"]; ?>.jpg" alt="Student ID Photo" style="width:100%;"></center></div>
-          <div class="col-sm-2"> <?php echo $row["times"]; ?></br>
-         <?php echo $row["EventID"]." - ".$row["EventName"]; ?></br>
-       <?php echo $row["HostName"]; ?></br>
-     <?php echo $row["IDLast"].", ".$row["IDFirst"]; ?></br></div>
+          <div class="col-sm-2" style="margin:auto;">
+        <strong><?php echo $row["IDLast"].", ".$row["IDFirst"]; ?></strong></br> <strong><?php echo $row["times"]; ?></strong></br>
+         <strong>Event:</strong><?php echo $row["EventID"]." - ".$row["EventName"]; ?></br>
+       <strong>Host:</strong><?php echo $row["HostName"]; ?></br></div>
   <?php if($c==4){?></div><div class="row"> <div class="col-sm-12"></br></div></div><?php
     $c=0;
 }
