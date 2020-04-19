@@ -29,8 +29,8 @@ if ($result->num_rows > 0) {
 if($c==1){
        ?>  <div class="row">
        <?php } ?>
-         <div class="col-md-1"> <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $row["IDPhoto"]; ?>.jpg" alt="Student ID Photo" style="width:100%;"></center></div>
-          <div class="col-md-2" style="margin:auto;">
+         <div class="col-sm-1"> <center><img src="https://snhuweb.snhu.edu/snhuimages/<?php echo $row["IDPhoto"]; ?>.jpg" alt="Student ID Photo" style="width:100%;"></center></div>
+          <div class="col-sm-2" style="margin:auto;">
         <strong><?php echo $row["IDLast"].", ".$row["IDFirst"]; ?></strong></br> <strong><?php echo $row["times"]; ?></strong></br>
          <strong>Event:</strong><?php echo $row["EventID"]." - ".$row["EventName"]; ?></br>
        <strong>Host:</strong><?php echo $row["HostName"]; ?></br></div>
