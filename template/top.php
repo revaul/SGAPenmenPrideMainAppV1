@@ -8,6 +8,9 @@ $uri = $_SERVER['REQUEST_URI']; ?>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Penmen Pride Database</title>
   <meta charset="utf-8">
+  <?php if($uri='/misc/scandashboard.php'){
+    ?><meta http-equiv="refresh" content="30" ><?php
+  } ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -68,7 +71,7 @@ if( $iPod || $iPhone || $iPad){
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-	  <?php if($userlevel>=1){ ?><li><a href="/">HOME<?php echo $uri; ?></a></li>
+	  <?php if($userlevel>=1){ ?><li><a href="/">HOME</a></li>
 		<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EVENTS
         <span class="caret"></span></a>
