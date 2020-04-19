@@ -9,7 +9,7 @@ $uri = $_SERVER['REQUEST_URI']; ?>
   <title>Penmen Pride Database</title>
   <meta charset="utf-8">
   <?php if($uri=='/misc/scandashboard.php'){
-    ?><meta http-equiv="refresh" content="30" ><?php
+    ?><meta http-equiv="refresh" content="60" ><?php
   } ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
