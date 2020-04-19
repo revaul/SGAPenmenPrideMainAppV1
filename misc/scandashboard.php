@@ -42,6 +42,21 @@ $c++;
 } else {
 
 }
+if($c==2){
+  <div class="col-sm-3">blah</div>
+  <div class="col-sm-3">Blah</div>
+  <div class="col-sm-3">Blah</div>
+  </div>
+}
+elseif($c==3){
+  <div class="col-sm-3">Blah</div>
+  <div class="col-sm-3">Blah</div>
+  </div>
+}
+elseif($c==4){
+  <div class="col-sm-3">Blah</div>
+  </div>
+}
 $conn->close();
 ?>
 
