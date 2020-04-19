@@ -1,6 +1,7 @@
 <?php
 $userlevel = -1;
-$userlevel = $_SESSION['userlevel']; ?>
+$userlevel = $_SESSION['userlevel'];
+$uri = $_SERVER['REQUEST_URI']; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +68,7 @@ if( $iPod || $iPhone || $iPad){
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-	  <?php if($userlevel>=1){ ?><li><a href="/">HOME</a></li>
+	  <?php if($userlevel>=1){ ?><li><a href="/">HOME<?php echo $uri; ?></a></li>
 		<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">EVENTS
         <span class="caret"></span></a>
