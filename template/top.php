@@ -118,6 +118,7 @@ if( $iPod || $iPhone || $iPad){
             <?php if($userlevel>=5){ ?><li><a href="/emailsystem/viewpendingemails.php">PENDING EMAILS</a></li>  <?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/misc/publiclinks.php">PUBLIC LINKS</a></li> <?php } ?>
             <?php if($userlevel>=3){ ?><li><a href="/timesystem/yearlisting.php">SEMESTER & SCHOOL YEAR ADJUSTMENT</a></li> <?php } ?>
+            <?php if($userlevel>=4){ ?> <li><a href="/misc/scandashboard.php">SCAN DASHBOARD</a></li> <?php } ?>
         </ul>
       </li>
       <?php } ?>
