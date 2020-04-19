@@ -6,7 +6,7 @@
 
     <div class="col-sm-12">
         <h2>Penmen Pride Scan Dashboard</h2>
-        <h3>Last Load Time:<?php echo date("h:i a"); ?></h3>
+        <h3>Last Load Time:<?php echo date("h:i:s a"); ?></h3>
         </div>
         </div>
 
