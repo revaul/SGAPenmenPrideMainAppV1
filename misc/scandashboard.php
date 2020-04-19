@@ -34,7 +34,7 @@ if($c==1){
          <?php echo $row["EventID"]." - ".$row["EventName"]; ?></br>
        <?php echo $row["HostName"]; ?></br>
      <?php echo $row["IDLast"].", ".$row["IDFirst"]; ?></br></div>
-  <?php if($c==4){?></div><?php
+  <?php if($c==4){?></div><div class="row"> <div class="col-sm-12"></br></div></div><?php
     $c=0;
 }
 $c++;
